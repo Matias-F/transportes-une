@@ -1,5 +1,5 @@
 /* GENERAL SETTINGS
-==================== */
+*********************/
 
 html,
 body {
@@ -49,7 +49,7 @@ a {
 
 
 /* SPECIFIC STYLES
-=================== */
+********************/
 
 /* Preview only */
 .services, .company, .footer {
@@ -60,31 +60,34 @@ a {
     border: 2px solid blue;
 }
 
+/* HOME
+*********/
+
 /* Hero */
 
 .hero {
-	background-color: #3366FF;
+	background-color: #3366ff;
 }
 
-.brand {
-	font-weight: 700;
-}
-
-.menu-btn, .logs {
+.menu-trigger, .logs {
 	min-width: 100px;
 }
 
-.menu, .login, .register {
+.nav.menu, .login, .register {
 	font-size: 1.25rem;
 	font-weight: 600;
 	letter-spacing: .05rem;
 }
 
-.menu {
+.register-home-btn {
+	font-weight: 600;
+}
+
+.nav.menu {
 	padding-bottom: 1px;
 }
 
-.menu a {
+.nav.menu .nav-link {
 	color: #ff9881;
 }
 
@@ -94,18 +97,16 @@ a {
 }
 
 
-
 /* Services */
 
 .sub-heading {
-	color: #ff7161;
+	color: #3366ff;
 	font-size: 2.5rem;
-	font-weight: 800;
 }
 
 .text {
 	max-width: 500px;
-	color: #FF9881;
+	color: #3366ff;
 	font-size: 1.4rem;
 }
 
@@ -122,10 +123,9 @@ a {
 	background-color: #d6e4ff;
 }
 
-.service {
-	color: #3366FF;
+.service-name {
+	color: #3366ff;
 	font-size: 1.8rem;
-	font-weight: 800;
 }
 
 /* Company */
@@ -133,28 +133,54 @@ a {
 /* Footer */
 
 
-/* Forms */
+/* FORMS
+**********/
 
-.title {
-	font-size: 1.8rem;
-	font-weight: 800;
-}
-
-.register-form {
+.form {
 	max-width: 550px;
 }
 
-.register-form label {
-	color: #3366FF;
+.form-title {
+	font-size: 1.8rem;
+}
+
+.form-label {
+	color: #3366ff;
+	font-size: 1.25rem;
 	font-weight: 600;
 }
 
-.register-form button {
+.form-btn {
 	min-width: 130px;
-	background-color: #3366FF;
+	height: 37px;
+	font-weight: 600;
+	letter-spacing: .025rem;
+	background-color: #3366ff;
 }
 
 
+
+/* Register */
+
+
+
+/* UTILITIES
+**************/
+
+.faq {
+	width: 200px;
+	height: 60px;
+	right: 0;
+	bottom: 0;
+	border-radius: 10px 0 0 0;
+	background-color: #ff3730;
+}
+
+.faq-link {
+	color: #ffE5d5 !important;
+	font-size: 1.25rem;
+	letter-spacing: .05rem;
+}
 
 
 

@@ -14,24 +14,24 @@
 <body>
 
     <!-- HERO -->
-    <header class="hero pt-2">
-        <nav class="navbar">
-            <div class="menu-btn d-sm-none">
+    <header class="hero" id="hero">
+        <nav class="navbar pt-4">
+            <div class="menu-trigger d-sm-none">
                 <button class="btn btn-secondary btn-lg" type="button">Menú</button>
             </div>
             <div class="wrapper d-flex">
-                <h1 class="brand">
-                    <a class="text-decoration-none text-light" href="#">RAPID</a>
+                <h1 class="logo font-weight-bold">
+                    <a class="text-decoration-none text-light" href="index.html">RAPID</a>
                 </h1>
-                <nav class="nav menu d-none ml-sm-3 d-sm-flex align-self-sm-end">
-                    <a class="nav-link" href="">Servicios</a>
-                    <a class="nav-link" href="">Nosotros</a>
-                    <a class="nav-link" href="">Contacto</a>
+                <nav class="nav menu d-none d-sm-flex align-self-sm-end ml-sm-3">
+                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link" href="#company">Nosotros</a>
+                    <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
             </div>
             <div class="logs d-flex flex-column align-items-center flex-sm-row">
-                <a class="login mb-2 text-center text-light mr-sm-4" href="#">Iniciar Sesión</a>
-                <button class="register btn btn-light btn-lg text-primary" type="button">Registrarse</button>
+                <a class="login mb-2 text-center text-light mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
+                <a class="register-home-btn btn btn-light btn-lg text-primary" href="forms/register.html">Registrarse</a>
             </div>
         </nav>
         <div class="container-full">
@@ -45,37 +45,37 @@
     </header>
 
     <!-- SERVICES -->
-    <main class="services">
-        <article class="content p-5 d-flex flex-column align-items-center">
-            <h3 class="sub-heading mb-4 text-center">Nuestros Servicios</h3>
-            <p class="text mb-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis cupiditate temporibus quis illum ipsa consectetur eveniet magni quia impedit.</p>
+    <main class="services" id="services">
+        <article class="products my-5 p-5 d-flex flex-column align-items-center">
+            <h3 class="sub-heading mb-4 text-center font-weight-bold">Nuestros Servicios</h3>
+            <p class="text text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis cupiditate temporibus quis illum ipsa consectetur eveniet magni quia impedit.</p>
             <div class="container">
                 <div class="row">
                     <div class="col mt-3 d-flex flex-column align-items-center">
                         <div class="card w-100 mb-5 bg-light">
-                            <a class="card-link w-100 d-flex flex-row align-items-center" href="">
+                            <a class="card-link w-100 d-flex flex-row align-items-center" href="service.html">
                                 <img class="icon d-sm-none img-fluid" src="https://via.placeholder.com/100x70" alt="service icon">
                                 <img class="icon d-none d-sm-block img-fluid" src="https://via.placeholder.com/150x70" alt="service icon">
-                                <div class="title w-100 d-flex justify-content-center align-items-center">
-                                    <h4 class="service">Mudanzas</h4>
+                                <div class="service w-100 d-flex justify-content-center align-items-center">
+                                    <h4 class="service-name font-weight-bold">Mudanzas</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="card w-100 mb-5 bg-light">
-                            <a class="card-link w-100 d-flex flex-row align-items-center" href="">
+                            <a class="card-link w-100 d-flex flex-row align-items-center" href="service.html">
                                 <img class="icon d-sm-none img-fluid" src="https://via.placeholder.com/100x70" alt="service icon">
                                 <img class="icon d-none d-sm-block img-fluid" src="https://via.placeholder.com/150x70" alt="service icon">
-                                <div class="title w-100 d-flex justify-content-center align-items-center">
-                                    <h4 class="service">Fletes</h4>
+                                <div class="service w-100 d-flex justify-content-center align-items-center">
+                                    <h4 class="service-name font-weight-bold">Fletes</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="card w-100 mb-5 bg-light">
-                            <a class="card-link w-100 d-flex flex-row align-items-center" href="">
+                            <a class="card-link w-100 d-flex flex-row align-items-center" href="service.html">
                                 <img class="icon d-sm-none img-fluid" src="https://via.placeholder.com/100x70" alt="service icon">
                                 <img class="icon d-none d-sm-block img-fluid" src="https://via.placeholder.com/150x70" alt="service icon">
-                                <div class="title w-100 d-flex justify-content-center align-items-center">
-                                    <h4 class="service">Frágiles</h4>
+                                <div class="service w-100 d-flex justify-content-center align-items-center">
+                                    <h4 class="service-name font-weight-bold">Frágiles</h4>
                                 </div>
                             </a>
                         </div>
@@ -86,14 +86,19 @@
     </main>
 
     <!-- COMPANY -->
-    <section class="company">
+    <section class="company" id="company">
         Company
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         Footer
     </footer>
+
+    <!-- FAQ Link -->
+    <div class="faq position-fixed d-flex justify-content-center align-items-center">
+        <a class="faq-link text-uppercase text-white" href="#">Preguntas Frecuentes</a>
+    </div>
 
 
 

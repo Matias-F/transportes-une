@@ -133,6 +133,30 @@ a {
 /* Footer */
 
 
+/* Forms */
+
+.title {
+	font-size: 1.8rem;
+	font-weight: 800;
+}
+
+.register-form {
+	max-width: 550px;
+}
+
+.register-form label {
+	color: #3366FF;
+	font-weight: 600;
+}
+
+.register-form button {
+	min-width: 130px;
+	background-color: #3366FF;
+}
+
+
+
+
 
 /* RWD MEDIA QUERIES
 ===================== */

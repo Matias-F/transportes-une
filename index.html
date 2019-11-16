@@ -15,9 +15,16 @@
 
     <!-- HERO -->
     <header class="hero" id="hero">
-        <nav class="navbar pt-4">
+        <div class="menu-collapsed collapse position-fixed d-sm-none" id="collapsedMenu">
+            <nav class="nav menu d-flex justify-content-center">
+                <a class="nav-link" href="#services">Servicios</a>
+                <a class="nav-link" href="#company">Nosotros</a>
+                <a class="nav-link" href="forms/contact.html">Contacto</a>
+            </nav>
+        </div>
+        <nav class="navbar w-100 pt-4 pb-3 position-fixed">
             <div class="menu-trigger d-sm-none">
-                <button class="btn btn-secondary btn-lg" type="button">Menú</button>
+                <button class="btn btn-secondary btn-lg" type="button" data-toggle="collapse" data-target="#collapsedMenu" aria-expanded="false" aria-controls="collapsedMenu">Menú</button>
             </div>
             <div class="wrapper d-flex">
                 <h1 class="logo font-weight-bold">
@@ -51,29 +58,26 @@
             <p class="text text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis cupiditate temporibus quis illum ipsa consectetur eveniet magni quia impedit.</p>
             <div class="container">
                 <div class="row">
-                    <div class="col mt-3 d-flex flex-column align-items-center">
+                    <div class="col mt-3 d-flex flex-column align-items-center flex-md-row">
                         <div class="card w-100 mb-5 bg-light">
-                            <a class="card-link w-100 d-flex flex-row align-items-center" href="service.html">
-                                <img class="icon d-sm-none img-fluid" src="https://via.placeholder.com/100x70" alt="service icon">
-                                <img class="icon d-none d-sm-block img-fluid" src="https://via.placeholder.com/150x70" alt="service icon">
+                            <a class="card-link w-100 d-flex flex-row align-items-center pb-md-4 flex-md-column justify-content-md-between" href="service.html">
+                                <div class="service-icon"></div>
                                 <div class="service w-100 d-flex justify-content-center align-items-center">
                                     <h4 class="service-name font-weight-bold">Mudanzas</h4>
                                 </div>
                             </a>
                         </div>
-                        <div class="card w-100 mb-5 bg-light">
-                            <a class="card-link w-100 d-flex flex-row align-items-center" href="service.html">
-                                <img class="icon d-sm-none img-fluid" src="https://via.placeholder.com/100x70" alt="service icon">
-                                <img class="icon d-none d-sm-block img-fluid" src="https://via.placeholder.com/150x70" alt="service icon">
+                        <div class="card w-100 mb-5 bg-light mx-md-3">
+                            <a class="card-link w-100 d-flex flex-row align-items-center pb-md-4 flex-md-column justify-content-md-between" href="service.html">
+                                <div class="service-icon"></div>
                                 <div class="service w-100 d-flex justify-content-center align-items-center">
                                     <h4 class="service-name font-weight-bold">Fletes</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="card w-100 mb-5 bg-light">
-                            <a class="card-link w-100 d-flex flex-row align-items-center" href="service.html">
-                                <img class="icon d-sm-none img-fluid" src="https://via.placeholder.com/100x70" alt="service icon">
-                                <img class="icon d-none d-sm-block img-fluid" src="https://via.placeholder.com/150x70" alt="service icon">
+                            <a class="card-link w-100 d-flex flex-row align-items-center pb-md-4 flex-md-column justify-content-md-between" href="service.html">
+                                <div class="service-icon"></div>
                                 <div class="service w-100 d-flex justify-content-center align-items-center">
                                     <h4 class="service-name font-weight-bold">Frágiles</h4>
                                 </div>
@@ -91,13 +95,34 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer" id="footer">
-        Footer
+    <footer class="footer p-5" id="footer">
+        <div class="container-full">
+            <div class="row">
+                <h2 class="logo col-12 mb-5 d-flex justify-content-center font-weight-bold col-sm-6 justify-content-sm-start">
+                    <a class="text-decoration-none text-light" href="index.html">RAPID</a>
+                </h2>
+                <div class="social col-12 mb-3 d-flex justify-content-center col-sm-6 mt-sm-3">
+                    <a class="facebook mr-4 font-weight-bold" href="#/">Facebook</a>
+                    <a class="instagram font-weight-bold" href="#/">Instagram</a>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="nav menu col-12 mb-5 d-flex justify-content-center col-sm-6 mt-sm-5 flex-sm-column align-items-sm-start">
+                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link" href="#company">Nosotros</a>
+                    <a class="nav-link" href="forms/contact.html">Contacto</a>
+                </nav>
+                <div class="contact col-12 d-flex flex-column align-items-center col-sm-6">
+                    <span class="dir mb-2 text-center text-white">Laprida 551 | Dorrego - Gllén | Mendoza</span>
+                    <span class="tel mb-2 text-center text-white">4250981 - 2612407123</span>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- FAQ Link -->
     <div class="faq position-fixed d-flex justify-content-center align-items-center">
-        <a class="faq-link text-uppercase text-white" href="#">Preguntas Frecuentes</a>
+        <a class="faq-link text-uppercase font-weight-bold text-white" href="preguntas.html">FAQ</a>
     </div>
 
 

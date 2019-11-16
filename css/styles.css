@@ -25,7 +25,7 @@ ul, ol {
 	padding: 0;
 }
 ul {
-	list-style: none;
+	list-style: none !important;
 }
 
 figure, figcaption {
@@ -44,20 +44,17 @@ video {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: none !important;
 }
+
 
 
 /* SPECIFIC STYLES
 ********************/
 
 /* Preview only */
-.services, .company, .footer {
+.services, .company {
     min-height: 500px;
-}
-
-.company, .footer {
-    border: 2px solid blue;
 }
 
 /* HOME
@@ -66,11 +63,26 @@ a {
 /* Hero */
 
 .hero {
+	padding-top: 90px;
+	background-color: #3366ff;
+}
+
+.menu-collapsed {
+	width: 100%;
+	top: 78.8px;
+	left: 0;
+	z-index: 1040;
 	background-color: #3366ff;
 }
 
 .menu-trigger, .logs {
 	min-width: 100px;
+}
+
+.navbar {
+	top: 0;
+	z-index: 1030;
+	background-color: #3366ff;
 }
 
 .nav.menu, .login, .register {
@@ -123,6 +135,12 @@ a {
 	background-color: #d6e4ff;
 }
 
+.service-icon {
+	width: 55%;
+	height: 100%;
+	background-color: #ff652d;
+}
+
 .service-name {
 	color: #3366ff;
 	font-size: 1.8rem;
@@ -131,6 +149,23 @@ a {
 /* Company */
 
 /* Footer */
+
+.footer {
+	height: 400px;
+	background-color: #3366ff;
+}
+
+.facebook, .instagram {
+	font-size: 1.8rem;
+	color: #ff9881;
+}
+.facebook:hover, .instagram:hover {
+	color: #f8f9fa;
+}
+
+.contact {
+	font-size: 1.4rem;
+}
 
 
 /* FORMS
@@ -160,15 +195,11 @@ a {
 
 
 
-/* Register */
-
-
-
 /* UTILITIES
 **************/
 
 .faq {
-	width: 200px;
+	width: 100px;
 	height: 60px;
 	right: 0;
 	bottom: 0;
@@ -178,7 +209,7 @@ a {
 
 .faq-link {
 	color: #ffE5d5 !important;
-	font-size: 1.25rem;
+	font-size: 1.4rem;
 	letter-spacing: .05rem;
 }
 
@@ -200,14 +231,41 @@ a {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
+	/* Services */
+	.card {
+		height: 140px;
+	}
+
+	.service-icon {
+		width: 100%;
+		height: 70px;
+	}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
+	/* Services */
+	.card {
+		height: 140px;
+	}
+
+	.service-icon {
+		width: 100%;
+		height: 70px;
+	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+	/* Services */
+	.card {
+		height: 140px;
+	}
+
+	.service-icon {
+		width: 100%;
+		height: 70px;
+	}
 }

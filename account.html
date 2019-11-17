@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="E-Commerce para empresa de transporte">
+    <title>E-Commerce Transporte / User</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
+<body>
+
+    <!-- HERO -->
+    <header class="user-hero" id="user-hero">
+        <nav class="navbar w-100 pt-4 pb-3 position-fixed px-md-5">
+            <div class="menu-btn dropdown d-sm-none">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item my-3" href="#services">Servicios</a>
+                    <a class="dropdown-item my-3" href="#company">Nosotros</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="contact dropdown-item my-3" href="forms/contact.html">Contacto</a>
+                </div>
+            </div>
+            <div class="wrapper d-flex">
+                <h1 class="logo font-weight-bold">
+                    <a class="text-decoration-none text-white" href="index.html">RAPID</a>
+                </h1>
+                <nav class="nav menu d-none d-sm-flex align-self-sm-end ml-sm-3">
+                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link" href="#company">Nosotros</a>
+                    <a class="nav-link" href="forms/contact.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="logs d-flex flex-column align-items-center flex-sm-row">
+                <a class="login mb-2 text-center text-white mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
+                <a class="register-home-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
+            </div>
+        </nav>
+        <div class="container-full">
+            <div class="row no-gutters">
+                <div class="user-heading col-12 pb-4 d-flex flex-column justify-content-end align-items-center pb-sm-5">
+                    <h2 class="heading text-center">Mi cuenta</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="user-dashboard" id="user-dashboard">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-5 d-flex flex-column align-items-center col-md-6">
+                    <img class="user-avatar mb-3" src="img/user.jpg" alt="User image avatar">
+                    <span class="user-name mb-4 text-center font-weight-bold">Nacho</span>
+                    <div class="user-info d-flex flex-column mb-4">
+                        <span class="user-fieldname mb-2">Nombre</span>
+                        <div class="input-group">
+                            <input class="form-control text-truncate" type="text" value="Ignacio Alcantara" aria-describedby="button-addon">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" id="button-addon" type="button">
+                                    <span class="fas fa-pen"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-info d-flex flex-column mb-4">
+                        <span class="user-fieldname mb-2">Email</span>
+                        <div class="input-group">
+                            <input class="form-control text-truncate" type="text" value="nachoal@gmail.com" aria-describedby="button-addon">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" id="button-addon" type="button">
+                                    <span class="fas fa-pen"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-info d-flex flex-column mb-4">
+                        <span class="user-fieldname mb-2">Dirección</span>
+                        <div class="input-group">
+                            <input class="form-control text-truncate" type="text" value="Pedro Vargas 1481 - PISO 1 DPTO 2 | Godoy Cruz - Mendoza" aria-describedby="button-addon">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" id="button-addon" type="button">
+                                    <span class="fas fa-pen"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-info d-flex flex-column mb-4">
+                        <span class="user-fieldname mb-2">Teléfono</span>
+                        <div class="input-group">
+                            <input class="form-control text-truncate" type="text" value="2612503955" aria-describedby="button-addon">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" id="button-addon" type="button">
+                                    <span class="fas fa-pen"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="save-btn mt-4 btn btn-secondary btn-lg" type="button" name="button" disabled>Guardar</button>
+                </div>
+                <div class="col-12 mb-5 p-5 d-flex flex-column align-items-center col-md-6">
+                    <span class="purchase-title mb-4">Historial de contrataciones</span>
+                    <div class="purchased-item mb-3 card text-center">
+                        <div class="card-header text-uppercase font-weight-bold">
+                            Mudanza
+                        </div>
+                        <div class="card-body">
+                            <ul class="purchase-details list-group list-group-flush">
+                                <li class="list-group-item text-truncate">
+                                    <span>Tipo</span>
+                                    Mudanza - casa de 1 planta - con asistencia
+                                </li>
+                                <li class="list-group-item text-truncate">
+                                    <span>Domicilio</span>
+                                    Hirigoyen 761 - B. Bombal - Godoy Cruz
+                                </li>
+                                <li class="list-group-item text-truncate">
+                                    <span>Kilómetros</span> 17
+                                    <a href="#/">Ver en mapa</a>
+                                </li>
+                                <li class="list-group-item text-truncate">
+                                    <span>Día y hora</span>
+                                    2/11/2019 - 11 am
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <span class="purchase-date mr-3">21/10/2019</span> <a href="#/" role="button">Descargar factura</a>
+                        </div>
+                    </div>
+                    <div class="purchased-item card text-center">
+                        <div class="card-header text-uppercase font-weight-bold">
+                            Flete
+                        </div>
+                        <div class="card-body">
+                            <ul class="purchase-details list-group list-group-flush">
+                                <li class="list-group-item text-truncate">
+                                    <span>Tipo</span>
+                                    Flete - mueble, electrodoméstico - con asistencia
+                                </li>
+                                <li class="list-group-item text-truncate">
+                                    <span>Domicilio</span>
+                                    Hirigoyen 761 - B. Bombal - Godoy Cruz
+                                </li>
+                                <li class="list-group-item text-truncate">
+                                    <span>Kilómetros</span> 11
+                                    <a href="#/">Ver en mapa</a>
+                                </li>
+                                <li class="list-group-item text-truncate">
+                                    <span>Día y hora</span>
+                                    2/11/2019 - 11 am
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <span class="purchase-date mr-3">21/10/2019</span> <a href="#/" role="button">Descargar factura</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer p-5" id="footer">
+        <div class="container-full">
+            <div class="row">
+                <h2 class="logo col-12 mb-5 d-flex justify-content-center font-weight-bold col-sm-6 justify-content-sm-start">
+                    <a class="text-decoration-none text-light" href="index.html">RAPID</a>
+                </h2>
+                <div class="social col-12 mb-3 d-flex justify-content-center col-sm-6 mt-sm-3">
+                    <a class="facebook mr-4 font-weight-bold" href="#/">Facebook</a>
+                    <a class="instagram font-weight-bold" href="#/">Instagram</a>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="nav menu col-12 mb-5 d-flex justify-content-center col-sm-6 justify-content-sm-start">
+                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link" href="#company">Nosotros</a>
+                    <a class="nav-link" href="forms/contact.html">Contacto</a>
+                </nav>
+                <div class="contact col-12 d-flex flex-column align-items-center col-sm-6">
+                    <span class="dir mb-2 text-center text-white">Laprida 551 | Dorrego - Gllén | Mendoza</span>
+                    <span class="tel mb-2 text-center text-white">4250981 - 2612407123</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

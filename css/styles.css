@@ -1,9 +1,10 @@
-/* GENERAL SETTINGS
+/*********************
+ GENERAL SETTINGS
 *********************/
 
 html,
 body {
-	height: 100%;
+	/* height: 100%; */
 }
 
 html {
@@ -17,7 +18,7 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 10px;
-	background-color: #f8f9fa;
+	background-color: #ebebeb; /*#f8f9fa*/
 }
 
 ul, ol {
@@ -49,40 +50,34 @@ a {
 
 
 
-/* SPECIFIC STYLES
+/********************
+ COMPONENTS
 ********************/
 
-/* Preview only */
-.services, .company {
-    min-height: 500px;
-}
-
-/* HOME
-*********/
-
-/* Hero */
-
-.hero {
-	padding-top: 90px;
-	background-color: #3366ff;
-}
-
-.menu-collapsed {
-	width: 100%;
-	top: 78.8px;
-	left: 0;
-	z-index: 1040;
-	background-color: #3366ff;
-}
-
-.menu-trigger, .logs {
-	min-width: 100px;
-}
+/* NAVBAR
+***********/
 
 .navbar {
 	top: 0;
 	z-index: 1030;
 	background-color: #3366ff;
+}
+
+.menu-btn button,
+.menu-btn .dropdown-item {
+	font-size: 1.4rem;
+}
+
+.menu-btn .dropdown-menu {
+	min-width: 140px;
+}
+
+.menu-btn .dropdown-menu .contact {
+	color: #3366ff;
+}
+
+.menu-btn, .logs {
+	min-width: 100px;
 }
 
 .nav.menu, .login, .register {
@@ -92,6 +87,7 @@ a {
 }
 
 .register-home-btn {
+	color: #3366ff;
 	font-weight: 600;
 }
 
@@ -103,13 +99,32 @@ a {
 	color: #ff9881;
 }
 
+
+/* HOME
+*********/
+
+/* Hero */
+
+.hero {
+	padding-top: 90px;
+	background-color: #3366ff;
+}
+
 .heading {
 	font-size: 3.5rem;
-	font-weight: 800;
+}
+
+.artwork {
+	height: 350px;
+	background-color: #999;
 }
 
 
-/* Services */
+/* Services - Company */
+
+.services, .company {
+    min-height: 450px;
+}
 
 .sub-heading {
 	color: #3366ff;
@@ -122,16 +137,19 @@ a {
 	font-size: 1.4rem;
 }
 
-.card {
+
+/* Services */
+
+.service-card {
 	max-width: 450px;
 	height: 70px;
 }
 
-.card-link {
+.service-link {
 	height: 100%;
 }
 
-.card-link:hover {
+.service-link:hover {
 	background-color: #d6e4ff;
 }
 
@@ -146,24 +164,55 @@ a {
 	font-size: 1.8rem;
 }
 
+
 /* Company */
 
-/* Footer */
-
-.footer {
-	height: 400px;
-	background-color: #3366ff;
+.company {
+	margin-bottom: 100px;
 }
 
-.facebook, .instagram {
+.title {
+	color: #3366ff;
 	font-size: 1.8rem;
-	color: #ff9881;
-}
-.facebook:hover, .instagram:hover {
-	color: #f8f9fa;
 }
 
-.contact {
+
+/* PRODUCTS
+************/
+
+/* FAQ BTN
+************/
+
+.faqbtn {
+	width: 100px;
+	height: 60px;
+	right: 0;
+	bottom: 0;
+	border-radius: 10px 0 0 0;
+	background-color: #ff3730;
+}
+
+.faqbtn-link {
+	color: #ffE5d5 !important;
+	font-size: 1.4rem;
+	letter-spacing: .05rem;
+}
+
+
+/* FAQ
+********/
+
+.faq-heading {
+	height: 200px;
+	background-color: #f5f5f5;
+	color: #3366ff;
+}
+
+.accordion {
+	margin-bottom: 100px;
+}
+
+.question, .answer {
 	font-size: 1.4rem;
 }
 
@@ -194,23 +243,81 @@ a {
 }
 
 
+/* ACCOUNT
+************/
 
-/* UTILITIES
-**************/
-
-.faq {
-	width: 100px;
-	height: 60px;
-	right: 0;
-	bottom: 0;
-	border-radius: 10px 0 0 0;
-	background-color: #ff3730;
+.user-heading {
+	height: 200px;
+	background-color: #f5f5f5;
+	color: #3366ff;
 }
 
-.faq-link {
-	color: #ffE5d5 !important;
+.user-avatar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.user-name {
 	font-size: 1.4rem;
-	letter-spacing: .05rem;
+	color: #3366ff;
+}
+
+.user-info {
+	width: 80%;
+	max-width: 450px;
+}
+
+.user-fieldname {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.user-info input {
+	font-size: 1.25rem;
+	pointer-events: none !important;
+	background-color: #ebebeb !important;
+}
+
+.purchase-title {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.purchased-item {
+	width: 80%;
+	max-width: 450px;
+	font-size: 1.2rem;
+}
+
+.purchase-details span {
+	font-weight: 600;
+}
+
+.code {
+	background-color: #d6e4ff;
+}
+
+
+
+/* FOOTER
+***********/
+
+.footer {
+	height: 400px;
+	background-color: #3366ff;
+}
+
+.facebook, .instagram {
+	font-size: 1.8rem;
+	color: #ff9881;
+}
+.facebook:hover, .instagram:hover {
+	color: #f8f9fa;
+}
+
+.contact {
+	font-size: 1.4rem;
 }
 
 
@@ -232,13 +339,19 @@ a {
 @media (min-width: 768px) and (max-width: 991.98px) {
 
 	/* Services */
-	.card {
-		height: 140px;
+	.service-card {
+		max-width: 225px;
+		height: 170px;
 	}
 
 	.service-icon {
 		width: 100%;
 		height: 70px;
+	}
+
+	/* Footer */
+	.footer {
+		height: 200px;
 	}
 }
 
@@ -246,13 +359,19 @@ a {
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
 	/* Services */
-	.card {
-		height: 140px;
+	.service-card {
+		max-width: 225px;
+		height: 170px;
 	}
 
 	.service-icon {
 		width: 100%;
 		height: 70px;
+	}
+
+	/* Footer */
+	.footer {
+		height: 200px;
 	}
 }
 
@@ -260,12 +379,18 @@ a {
 @media (min-width: 1200px) {
 
 	/* Services */
-	.card {
-		height: 140px;
+	.service-card {
+		max-width: 225px;
+		height: 170px;
 	}
 
 	.service-icon {
 		width: 100%;
 		height: 70px;
+	}
+
+	/* Footer */
+	.footer {
+		height: 200px;
 	}
 }

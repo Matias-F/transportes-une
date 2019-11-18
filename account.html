@@ -11,16 +11,19 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
+</head>    
 <body>
 
-    <!-- HERO -->
-    <header class="user-hero" id="user-hero">
+
+    <!-- ACCOUNT HEADER -->
+    <header class="account" id="account">
+        <!-- NAVBAR -->
         <nav class="navbar w-100 pt-4 pb-3 position-fixed px-md-5">
             <div class="menu-btn dropdown d-sm-none">
                 <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item my-3" href="#services">Servicios</a>
-                    <a class="dropdown-item my-3" href="#company">Nosotros</a>
+                    <a class="dropdown-item my-3" href="index.html#services">Servicios</a>
+                    <a class="dropdown-item my-3" href="index.html#company">Nosotros</a>
                     <div class="dropdown-divider"></div>
                     <a class="contact dropdown-item my-3" href="forms/contact.html">Contacto</a>
                 </div>
@@ -30,26 +33,39 @@
                     <a class="text-decoration-none text-white" href="index.html">RAPID</a>
                 </h1>
                 <nav class="nav menu d-none d-sm-flex align-self-sm-end ml-sm-3">
-                    <a class="nav-link" href="#services">Servicios</a>
-                    <a class="nav-link" href="#company">Nosotros</a>
+                    <a class="nav-link" href="index.html#services">Servicios</a>
+                    <a class="nav-link" href="index.html#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
             </div>
-            <div class="logs d-flex flex-column align-items-center flex-sm-row">
+            <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row">
                 <a class="login mb-2 text-center text-white mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
-                <a class="register-home-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
+                <a class="register-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
+            </div> -->
+            <div class="loged-user dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownUserAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="loged-user-avatar" src="img/user.jpg" alt="User image avatar">
+                    <span class="loged-user-name ml-2 text-white">Nacho</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownUserAccount">
+                    <a class="dropdown-item disabled" href="account.html">Mi cuenta</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="logout dropdown-item" href="index.html">Salir</a>
+                </div>
             </div>
         </nav>
+        <!-- LABEL -->
         <div class="container-full">
             <div class="row no-gutters">
-                <div class="user-heading col-12 pb-4 d-flex flex-column justify-content-end align-items-center pb-sm-5">
+                <div class="account-label col-12 pb-4 d-flex flex-column justify-content-end align-items-center pb-sm-5">
                     <h2 class="heading text-center">Mi cuenta</h2>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="user-dashboard" id="user-dashboard">
+    <!-- ACCOUNT DASHBOARD -->
+    <section class="dashboard" id="dashboard">
         <div class="container">
             <div class="row">
                 <div class="col-12 p-5 d-flex flex-column align-items-center col-md-6">
@@ -119,10 +135,10 @@
                                 </li>
                                 <li class="list-group-item text-truncate">
                                     <span>Kilómetros</span> 17
-                                    <a href="#/">Ver en mapa</a>
+                                    <a href="#/">Ver trayecto</a>
                                 </li>
                                 <li class="list-group-item text-truncate">
-                                    <span>Día y hora</span>
+                                    <span>Realizado el</span>
                                     2/11/2019 - 11 am
                                 </li>
                             </ul>
@@ -147,16 +163,16 @@
                                 </li>
                                 <li class="list-group-item text-truncate">
                                     <span>Kilómetros</span> 11
-                                    <a href="#/">Ver en mapa</a>
+                                    <a href="#/">Ver trayecto</a>
                                 </li>
                                 <li class="list-group-item text-truncate">
-                                    <span>Día y hora</span>
-                                    2/11/2019 - 11 am
+                                    <span>Realizado el</span>
+                                    18/10/2019 - 10 am
                                 </li>
                             </ul>
                         </div>
                         <div class="card-footer text-muted">
-                            <span class="purchase-date mr-3">21/10/2019</span> <a href="#/" role="button">Descargar factura</a>
+                            <span class="purchase-date mr-3">15/10/2019</span> <a href="#/" role="button">Descargar factura</a>
                         </div>
                     </div>
                 </div>
@@ -179,8 +195,8 @@
             </div>
             <div class="row">
                 <nav class="nav menu col-12 mb-5 d-flex justify-content-center col-sm-6 justify-content-sm-start">
-                    <a class="nav-link" href="#services">Servicios</a>
-                    <a class="nav-link" href="#company">Nosotros</a>
+                    <a class="nav-link" href="index.html#services">Servicios</a>
+                    <a class="nav-link" href="index.html#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
                 <div class="contact col-12 d-flex flex-column align-items-center col-sm-6">
@@ -190,6 +206,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- FAQ Button -->
+    <div class="faq-btn-shape position-fixed d-flex justify-content-center align-items-center">
+        <a class="faq-btn-link text-uppercase font-weight-bold text-white" href="faq.html">FAQ</a>
+    </div>
 
 
 

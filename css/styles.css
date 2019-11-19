@@ -138,9 +138,32 @@ a {
 	font-size: 3.5rem;
 }
 
-.artwork {
+.lead {
+    max-width: 600px;
+    font-size: 1.6rem;
+}
+
+.image {
 	height: 350px;
-	background-color: #999;
+    position: relative;
+	background-image: url("../img/cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: cover;
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image:
+    linear-gradient(
+      to left,
+      #3366ff,
+      rgba(255,255,255,0)
+    );
 }
 
 
@@ -183,6 +206,11 @@ a {
 	background-color: #ff652d;
 }
 
+.service-icon span {
+    color: #ff935d;
+    font-size: 4rem;
+}
+
 .service-name {
 	color: #3366ff;
 	font-size: 1.8rem;
@@ -201,12 +229,17 @@ a {
 }
 
 
-/* SERVICES
+/* SERVICE
 ************/
 
 .service-label {
     height: 300px;
     background-color: #ff652d;
+}
+
+.service-label span {
+    color: #ff935d;
+    font-size: 15rem;
 }
 
 .pricing {
@@ -231,6 +264,10 @@ a {
 .step .label {
     color: #3366ff;
     font-size: 1.6rem;
+}
+
+.area {
+    max-width: 550px;
 }
 
 .area-options,

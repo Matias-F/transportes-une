@@ -17,17 +17,28 @@
     <!-- SERVICE HEADER -->
     <header class="service" id="service">
         <!-- NAVBAR -->
-        <nav class="navbar w-100 pt-4 pb-3 position-fixed px-md-5">
-            <div class="menu-btn dropdown d-sm-none">
+        <nav class="navbar w-100 pt-0 px-0 pb-2 position-fixed">
+            <!-- SHOPPING CART -->
+            <div class="shopping-cart mb-3 px-4 d-flex justify-content-between align-items-center">
+                <div class="flex-grow-1 d-flex justify-content-between align-items-center justify-content-sm-start">
+                    <span class="fas fa-shopping-cart fa-2x"></span>
+                    <span class="items ml-sm-4">Tenés <strong>1</strong> item en tu carrito. <a href="cart.html">Ir al carrito</a></span>
+                </div>
+                <div class="d-none d-md-block flex-shrink-0">
+                    <span class="fas fa-phone-alt fa-lg"></span>
+                    <span class="phone ml-2">4250981 | 261-2407123</span>
+                </div>
+            </div>
+            <div class="menu-btn dropdown pl-2 d-sm-none">
                 <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu ml-2" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item my-3" href="index.html#services">Servicios</a>
                     <a class="dropdown-item my-3" href="index.html#company">Nosotros</a>
                     <div class="dropdown-divider"></div>
                     <a class="contact dropdown-item my-3" href="forms/contact.html">Contacto</a>
                 </div>
             </div>
-            <div class="wrapper d-flex">
+            <div class="wrapper d-flex ml-sm-4">
                 <h1 class="logo font-weight-bold">
                     <a class="text-decoration-none text-white" href="index.html">RAPID</a>
                 </h1>
@@ -37,11 +48,11 @@
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
             </div>
-            <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row">
+            <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row mr-sm-4">
                 <a class="login mb-2 text-center text-white mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
                 <a class="register-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
             </div> -->
-            <div class="loged-user dropdown">
+            <div class="loged-user dropdown mr-4">
                 <button class="btn dropdown-toggle" type="button" id="dropdownUserAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="loged-user-avatar" src="img/user.jpg" alt="User image avatar">
                     <span class="loged-user-name ml-2 text-white">Nacho</span>
@@ -144,35 +155,26 @@
                     <!-- Book -->
                     <div class="step mt-5 mb-4 d-flex align-items-center">
                         <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">5</span>
-                        <span class="label font-weight-bold">¡Ya estas listo para Reservar!</span>
+                        <span class="label font-weight-bold">Agregar al carrito</span>
                     </div>
                     <p class="bookin ml-4">
-                        Dejanos tus datos así podemos contactarte y brindarte atención personalizada para encontrar la mejor manera de hacer tu mudanza, y en base a ello determinar el <strong>valor final del servicio</strong>, la forma de pago que más te convenga y la fecha que sea más cómoda para vos.
+                        Al agregar tu cotización al carrito se guardarán en el sistema todos los detalles del servicio que estés interesado en contratar.
                     </p>
-                    <!-- Form -->
-                    <form class="form mt-3 mx-4 d-flex flex-column rounded" action="">
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="name">Ingresá tu nombre</label>
-                            <input class="form-control form-control-lg" id="name" type="text" placeholder="Nombre">
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="email">Ingresá tu email</label>
-                            <input class="form-control form-control-lg" id="email" type="email" placeholder="Correo electrónico">
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="phone">Ingresá un teléfono</label>
-                            <input class="form-control form-control-lg" id="phone" type="number" placeholder="Teléfono">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="message">Si lo necesitás podes dejarnos un mensaje</label>
-                            <textarea class="form-control" id="message" rows="8"></textarea>
-                        </div>
-                        <div class="discount alert alert-primary text-center" role="alert">
-                            Reservando a través de la web obtenés un <strong>10%</strong> de descuento
-                        </div>
-                        <button class="bookin-btn mt-5 align-self-center btn btn-lg text-white" type="submit" >Reservar</button>
-                        <span class="terms mt-4 text-center text-muted font-weight-bold">La reserva NO implica obligación de compra</span>
-                    </form>
+                    <p class="bookin ml-4">
+                        A continuación, el sistema te enviará un correo electrónico para que nos indiques cuándo y cómo prefieres que nos contactemos contigo para poder brindarte toda la información que necesites y corroborar los detalles a fin de confirmar el precio.
+                    </p>
+                    <p class="bookin ml-4">
+                        Si finalmente decides contratarnos actualizaremos en el carrito todos los detalles del servicio y habilitaremos el botón de pago para que puedas completar la operación.
+                    </p>
+                    <p class="bookin ml-4">
+                        Si lo prefieres puedes contactarnos directamente por teléfono.
+                    </p>
+                    <div class="discount alert alert-primary text-center" role="alert">
+                        Reservando a través de la web obtenés un <strong>10%</strong> de descuento
+                    </div>
+                    <!-- Si al hacer click el usuario no se ha registrado, entonces llevar al formulario de registro -->
+                    <button class="bookin-btn mt-5 align-self-center btn btn-lg text-white" type="button">Agregar al carrito</button>
+                    <a class="legal text-center mt-3" href="#/">Términos y Condiciones</a>
                 </div>
             </div>
         </div>

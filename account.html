@@ -18,17 +18,28 @@
     <!-- ACCOUNT HEADER -->
     <header class="account" id="account">
         <!-- NAVBAR -->
-        <nav class="navbar w-100 pt-4 pb-3 position-fixed px-md-5">
-            <div class="menu-btn dropdown d-sm-none">
+        <nav class="navbar w-100 pt-0 px-0 pb-2 position-fixed">
+            <!-- SHOPPING CART -->
+            <div class="shopping-cart mb-3 px-4 d-flex justify-content-between align-items-center">
+                <div class="flex-grow-1 d-flex justify-content-between align-items-center justify-content-sm-start">
+                    <span class="fas fa-shopping-cart fa-2x"></span>
+                    <span class="items ml-sm-4">Tenés <strong>0</strong> items en tu carrito. <a href="cart.html">Ir al carrito</a></span>
+                </div>
+                <div class="d-none d-md-block flex-shrink-0">
+                    <span class="fas fa-phone-alt fa-lg"></span>
+                    <span class="phone ml-2">4250981 | 261-2407123</span>
+                </div>
+            </div>
+            <div class="menu-btn dropdown pl-2 d-sm-none">
                 <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu ml-2" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item my-3" href="index.html#services">Servicios</a>
                     <a class="dropdown-item my-3" href="index.html#company">Nosotros</a>
                     <div class="dropdown-divider"></div>
                     <a class="contact dropdown-item my-3" href="forms/contact.html">Contacto</a>
                 </div>
             </div>
-            <div class="wrapper d-flex">
+            <div class="wrapper d-flex ml-sm-4">
                 <h1 class="logo font-weight-bold">
                     <a class="text-decoration-none text-white" href="index.html">RAPID</a>
                 </h1>
@@ -38,11 +49,11 @@
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
             </div>
-            <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row">
+            <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row mr-sm-4">
                 <a class="login mb-2 text-center text-white mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
                 <a class="register-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
             </div> -->
-            <div class="loged-user dropdown">
+            <div class="loged-user dropdown mr-4">
                 <button class="btn dropdown-toggle" type="button" id="dropdownUserAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="loged-user-avatar" src="img/user.jpg" alt="User image avatar">
                     <span class="loged-user-name ml-2 text-white">Nacho</span>

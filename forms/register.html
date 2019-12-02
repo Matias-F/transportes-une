@@ -15,33 +15,49 @@
 
     <!-- REGISTER FORM -->
 
+    <nav class="navbar w-100 pt-4 pb-3 position-fixed px-md-5">
+        <div class="wrapper d-flex">
+            <h1 class="logo font-weight-bold">
+                <a class="text-decoration-none text-white" href="../index.html">RAPID</a>
+            </h1>
+        </div>
+    </nav>
+
     <section class="register" id="register">
         <div class="container">
             <div class="row">
                 <div class="form-page col p-5 d-flex flex-column align-items-center">
-                    <h1 class="logo mb-5 font-weight-bold">
-                        <a class="text-decoration-none" href="../index.html">RAPID</a>
-                    </h1>
-                    <h3 class="form-title mb-4 text-center text-secondary font-weight-bold">¡Registrate en Rapid!</h3>
+                    <h3 class="form-title mb-4 text-center font-weight-bold">¡Registrate en Rapid!</h3>
                     <form class="form w-100 mx-3 p-5 d-flex flex-column rounded shadow bg-white" action="">
+                        <div class="user card mb-3 p-3 align-items-center flex-sm-row">
+                            <img class="user-image" src="../img/user-placeholder.png" alt="">
+                            <div class="user-content d-flex flex-column align-items-center align-items-sm-start ml-sm-5">
+                                <h4 class="mt-3 text-center mt-sm-0 text-sm-left">Subí una foto de perfil <span class="text-muted">Opcional</span></h4>
+                                <button class="my-3 btn btn-lg" type="button">Buscar foto</button>
+                            </div>
+                        </div>
                         <div class="form-group mb-4">
                             <label class="form-label" for="user">Elegí un nombre de usuario</label>
-                            <input class="form-control form-control-lg" id="user" type="text" placeholder="Nombre de usuario">
+                            <input class="form-control form-control-lg" id="user" type="text" placeholder="Nombre de usuario" required>
                         </div>
                         <div class="form-group mb-4">
                             <label class="form-label" for="email">Ingresá tu email</label>
-                            <input class="form-control form-control-lg" id="email" type="email" placeholder="Correo electrónico">
+                            <input class="form-control form-control-lg" id="email" type="email" placeholder="Correo electrónico" required>
                         </div>
                         <div class="form-group mb-4">
                             <label class="form-label" for="name">Ingresá tu nombre</label>
-                            <input class="form-control form-control-lg" id="name" type="text" placeholder="Nombre completo">
+                            <input class="form-control form-control-lg" id="name" type="text" placeholder="Nombre completo" required>
                         </div>
                         <div class="form-group mb-4">
                             <label class="form-label" for="pass">Creá tu contraseña</label>
-                            <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña">
+                            <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="confirm-pass">Confirmá tu contraseña</label>
+                            <input class="form-control form-control-lg" id="confirm-pass" type="password" placeholder="Confirmá tu contraseña" required>
                         </div>
                         <button class="form-btn mt-5 align-self-center btn btn-lg text-white" type="submit" >Registrarme</button>
-                        <a class="login mt-4 text-center" href="login.html">¿Ya tenés una cuenta?</a>
+                        <a class="login-link mt-4 text-center" href="login.html">¿Ya tenés una cuenta?</a>
                     </form>
                 </div>
             </div>

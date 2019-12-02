@@ -48,6 +48,9 @@ a {
 	text-decoration: none !important;
 }
 
+.btn-primary {
+    background-color: #3366ff !important;
+}
 
 
 /********************
@@ -62,6 +65,35 @@ a {
 	z-index: 1030;
 	background-color: #3366ff;
 }
+
+/* Cart */
+
+.shopping-cart {
+    width: 100%;
+    height: 30px;
+    background-color: #f5f5f5;
+}
+
+.shopping-cart .fas {
+    color: #ff652d;
+}
+
+.items, .phone {
+    font-size: 1.2rem;
+    color: #3366ff;
+}
+
+.items strong {
+    color: #ff652d;
+}
+
+.items a {
+    font-weight: 600;
+    border-bottom: 1.5px solid #ff3730;
+    color: #ff3730;
+}
+
+/* Menu */
 
 .menu-btn button,
 .menu-btn .dropdown-item {
@@ -91,8 +123,10 @@ a {
 }
 
 .nav.menu .nav-link {
-	color: #ff9881;
+	color: #f5f5f5;
 }
+
+/* Logs */
 
 .register-btn {
 	color: #3366ff;
@@ -127,12 +161,12 @@ a {
 /* HOME
 *********/
 
-/* Hero */
-
-.hero {
+.home {
 	padding-top: 90px;
 	background-color: #3366ff;
 }
+
+/* Hero */
 
 .heading {
 	font-size: 3.5rem;
@@ -189,15 +223,7 @@ a {
 
 .service-card {
 	max-width: 450px;
-	height: 70px;
-}
-
-.service-link {
-	height: 100%;
-}
-
-.service-link:hover {
-	background-color: #d6e4ff;
+	height: 100px;
 }
 
 .service-icon {
@@ -209,6 +235,10 @@ a {
 .service-icon span {
     color: #ff935d;
     font-size: 4rem;
+}
+
+.service-info {
+    height: 65%;
 }
 
 .service-name {
@@ -232,6 +262,8 @@ a {
 /* SERVICE
 ************/
 
+/* Label */
+
 .service-label {
     height: 300px;
     background-color: #ff652d;
@@ -241,6 +273,8 @@ a {
     color: #ff935d;
     font-size: 15rem;
 }
+
+/* Pricing */
 
 .pricing {
     margin-bottom: 100px;
@@ -295,8 +329,8 @@ a {
 }
 
 .bookin {
-    max-width: 450px;
-    font-size: 1.3rem;
+    max-width: 600px;
+    font-size: 1.35rem;
 }
 
 .discount {
@@ -304,10 +338,57 @@ a {
 }
 
 .bookin-btn {
+    font-size: 1.6rem;
     background-color: #3366ff;
 }
 
+.legal {
+    font-size: 1.25rem;
+}
 
+/* CART
+*********/
+
+.cart {
+	padding-top: 120px;
+}
+
+.cart-content {
+    height: 100vh;
+}
+
+.cart-content > .card {
+    min-height: 250px;
+}
+
+.cart-title {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #ebebeb;
+    color: #6c757d;
+}
+
+.cart-items {
+    min-width: 0;
+    font-size: 1.4rem;
+}
+
+.item-icon {
+    width: 100%;
+    height: 70px;
+    background-color: #ff652d;
+    color: #ff935d;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #3366ff;
+}
+
+.item-price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 2px;
+}
 
 
 /* FAQ BTN
@@ -407,12 +488,42 @@ a {
 /* FORMS
 **********/
 
+section.register,
+section.login,
+section.contact {
+    padding-top: 60px;
+}
+
+.user-image {
+    width: 8rem;
+    height: 8rem
+}
+
+.user-content span {
+    font-size: 1.2rem;
+}
+
+.user-content button {
+    font-weight: 600;
+	letter-spacing: .025rem;
+    border-radius: 2px;
+    border: 1.5px solid #3366ff;
+	color: #3366ff;
+}
+
+.user-content button:hover {
+	background-color: #dcf1ff;
+    color: #3366ff;
+}
+
 .form {
+    width: 100%;
 	max-width: 550px;
 }
 
 .form-title {
 	font-size: 1.8rem;
+    color: #3366ff;
 }
 
 .form-label {
@@ -428,6 +539,7 @@ a {
 	letter-spacing: .025rem;
 	background-color: #3366ff;
 }
+
 
 
 /* FOOTER
@@ -476,8 +588,19 @@ a {
 
 	.service-icon {
 		width: 100%;
-		height: 70px;
+		height: 100px;
 	}
+
+    /* Cart */
+    .item-icon {
+        width: 120px;
+    }
+
+    .item-detail {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
 	/* Footer */
 	.footer {
@@ -496,8 +619,19 @@ a {
 
 	.service-icon {
 		width: 100%;
-		height: 70px;
+		height: 100px;
 	}
+
+    /* Cart */
+    .item-icon {
+        width: 120px;
+    }
+
+    .item-detail {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
 	/* Footer */
 	.footer {
@@ -516,8 +650,19 @@ a {
 
 	.service-icon {
 		width: 100%;
-		height: 70px;
+		height: 100px;
 	}
+
+    /* Cart */
+    .item-icon {
+        width: 120px;
+    }
+
+    .item-detail {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
 	/* Footer */
 	.footer {

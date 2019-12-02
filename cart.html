@@ -18,7 +18,6 @@
     <header class="cart" id="cart">
         <!-- NAVBAR -->
         <nav class="navbar w-100 pt-0 px-0 pb-2 position-fixed">
-            <!-- SHOPPING CART -->
             <div class="shopping-cart mb-3 px-4 d-flex justify-content-between align-items-center">
                 <div class="flex-grow-1 d-flex justify-content-between align-items-center justify-content-sm-start">
                     <span class="fas fa-shopping-cart fa-2x"></span>
@@ -49,7 +48,7 @@
                 </nav>
             </div>
             <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row mr-sm-4">
-                <a class="login mb-2 text-center text-white mb-sm-0 mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
+                <a class="login-btn mb-2 text-center text-white mb-sm-0 mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
                 <a class="register-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
             </div> -->
             <div class="loged-user dropdown mr-4">
@@ -69,20 +68,37 @@
     <!-- CART CONTENT -->
     <section class="cart-content" id="cart-content">
         <div class="container">
-            <div class="row no-gutters">
-                <div class="card col-12 p-5">
-                    <h3 class="cart-title pb-3">Mis Pedidos</h3>
-                    <article class="cart-items card p-0 d-flex align-items-center flex-md-row">
-                        <div class="item-icon my-3 d-flex justify-content-center align-items-center flex-shrink-0 my-md-0">
-                            <span class="fas fa-truck fa-3x"></span>
+            <div class="row">
+                <div class="col-12 py-4 card cart-frame">
+                    <h3 class="cart-title mb-3">Mi Carrito</h3>
+                    <div class="card">
+                        <div class="card-img-top d-flex justify-content-center align-items-center pt-4">
+                            <span class="cart-icon fas fa-truck fa-3x"></span>
                         </div>
-                        <h4 class="item-name mb-md-0 ml-md-3">Mudanza</h4>
-                        <p class="item-detail text-center mx-3 text-md-left mb-md-0 mr-md-3">
-                            80 a 200 m2 - En planta - 13 km - Con asistencia
-                        </p>
-                        <p class="item-price alert-success px-3 mb-md-0">$7365</p>
-                        <p class="item-date mb-md-0 mx-md-3">22/12/2019</p>
-                    </article>
+                        <div class="card-body">
+                            <h5 class="service-name card-title text-center">Mudanza</h5>
+                            <h6 class="service-status card-subtitle mb-2 text-muted text-center">Pendiente</h6>
+                            <ul class="service-details list-group list-group-flush">
+                                <li class="list-group-item text-center text-truncate">A nombre de Mabel Alcantara</li>
+                                <li class="list-group-item text-center text-truncate">Casa 1 planta</li>
+                                <li class="list-group-item text-center text-truncate">Hirigoyen 761 - B. Bombal - Godoy Cruz</li>
+                                <li class="list-group-item text-center text-truncate">
+                                    17 kilómetros
+                                    <a class="card-link" href="#/">Ver trayecto en mapa</a>
+                                </li>
+                                <li class="list-group-item text-center text-truncate"> Fecha probable 2/11/2019 - 11 am</li>
+                            </ul>
+                            <div class="service-price d-flex justify-content-center mt-3">
+                                <span class="alert-success text-center px-4">$ 7365</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2 mb-4">
+                            <button class="btn btn-lg btn-secondary disabled">Continuar compra</button>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a class="card-link" href="#/">Eliminar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,7 +122,7 @@
                     <a class="nav-link" href="#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
-                <div class="contact col-12 d-flex flex-column align-items-center col-sm-6">
+                <div class="contact-info col-12 d-flex flex-column align-items-center col-sm-6">
                     <span class="dir mb-2 text-center text-white">Laprida 551 | Dorrego - Gllén | Mendoza</span>
                     <span class="tel mb-2 text-center text-white">4250981 - 2612407123</span>
                 </div>

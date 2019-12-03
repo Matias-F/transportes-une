@@ -36,27 +36,31 @@
                                 <button class="my-3 btn btn-lg" type="button">Buscar foto</button>
                             </div>
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="user">Elegí un nombre de usuario</label>
                             <input class="form-control form-control-lg" id="user" type="text" placeholder="Nombre de usuario" required>
+                            <small class="helper user-name-format-helper text-primary mt-1">Puedes usar mayúsculas, minúsculas, números y guiones</small>
+                            <small class="alert user-name-empty-alert alert-warning mt-1 mb-0" role="alert">Campo requerido</small>
+                            <small class="alert user-name-length-alert alert-warning mt-1 mb-0" role="alert">El nombre de usuario debe tener al menos cuatro caracteres</small>
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="email">Ingresá tu email</label>
                             <input class="form-control form-control-lg" id="email" type="email" placeholder="Correo electrónico" required>
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="name">Ingresá tu nombre</label>
                             <input class="form-control form-control-lg" id="name" type="text" placeholder="Nombre completo" required>
+                            <small class="alert name-empty-alert alert-warning mt-1 mb-0" role="alert">Campo requerido</small>
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="pass">Creá tu contraseña</label>
                             <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña" required>
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-3">
                             <label class="form-label" for="confirm-pass">Confirmá tu contraseña</label>
                             <input class="form-control form-control-lg" id="confirm-pass" type="password" placeholder="Confirmá tu contraseña" required>
                         </div>
-                        <button class="form-btn mt-5 align-self-center btn btn-lg text-white" type="submit" >Registrarme</button>
+                        <button class="form-btn mt-5 align-self-center btn btn-lg text-white" type="submit">Registrarme</button>
                         <a class="login-link mt-4 text-center" href="login.html">¿Ya tenés una cuenta?</a>
                     </form>
                 </div>
@@ -64,5 +68,9 @@
         </div>
     </section>
 
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap/popper.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

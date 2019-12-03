@@ -545,6 +545,10 @@ a {
     color: #3366ff;
 }
 
+.form-group .helper,
+.form-group .alert {
+    display: none;
+}
 
 /* FOOTER
 ***********/

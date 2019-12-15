@@ -1,0 +1,22 @@
+{
+  "servicios": [
+    {
+      "Id": 1,
+      "Servicio": "Mudanzas",
+      "Descripcion": "Contamos con una flota de camiones con diferente capacidades de carga y en excelentes condiciones para llegar a destino, vayas a donde vayas. Atendemos tanto las necesidades de particulares como también de empresas, simpre poniendo en valor la atención personalizada para dar la mejor solución a cada caso concreto. Nuestro personal calificado garantiza la seguridad e integridad de la carga.",
+      "Icono": "fas fa-truck"        
+    },
+    {
+      "Id": 2,
+      "Servicio": "Fletes",
+      "Descripcion": "Cuidamos tus cosas como si fueran nuestras, nos importa tu economía y respetamos tu tiempo. Solucionamos tus necesidades de transportes de cargas pequeñas de manera simple, eficiente y a costos accesibles. Ponemos a tu disposición distintos tipos de vehículos de acuerdo al tipo de carga que quieras transportar, para garantizar la seguridad e integridad de la misma.",
+      "Icono": "fas fa-truck-pickup"      
+    },
+    {
+      "Id": 3,
+      "Servicio": "Fragiles",
+      "Descripcion": "Contamos con modernas Vans adaptadas para el transporte de cargas frágiles y operarios capacitados para el manejo seguro de este tipo de productos delicados. Ponemos toda nuestra tecnología y atención en el cuidado y la integridad de estos elementos que requieren medidas específicas y previsiones especiales.",
+      "Icono": "fas fa-people-carry"
+    }
+  ]
+}

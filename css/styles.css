@@ -182,8 +182,9 @@ a {
 }
 
 .lead {
-    max-width: 600px;
+    max-width: 650px;
     font-size: 1.6rem;
+    line-height: 2rem;
 }
 
 .image {

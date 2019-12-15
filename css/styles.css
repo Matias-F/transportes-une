@@ -391,8 +391,6 @@ a {
 }
 
 
-
-
 /* ACCOUNT
 ************/
 
@@ -547,7 +545,8 @@ a {
 }
 
 .form-group .helper,
-.form-group .alert {
+.form-group .error,
+.successfully-registered {
     display: none;
 }
 

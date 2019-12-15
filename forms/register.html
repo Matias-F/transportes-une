@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="form-page col p-5 d-flex flex-column align-items-center">
                     <h3 class="form-title mb-4 text-center font-weight-bold">¡Registrate en Rapid!</h3>
-                    <form class="form w-100 mx-3 p-5 d-flex flex-column rounded shadow bg-white" action="">
+                    <form class="form register-form w-100 mx-3 p-5 d-flex flex-column rounded shadow bg-white" action="">
                         <div class="user card mb-3 p-3 align-items-center flex-sm-row">
                             <img class="user-image" src="../img/user-placeholder.png" alt="">
                             <div class="user-content d-flex flex-column align-items-center align-items-sm-start ml-sm-5">
@@ -37,29 +37,39 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label class="form-label" for="user">Elegí un nombre de usuario</label>
-                            <input class="form-control form-control-lg" id="user" type="text" placeholder="Nombre de usuario" required>
-                            <small class="helper user-name-format-helper text-primary mt-1">Puedes usar mayúsculas, minúsculas, números y guiones</small>
-                            <small class="alert user-name-empty-alert alert-warning mt-1 mb-0" role="alert">Campo requerido</small>
-                            <small class="alert user-name-length-alert alert-warning mt-1 mb-0" role="alert">El nombre de usuario debe tener al menos cuatro caracteres</small>
+                            <label class="form-label mb-1" for="user">Elegí un nombre de usuario</label>
+                            <input class="form-control form-control-lg" id="user" type="text" placeholder="Nombre de usuario">
+                            <small class="helper username-format text-primary mt-1">Puedes usar mayúsculas, minúsculas, números y guiones</small>
+                            <small class="error username-exists text-danger mt-1">Este nombre ya existe</small> <!-- check with BD -->
+                            <small class="error username-empty text-danger mt-1">Campo requerido</small>
+                            <small class="error username-length text-danger mt-1">El nombre de usuario debe tener al menos cuatro caracteres</small>
                         </div>
                         <div class="form-group mb-3">
-                            <label class="form-label" for="email">Ingresá tu email</label>
-                            <input class="form-control form-control-lg" id="email" type="email" placeholder="Correo electrónico" required>
+                            <label class="form-label mb-1" for="email">Ingresá tu email</label>
+                            <input class="form-control form-control-lg" id="email" type="email" placeholder="ejemplo@email.com">
+                            <small class="error email-exists text-danger mt-1">Este email ya existe</small> <!-- check with BD -->
+                            <small class="error email-empty text-danger mt-1">Campo requerido</small>
+                            <small class="error email-format text-danger mt-1">Este no es un formato de email válido</small>
                         </div>
                         <div class="form-group mb-3">
-                            <label class="form-label" for="name">Ingresá tu nombre</label>
-                            <input class="form-control form-control-lg" id="name" type="text" placeholder="Nombre completo" required>
-                            <small class="alert name-empty-alert alert-warning mt-1 mb-0" role="alert">Campo requerido</small>
+                            <label class="form-label mb-1" for="name">Ingresá tu nombre</label>
+                            <input class="form-control form-control-lg" id="name" type="text" placeholder="Nombre completo">
+                            <small class="error name-empty text-danger mt-1">Campo requerido</small>
                         </div>
                         <div class="form-group mb-3">
-                            <label class="form-label" for="pass">Creá tu contraseña</label>
-                            <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña" required>
+                            <label class="form-label mb-1" for="pass">Creá tu contraseña</label>
+                            <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña">
+                            <small class="helper pass-format text-primary mt-1">Puedes usar mayúsculas, minúsculas, números, guiones y espacios</small>
+                            <small class="error pass-empty text-danger mt-1">Campo requerido</small>
+                            <small class="error pass-length text-danger mt-1">La contraseña debe tener al menos seis caracteres</small>
                         </div>
                         <div class="form-group mb-3">
-                            <label class="form-label" for="confirm-pass">Confirmá tu contraseña</label>
-                            <input class="form-control form-control-lg" id="confirm-pass" type="password" placeholder="Confirmá tu contraseña" required>
+                            <label class="form-label mb-1" for="confirm-pass">Confirmá tu contraseña</label>
+                            <input class="form-control form-control-lg" id="confirm-pass" type="password" placeholder="Confirmá tu contraseña">
+                            <small class="error confirmpass-diff text-danger mt-1">Las contraseñas no coinciden</small>
+                            <small class="error confirmpass-empty text-danger mt-1">Campo requerido</small>
                         </div>
+                        <div class="successfully-registered alert alert-success text-center w-100 mt-4" role="alert">¡Hecho! El formulario fue enviado con éxito</div>
                         <button class="form-btn mt-5 align-self-center btn btn-lg text-white" type="submit">Registrarme</button>
                         <a class="login-link mt-4 text-center" href="login.html">¿Ya tenés una cuenta?</a>
                     </form>

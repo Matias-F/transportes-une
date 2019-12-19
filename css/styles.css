@@ -490,6 +490,7 @@ a {
 
 .register,
 .login,
+.password,
 .contact {
     padding-top: 60px;
 }
@@ -545,9 +546,24 @@ a {
 }
 
 .form-group .helper,
+.form-group .error {
+    font-size: 1.1rem;
+}
+
+.form-group .helper,
 .form-group .error,
-.successfully-registered {
+.successfully-sent {
     display: none;
+}
+
+.successfully-sent {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+}
+
+#message {
+    font-size: 1.25rem;
 }
 
 /* FOOTER

@@ -35,7 +35,7 @@ let errorPassLength  = document.querySelector('.pass-length');
 let errorConfirmPassEmpty  = document.querySelector('.confirmpass-empty');
 let errorConfirmPassMatching = document.querySelector('.confirmpass-diff');
 
-let registerFormSent = document.querySelector('.successfully-registered');
+let registerFormSent = document.querySelector('.successfully-sent');
 
 
 /* Validations */
@@ -92,7 +92,8 @@ fieldUserName.onblur = function() {
 
 fieldEmail.onfocus = function() {
     errorEmailEmpty.style.display = 'none';
-}
+    errorEmailFormat.style.display = 'none';
+};
 fieldEmail.onblur = function() {
     if (this.value.length > 0 && !REGEX_MAIL.test(this.value)) {
         errorEmailFormat.style.display = 'block';
@@ -103,7 +104,7 @@ fieldEmail.onblur = function() {
 
 fieldName.onfocus = function() {
     errorNameEmpty.style.display = 'none';
-}
+};
 
 fieldPass.onfocus = function() {
     helperPassFormat.style.display = 'block';
@@ -124,5 +125,3 @@ fieldConfirmPass.onfocus = function() {
     errorConfirmPassEmpty.style.display = 'none';
     errorConfirmPassMatching.style.display = 'none';
 };
-
-

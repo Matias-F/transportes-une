@@ -27,23 +27,26 @@
         <div class="container">
             <div class="row">
                 <div class="form-page col p-5 d-flex flex-column align-items-center">
-                    <img class="user-image mb-3" src="../img/user-placeholder.png" alt="">
                     <h3 class="form-title mb-4 text-center font-weight-bold">¡Iniciá sesión en Rapid!</h3>
                     <form class="form login-form w-100 mx-3 p-5 d-flex flex-column rounded shadow bg-white" action="">
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="user">Ingresá tu nombre de usuario o email</label>
-                            <input class="form-control form-control-lg" id="user" type="text" placeholder="Nombre de usuario o email" required>
+                        <div class="form-group mb-3">
+                            <label class="form-label mb-1" for="user">Ingresá tu nombre de usuario o email</label>
+                            <input class="form-control form-control-lg" id="user-credentials" type="text" placeholder="Nombre de usuario o email">
+                            <small class="error user-wrong text-danger mt-1">Este usuario no existe</small> <!-- check with DB -->
+                            <small class="error user-empty text-danger mt-1">Campo requerido</small>
                         </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="pass">Ingresá tu contraseña</label>
-                            <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña" required>
+                        <div class="form-group mb-3">
+                            <label class="form-label mb-1" for="pass">Ingresá tu contraseña</label>
+                            <input class="form-control form-control-lg" id="pass" type="password" placeholder="Contraseña">
+                            <small class="error pass-wrong text-danger mt-1">Contraseña incorrecta</small> <!-- check with DB -->
+                            <small class="error pass-empty text-danger mt-1">Campo requerido</small>
                         </div>
                         <div class="form-group form-check mt-2 text-center">
                             <input class="form-check-input" id="remember-me" type="checkbox">
                             <label class="form-check-label ml-2 text-secondary" for="remember-me">Recordarme</label>
                         </div>
                         <button class="form-btn mt-4 align-self-center btn btn-lg text-white" type="submit" >Iniciar Sesión</button>
-                        <a class="forgot-pass mt-4 text-center" href="#/">¿Olvidaste tu contraseña?</a>
+                        <a class="forgot-pass mt-4 text-center" href="password.html">¿Olvidaste tu contraseña?</a>
                         <a class="forgot-pass mt-4 text-center" href="register.html">¿No tenés una cuenta?</a>
                     </form>
                 </div>
@@ -54,6 +57,6 @@
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap/popper.min.js"></script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
-    <script src="../js/forms-validation.js"></script>
+    <script src="../js/form-validation/login-form-validation.js"></script>
 </body>
 </html>

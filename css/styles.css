@@ -61,135 +61,98 @@ a {
 ***********/
 
 .navbar {
+	height: 70px;
 	top: 0;
 	z-index: 1030;
 	background-color: #3366ff;
 }
 
+/* Geo-localization */
 
-/* Cart */
-
-.shopping-cart {
-    width: 100%;
-    height: 30px;
-    background-color: #f5f5f5;
+.geo-localization {
+	left: 15px;
+	color: #adc8ff;
 }
 
-.shopping-cart .fas {
-    color: #ff652d;
+.location-label {
+	line-height: 1rem;
 }
 
-.items, .phone {
-    font-size: 1.2rem;
-    color: #3366ff;
+.location-address {
+	font-size: 1.1rem;
+	font-weight: 600;
 }
 
-.items strong {
-    color: #ff652d;
-}
 
-.items a {
-    font-weight: 600;
-    border-bottom: 1.5px solid #ff3730;
-    color: #ff3730;
+/* Logo */
+
+.navbar .logo a {
+	font-size: 3.5rem;
+	font-weight: 600;
+	color: #ffffff;
 }
 
 
 /* Menu */
 
-.menu-btn button,
-.menu-btn .dropdown-item {
-	font-size: 1.4rem;
+.nav.menu {
+	width: 280px;
 }
 
-.menu-btn .dropdown-menu {
-	min-width: 140px;
-}
-
-.menu-btn .dropdown-menu .contact {
-	color: #3366ff;
-}
-
-.menu-btn, .logs {
-	min-width: 100px;
-}
-
-.nav.menu, .login, .register {
+.nav.menu .nav-link,
+.nav.menu .user {
+	margin: .5rem 1rem;
+	padding: 0 !important;
 	font-size: 1.25rem;
 	font-weight: 600;
 	letter-spacing: .05rem;
-}
-
-.nav.menu {
-	padding-bottom: 1px;
-}
-
-.nav.menu .nav-link {
+	background: none !important;
 	color: #f5f5f5;
 }
 
-
-/* Logs */
-
-.login-btn {
-    font-size: 1.25rem;
-    font-weight: 600;
+.nav.menu .nav-link:hover,
+.nav.menu .user:hover {
+	color: #ffffff;
 }
 
-.register-btn {
-	color: #3366ff;
+.nav.menu .dropdown-toggle::after {
+	display: none !important;
+} /* hides the default bootstrap's dropdown arrow */
+
+.nav.menu .dropdown-menu a {
+	font-size: 1.125rem;
 	font-weight: 600;
 }
 
-.loged-user-name {
-    font-size: 1.25rem;
-    font-weight: 600;
+.nav.menu .dropdown-menu a.logout {
+	color: #3366ff;
 }
 
-.loged-user-avatar {
-	width: 35px;
-	height: 35px;
-    border-radius: 50%;
+
+/* Notifications */
+
+.notifications {
+	right: 15px;
+	cursor: pointer;
+	color: #adc8ff;
 }
 
-.loged-user .btn {
-    color: white;
-}
-
-.loged-user .dropdown-item {
-	font-size: 1.4rem;
-}
-
-.loged-user .logout {
-    color: #3366ff;
-    font-weight: 600;
-}
 
 
 /* HOME
 *********/
 
 .home {
-	padding-top: 90px;
-	background-color: #3366ff;
+
 }
 
 
 /* Hero */
 
-.heading {
-	font-size: 3.5rem;
-}
-
-.lead {
-    max-width: 650px;
-    font-size: 1.6rem;
-    line-height: 2rem;
-}
-
 .image {
-	height: 350px;
-    position: relative;
+	height: 400px;
+	position: relative;
+	margin-top: 70px;
 	background-image: url("../img/cover.jpg");
     background-repeat: no-repeat;
     background-position: center 60%;
@@ -208,6 +171,35 @@ a {
       #3366ff,
       rgba(255,255,255,0)
     );
+}
+
+.heading {
+	position: absolute;
+	top: 65px;
+	z-index: 1020;
+	font-size: 4rem;
+	line-height: 4rem;
+	font-weight: 300;
+	text-shadow: 1px 1px 4px #4b4b4b; 
+}
+
+.main-cta {
+	width: 150px;
+	height: 40px;
+	position: absolute;
+	bottom: 50px;
+	z-index: 1020;
+	font-size: 1.6rem;
+	font-weight: 800;
+	border-radius: 4px;
+	border: 2px solid #ffffff;
+	background-color: #eb6448;
+	color: #ffffff;
+}
+
+.main-cta:hover {
+	background-color: #FC522F;
+	color: #ffffff !important;
 }
 
 

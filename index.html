@@ -6,71 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="E-Commerce para empresa de transporte">
     <title>E-Commerce Transporte / Home</title>
+    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <!-- HOME HEADER -->
     <header class="home" id="home">
         <!-- NAVBAR -->
-        <nav class="navbar w-100 pt-0 px-0 pb-2 position-fixed">
-            <!-- SHOPPING CART -->
-            <div class="shopping-cart mb-3 px-4 d-flex justify-content-between align-items-center">
-                <div class="flex-grow-1 d-flex justify-content-between align-items-center justify-content-sm-start">
-                    <span class="fas fa-shopping-cart fa-2x"></span>
-                    <span class="items ml-sm-4">Tenés <strong>0</strong> items en tu carrito. <a href="cart.html">Ir al carrito</a></span>
-                </div>
-                <div class="d-none d-md-block flex-shrink-0">
-                    <span class="fas fa-phone-alt fa-lg"></span>
-                    <span class="phone ml-2">4250981 | 261-2407123</span>
-                </div>
-            </div>
-            <div class="menu-btn dropdown pl-2 d-sm-none">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</button>
-                <div class="dropdown-menu ml-2" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item my-3" href="#services">Servicios</a>
-                    <a class="dropdown-item my-3" href="#company">Nosotros</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="contact dropdown-item my-3" href="forms/contact.html">Contacto</a>
-                </div>
-            </div>
-            <div class="wrapper d-flex ml-sm-4">
-                <h1 class="logo font-weight-bold">
-                    <a class="text-decoration-none text-white" href="index.html">RAPID</a>
-                </h1>
-                <nav class="nav menu d-none d-sm-flex align-self-sm-end ml-sm-3">
-                    <a class="nav-link" href="#services">Servicios</a>
+        <nav class="navbar w-100 position-fixed">
+            <div class="w-100 position-relative d-flex justify-content-center align-items-center">
+                <aside class="geo-localization position-absolute d-flex align-items-center">
+                    <span class="fas fa-map-marker-alt fa-2x"></span>
+                    <div class="location d-flex flex-column mx-3">
+                        <span class="location-label">Ubicación actual</span>
+                        <span class="location-address">Zuloaga 781, Mendoza, Argentina</span>
+                    </div>
+                </aside>
+                <nav class="nav menu d-flex justify-content-end">
+                    <a class="nav-link" href="services.html">Servicios</a>
                     <a class="nav-link" href="#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
-            </div>
-            <div class="logs d-flex flex-column align-items-center flex-sm-row mr-sm-4">
-                <a class="login-btn mb-2 text-center text-white mb-sm-0 mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
-                <a class="register-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
-            </div>
-            <!-- <div class="loged-user dropdown mr-4">
-                <button class="btn dropdown-toggle" type="button" id="dropdownUserAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="loged-user-avatar" src="img/user.jpg" alt="User image avatar">
-                    <span class="loged-user-name ml-2 text-white">Nacho</span>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownUserAccount">
-                    <a class="dropdown-item" href="account.html">Mi cuenta</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="logout dropdown-item" href="index.html">Salir</a>
-                </div>
-            </div> -->
+                <h1 class="logo mx-5">
+                    <a class="text-decoration-none" href="index.html">Surlink</a>
+                </h1>
+               <!--  <nav class="nav menu d-flex justify-content-start">
+                    <a class="nav-link" href="forms/register.html">Creá tu cuenta</a>
+                    <a class="nav-link" href="forms/login.html">Ingresá</a>
+                    <a class="nav-link" href="cart.html">
+                        Pedidos
+                        <span class="fas fa-shopping-cart"></span>
+                    </a>
+                </nav> -->
+                <nav class="nav menu d-flex justify-content-start">
+                    <div class="dropdown">
+                        <button class="user dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nacho
+                            <span class="fas fa-chevron-down"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="account.html">Mi cuenta</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item logout" href="#">Cerrar Sesión</a>
+                        </div>
+                    </div>    
+                    <a class="nav-link" href="cart.html">
+                        Pedidos
+                        <span class="fas fa-shopping-cart"></span>
+                    </a>
+                    <a class="nav-link" href="faq.html">¿Dudas?</a>
+                </nav>
+                <aside class="notifications position-absolute">
+                    <span class="fas fa-bell fa-2x"></span>
+                </aside>
+            </div>    
         </nav>
         <!-- HERO -->
         <div class="container-full">
             <div class="row no-gutters">
-                <div class="col-12 mt-5 d-flex flex-column align-items-center">
-                    <h2 class="heading mb-3 text-center text-white font-weight-bold">Te acompañamos a donde vayas</h2>
-                    <p class="lead mb-5 text-center text-white">Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p>
-                    <div class="image w-100">
+                <div class="col-12">
+                    <div class="image w-100 d-flex justify-content-center align-items-center">
+                        <h2 class="heading text-center text-white">Te acompañamos donde vayas</h2>
+                        <!-- <p class="lead mb-5 text-center text-white">Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p> -->
+                        <a class="main-cta d-flex justify-content-center align-items-center text-center" href="services.html">Cotizá online</a>
                         <div class="gradient"></div>
                     </div>
                 </div>
@@ -80,7 +82,9 @@
 
     <!-- SERVICES -->
     <main class="services" id="services">
-        <article class="products my-5 p-5 d-flex flex-column align-items-center">
+
+
+       <!--  <article class="products my-5 p-5 d-flex flex-column align-items-center">
             <h3 class="sub-heading mb-4 text-center font-weight-bold">Nuestros Servicios</h3>
             <p class="text text-center mb-5">Ponemos nuestra experiencia al alcance de nuestros clientes de un modo simple, eficaz y con el diferencial de una atención personalizada real.</p>
             <div class="container">
@@ -116,7 +120,8 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </article> -->
+    
     </main>
 
     <!-- COMPANY -->
@@ -138,7 +143,7 @@
         <div class="container-full">
             <div class="row">
                 <h2 class="logo col-12 mb-5 d-flex justify-content-center font-weight-bold col-sm-6 justify-content-sm-start">
-                    <a class="text-decoration-none text-light" href="index.html">RAPID</a>
+                    <a class="text-decoration-none text-light" href="index.html">Surlink</a>
                 </h2>
                 <div class="social col-12 mb-3 d-flex justify-content-center col-sm-6 mt-sm-3">
                     <a class="facebook mr-4 font-weight-bold" href="#/">Facebook</a>
@@ -158,12 +163,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- FAQ Button -->
-    <div class="faq-btn-shape position-fixed d-flex justify-content-center align-items-center">
-        <a class="faq-btn-link text-uppercase font-weight-bold text-white" href="faq.html">FAQ</a>
-    </div>
-
 
 
 

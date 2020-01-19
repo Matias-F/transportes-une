@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="E-Commerce para empresa de transporte">
     <title>E-Commerce Transporte / Register</title>
+    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
     <link href="../css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -15,19 +16,61 @@
 
     <!-- REGISTER FORM -->
 
-    <nav class="navbar w-100 pt-4 pb-3 position-fixed px-md-5">
-        <div class="wrapper w-100 d-flex justify-content-center">
-            <h1 class="logo font-weight-bold">
-                <a class="text-decoration-none text-white" href="../index.html">Surlink</a>
+    <!-- NAVBAR -->
+    <nav class="navbar w-100 position-fixed">
+        <div class="w-100 position-relative d-flex justify-content-center align-items-center">
+            <aside class="geo-localization position-absolute d-flex align-items-center">
+                <span class="fas fa-map-marker-alt fa-2x"></span>
+                <div class="location d-flex flex-column mx-3">
+                    <span class="location-label">Ubicación actual</span>
+                    <span class="location-address">Zuloaga 781, Mendoza, Argentina</span>
+                </div>
+            </aside>
+            <nav class="nav menu d-flex justify-content-end">
+                <a class="nav-link" href="../services.html">Servicios</a>
+                <a class="nav-link" href="../index.html#company">Nosotros</a>
+                <a class="nav-link" href="forms/contact.html">Contacto</a>
+            </nav>
+            <h1 class="logo mx-5">
+                <a class="text-decoration-none" href="../index.html">UNE</a>
             </h1>
-        </div>
+            <nav class="nav menu d-flex justify-content-start">
+                <a class="nav-link" href="register.html">Creá tu cuenta</a>
+                <a class="nav-link" href="login.html">Ingresá</a>
+                <a class="nav-link" href="../cart.html">
+                    Pedidos
+                    <span class="fas fa-shopping-cart"></span>
+                </a>
+            </nav>
+           <!--  <nav class="nav menu d-flex justify-content-start">
+                <div class="dropdown">
+                    <button class="user dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Nacho
+                        <span class="fas fa-chevron-down"></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="account.html">Mi cuenta</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item logout" href="#">Cerrar Sesión</a>
+                    </div>
+                </div>    
+                <a class="nav-link" href="cart.html">
+                    Pedidos
+                    <span class="fas fa-shopping-cart"></span>
+                </a>
+                <a class="nav-link" href="faq.html">¿Dudas?</a>
+            </nav> -->
+            <aside class="notifications position-absolute">
+                <span class="fas fa-bell fa-2x"></span>
+            </aside>
+        </div>    
     </nav>
 
     <section class="register" id="register">
         <div class="container">
             <div class="row">
                 <div class="form-page col p-5 d-flex flex-column align-items-center">
-                    <h3 class="form-title mb-4 text-center font-weight-bold">¡Registrate en Rapid!</h3>
+                    <h3 class="form-title mb-4 text-center font-weight-bold">¡Crea tu cuenta!</h3>
                     <form class="form register-form w-100 mx-3 p-5 d-flex flex-column rounded shadow bg-white" action="">
                         <div class="user card mb-3 p-3 align-items-center flex-sm-row">
                             <img class="user-image" src="../img/user-placeholder.png" alt="">

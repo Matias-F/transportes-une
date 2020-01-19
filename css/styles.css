@@ -2,11 +2,6 @@
  GENERAL SETTINGS
 *********************/
 
-html,
-body {
-	/* height: 100%; */
-}
-
 html {
     box-sizing: border-box;
 	font-size: 62.5%;
@@ -35,7 +30,7 @@ figure, figcaption {
 }
 
 input, select, textarea, button {
-	outline: 0;
+	outline: 0 !important;
 	border: none;
 }
 
@@ -48,9 +43,6 @@ a {
 	text-decoration: none !important;
 }
 
-.btn-primary {
-    background-color: #3366ff !important;
-}
 
 
 /********************
@@ -61,25 +53,23 @@ a {
 ***********/
 
 .navbar {
-	height: 70px;
+	height: 60px;
 	top: 0;
 	z-index: 1030;
 	background-color: #3366ff;
 }
 
-/* Geo-localization */
 
-.geo-localization {
+/* Datetime */
+
+.datetime {
 	left: 15px;
 	color: #adc8ff;
 }
 
-.location-label {
-	line-height: 1rem;
-}
-
-.location-address {
-	font-size: 1.1rem;
+.place, 
+.timestamp {
+	font-size: 1rem;
 	font-weight: 600;
 }
 
@@ -88,12 +78,40 @@ a {
 
 .navbar .logo a {
 	font-size: 3.5rem;
-	font-weight: 600;
+	font-weight: 800;
 	color: #ffffff;
 }
 
 
-/* Menu */
+/* Hamburguer button and Offcanvas menu */
+
+.hamb-btn {
+	right: 60px;
+	z-index: 1030;
+	background: none !important;
+}
+
+.menu-offcanvas {
+	margin-top: 8px;
+	background-color: #3366ff;
+}
+
+.nav.menu-offcanvas .nav-link {
+	margin: .5rem 1rem;
+	padding: 0 !important;
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: .05rem;
+	background: none !important;
+	color: #f5f5f5;
+}
+
+.nav.menu-offcanvas .nav-link:hover {
+	color: #ffffff;
+}
+
+
+/* Menu displayed in desktop size */
 
 .nav.menu {
 	width: 280px;
@@ -132,27 +150,45 @@ a {
 /* Notifications */
 
 .notifications {
-	right: 15px;
+	width: 150px;
+	right: 6px;
+}
+
+.notifications .bell {
+	margin: .5rem 1rem;
+	padding: 0 !important;
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: .05rem;
+	background: none !important;
+}
+
+.notifications .dropdown-toggle::after {
+	display: none !important;
+} /* hides the default bootstrap's dropdown arrow */
+
+.notifications .bell span {
 	cursor: pointer;
 	color: #adc8ff;
 }
 
+.notifications .dropdown-menu {
+	min-width: 200px;
+	left: auto !important;
+	padding: 5px;
+	font-size: 1.25rem;
+}
 
 
 /* HOME
 *********/
 
-.home {
-
-}
-
-
 /* Hero */
 
 .image {
-	height: 400px;
+	height: 350px;
 	position: relative;
-	margin-top: 70px;
+	margin-top: 60px;
 	background-image: url("../img/cover.jpg");
     background-repeat: no-repeat;
     background-position: center 60%;
@@ -175,11 +211,11 @@ a {
 
 .heading {
 	position: absolute;
-	top: 65px;
+	top: 45px;
 	z-index: 1020;
 	font-size: 4rem;
 	line-height: 4rem;
-	font-weight: 300;
+	font-weight: 400;
 	text-shadow: 1px 1px 4px #4b4b4b; 
 }
 
@@ -203,61 +239,57 @@ a {
 }
 
 
-/* Services - Company */
-
-.services, .company {
-    min-height: 450px;
-}
-
-.sub-heading {
-	color: #3366ff;
-	font-size: 2.5rem;
-}
-
-.text {
-	max-width: 500px;
-	color: #3366ff;
-	font-size: 1.4rem;
-}
-
-
 /* Services */
 
-.service-card {
-	max-width: 450px;
-	height: 100px;
-}
-
-.service-icon {
-	width: 55%;
-	height: 100%;
-	background-color: #ff652d;
-}
-
-.service-icon span {
-    color: #ff935d;
-    font-size: 4rem;
-}
-
-.service-info {
-    height: 65%;
+.services .card {
+	height: 250px;
 }
 
 .service-name {
-	color: #3366ff;
 	font-size: 1.8rem;
+	font-weight: 600;
+	color: #3366ff;
+}
+
+.service-icon {
+	font-size: 6rem;
+	color: #3366ff;
+}
+
+.service-text {
+	max-width: 85%;
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	color: #3366ff;
 }
 
 
 /* Company */
 
 .company {
-	margin-bottom: 100px;
+	margin: 200px 0;
 }
 
-.title {
+.company img {
+	height: auto;
+}
+
+.company-title {
 	color: #3366ff;
 	font-size: 1.8rem;
+}
+
+.company-maintext {
+	font-size: 1.6rem;
+	line-height: 2rem;
+	font-weight: 600;
+	color: #3366ff;
+}
+
+.company-text {
+	font-size: 1.3rem;
+	line-height: 1.6rem;
+	color: #3366ff;
 }
 
 
@@ -562,20 +594,37 @@ a {
 ***********/
 
 .footer {
-	height: 400px;
+	min-height: 150px;
 	background-color: #3366ff;
 }
 
-.facebook, .instagram {
-	font-size: 1.8rem;
-	color: #ff9881;
+.footer .specialty, 
+.footer .logo a {
+	color: #84a9ff !important;
 }
-.facebook:hover, .instagram:hover {
-	color: #f8f9fa;
+
+.footer .logo a:hover {
+	color: #84a9ff !important;
+}
+
+.footer .specialty {
+	font-size: 1.4rem;
+}
+
+.footer .logo a {
+	font-size: 3rem;
 }
 
 .contact-info {
-	font-size: 1.4rem;
+	font-size: 1.125rem;
+}
+
+.footer .menu .nav-link {
+	font-size: 1.125rem;
+	letter-spacing: .05rem;
+	font-weight: 600;
+	background: none !important;
+	color: #f5f5f5;
 }
 
 
@@ -588,26 +637,28 @@ a {
 
 }
 
+			/* Speciall mediaquery correction */
+			@media (min-width: 425px) and (max-width: 575.98px) {
+				.company {
+					max-width: 350px;
+					margin: 200px auto;
+				}
+			} 
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-
+	
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-	/* Services */
-	.service-card {
-		max-width: 225px;
-		height: 170px;
+	/* Menu offcanvas */
+	.hamb-btn {
+		right: 90px;
 	}
-
-	.service-icon {
-		width: 100%;
-		height: 100px;
-	}
-
-    /* Cart */
+	
+	/* Cart */
     .item-icon {
         width: 120px;
     }
@@ -616,28 +667,13 @@ a {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }
-
-	/* Footer */
-	.footer {
-		height: 200px;
 	}
+	
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
-	/* Services */
-	.service-card {
-		max-width: 225px;
-		height: 170px;
-	}
-
-	.service-icon {
-		width: 100%;
-		height: 100px;
-	}
-
     /* Cart */
     .item-icon {
         width: 120px;
@@ -649,25 +685,11 @@ a {
         white-space: nowrap;
     }
 
-	/* Footer */
-	.footer {
-		height: 200px;
-	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-	/* Services */
-	.service-card {
-		max-width: 225px;
-		height: 170px;
-	}
-
-	.service-icon {
-		width: 100%;
-		height: 100px;
-	}
 
     /* Cart */
     .item-icon {
@@ -678,10 +700,7 @@ a {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }
-
-	/* Footer */
-	.footer {
-		height: 200px;
 	}
+	
 }
+

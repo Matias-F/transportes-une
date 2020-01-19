@@ -18,51 +18,56 @@
     <!-- ACCOUNT HEADER -->
     <header class="account" id="account">
         <!-- NAVBAR -->
-        <nav class="navbar w-100 pt-0 px-0 pb-2 position-fixed">
-            <!-- SHOPPING CART -->
-            <div class="shopping-cart mb-3 px-4 d-flex justify-content-between align-items-center">
-                <div class="flex-grow-1 d-flex justify-content-between align-items-center justify-content-sm-start">
-                    <span class="fas fa-shopping-cart fa-2x"></span>
-                    <span class="items ml-sm-4">Tenés <strong>0</strong> items en tu carrito. <a href="cart.html">Ir al carrito</a></span>
-                </div>
-                <div class="d-none d-md-block flex-shrink-0">
-                    <span class="fas fa-phone-alt fa-lg"></span>
-                    <span class="phone ml-2">4250981 | 261-2407123</span>
-                </div>
-            </div>
-            <div class="menu-btn dropdown pl-2 d-sm-none">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</button>
-                <div class="dropdown-menu ml-2" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item my-3" href="#services">Servicios</a>
-                    <a class="dropdown-item my-3" href="#company">Nosotros</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="contact dropdown-item my-3" href="forms/contact.html">Contacto</a>
-                </div>
-            </div>
-            <nav class="nav menu d-none d-sm-flex ml-sm-3">
-                <a class="nav-link" href="#services">Servicios</a>
-                <a class="nav-link" href="#company">Nosotros</a>
-                <a class="nav-link" href="forms/contact.html">Contacto</a>
-            </nav>
-            <h1 class="logo font-weight-bold">
-                <a class="text-decoration-none" href="index.html">Surlink</a>
-            </h1>
-            <!-- <div class="logs d-flex flex-column align-items-center flex-sm-row mr-sm-4">
-                <a class="login-btn mb-2 text-center text-white mb-sm-0 mr-sm-4" href="forms/login.html">Iniciar Sesión</a>
-                <a class="register-btn btn btn-light btn-lg" href="forms/register.html">Registrarse</a>
-            </div> -->
-            <div class="loged-user dropdown d-flex justify-content-end align-items-center mr-4">
-                <button class="btn dropdown-toggle" type="button" id="dropdownUserAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="loged-user-avatar" src="img/user.jpg" alt="User image avatar">
-                    <span class="loged-user-name ml-2 text-white">Nacho</span>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownUserAccount">
-                    <a class="dropdown-item" href="account.html">Mi cuenta</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="logout dropdown-item" href="index.html">Salir</a>
-                </div>
-            </div>
+        <!-- NAVBAR -->
+        <nav class="navbar w-100 position-fixed">
+            <div class="w-100 position-relative d-flex justify-content-center align-items-center">
+                <aside class="geo-localization position-absolute d-flex align-items-center">
+                    <span class="fas fa-map-marker-alt fa-2x"></span>
+                    <div class="location d-flex flex-column mx-3">
+                        <span class="location-label">Ubicación actual</span>
+                        <span class="location-address">Zuloaga 781, Mendoza, Argentina</span>
+                    </div>
+                </aside>
+                <nav class="nav menu d-flex justify-content-end">
+                    <a class="nav-link" href="services.html">Servicios</a>
+                    <a class="nav-link" href="index.html#company">Nosotros</a>
+                    <a class="nav-link" href="forms/contact.html">Contacto</a>
+                </nav>
+                <h1 class="logo mx-5">
+                    <a class="text-decoration-none" href="index.html">UNE</a>
+                </h1>
+               <!--  <nav class="nav menu d-flex justify-content-start">
+                    <a class="nav-link" href="forms/register.html">Creá tu cuenta</a>
+                    <a class="nav-link" href="forms/login.html">Ingresá</a>
+                    <a class="nav-link" href="cart.html">
+                        Pedidos
+                        <span class="fas fa-shopping-cart"></span>
+                    </a>
+                </nav> -->
+                <nav class="nav menu d-flex justify-content-start">
+                    <div class="dropdown">
+                        <button class="user dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nacho
+                            <span class="fas fa-chevron-down"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="account.html">Mi cuenta</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item logout" href="#">Cerrar Sesión</a>
+                        </div>
+                    </div>    
+                    <a class="nav-link" href="cart.html">
+                        Pedidos
+                        <span class="fas fa-shopping-cart"></span>
+                    </a>
+                    <a class="nav-link" href="faq.html">¿Dudas?</a>
+                </nav>
+                <aside class="notifications position-absolute">
+                    <span class="fas fa-bell fa-2x"></span>
+                </aside>
+            </div>    
         </nav>
+        
         <!-- LABEL -->
         <div class="container-full">
             <div class="row no-gutters">
@@ -193,33 +198,25 @@
     <!-- FOOTER -->
     <footer class="footer p-5" id="footer">
         <div class="container-full">
-            <div class="row">
-                <h2 class="logo col-12 mb-5 d-flex justify-content-center font-weight-bold col-sm-6 justify-content-sm-start">
-                    <a class="text-decoration-none text-light" href="index.html">Surlink</a>
+            <div class="row align-items-center">
+                <h2 class="footer-logo col-3">
+                    <a class="text-decoration-none font-weight-bold text-light" href="index.html">UNE</a>
                 </h2>
-                <div class="social col-12 mb-3 d-flex justify-content-center col-sm-6 mt-sm-3">
-                    <a class="facebook mr-4 font-weight-bold" href="#/">Facebook</a>
-                    <a class="instagram font-weight-bold" href="#/">Instagram</a>
-                </div>
-            </div>
-            <div class="row">
-                <nav class="nav menu col-12 mb-5 d-flex justify-content-center col-sm-6 justify-content-sm-start">
-                    <a class="nav-link" href="index.html#services">Servicios</a>
-                    <a class="nav-link" href="index.html#company">Nosotros</a>
+                <div class="footer-info col-5 d-flex flex-column">
+                    <div class="dir text-white">Hipólito Yrigoyen 760 Godoy Cruz, Mendoza</div>
+                    <div class="tel text-white">4250981 - 2612407123</div>
+                </div>    
+                <nav class="nav footer-menu col-4 d-flex">
+                    <a class="nav-link" href="services.html">Servicios</a>
+                    <a class="nav-link" href="#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
+                    <a class="nav-link" href="account.html">Mi cuenta</a>
+                    <a class="nav-link" href="cart.html">Pedidos</a>
+                    <a class="nav-link" href="faq.html">Ayuda</a>
                 </nav>
-                <div class="contact-info col-12 d-flex flex-column align-items-center col-sm-6">
-                    <span class="dir mb-2 text-center text-white">Laprida 551 | Dorrego - Gllén | Mendoza</span>
-                    <span class="tel mb-2 text-center text-white">4250981 - 2612407123</span>
-                </div>
-            </div>
+            </div>        
         </div>
     </footer>
-
-    <!-- FAQ Button -->
-    <div class="faq-btn-shape position-fixed d-flex justify-content-center align-items-center">
-        <a class="faq-btn-link text-uppercase font-weight-bold text-white" href="faq.html">FAQ</a>
-    </div>
 
 
 

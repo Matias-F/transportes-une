@@ -8,7 +8,7 @@
     <title>E-Commerce Transporte / Home</title>
     <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -16,153 +16,221 @@
 
     <!-- HOME HEADER -->
     <header class="home" id="home">
+
         <!-- NAVBAR -->
-        <nav class="navbar w-100 position-fixed">
-            <div class="w-100 position-relative d-flex justify-content-center align-items-center">
-                <aside class="geo-localization position-absolute d-flex align-items-center">
+        <nav class="navbar w-100 p-0 position-fixed align-items-start">
+
+            <!-- Main navbar container -->
+            <div class="w-100 mt-2 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
+
+                <!-- Datetime -->
+                <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
                     <span class="fas fa-map-marker-alt fa-2x"></span>
-                    <div class="location d-flex flex-column mx-3">
-                        <span class="location-label">Ubicación actual</span>
-                        <span class="location-address">Zuloaga 781, Mendoza, Argentina</span>
+                    <div class="d-flex flex-column mx-3">
+                        <span class="place">Godoy Cruz, Mendoza, Argentina</span>
+                        <span class="timestamp">19/01/20 - 17:00 h</span>
                     </div>
                 </aside>
-                <nav class="nav menu d-flex justify-content-end">
+
+                <!-- Hamburguer btn - Offcanvas menu trigger -->
+                <button class="hamb-btn position-absolute d-lg-none" type="button" data-toggle="collapse" data-target="#collapsedMenu" aria-expanded="false" aria-controls="collapsedMenu"> 
+                    <span class="fas fa-bars fa-2x text-white"></span> 
+                </button>
+
+                <!-- Left-side menu displayed in desktop size -->
+                <nav class="nav menu d-none d-lg-flex justify-content-lg-end">
                     <a class="nav-link" href="services.html">Servicios</a>
-                    <a class="nav-link" href="#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
-                <h1 class="logo mx-5">
-                    <a class="text-decoration-none" href="index.html">Surlink</a>
+
+                <!-- Company logo -->
+                <h1 class="logo mx-3 mx-sm-5">
+                    <a class="text-decoration-none" href="index.html">UNE</a>
                 </h1>
-               <!--  <nav class="nav menu d-flex justify-content-start">
+
+                <!-- Rigth-side menu displayed in desktop size -->
+                <nav class="nav menu d-none d-lg-flex justify-content-lg-start">
                     <a class="nav-link" href="forms/register.html">Creá tu cuenta</a>
                     <a class="nav-link" href="forms/login.html">Ingresá</a>
                     <a class="nav-link" href="cart.html">
                         Pedidos
                         <span class="fas fa-shopping-cart"></span>
                     </a>
-                </nav> -->
-                <nav class="nav menu d-flex justify-content-start">
-                    <div class="dropdown">
-                        <button class="user dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Nacho
-                            <span class="fas fa-chevron-down"></span>
+                </nav>
+
+                <!-- Notifications -->
+                <aside class="notifications position-absolute">
+                    <div class="dropdown d-flex justify-content-end">
+                        <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fas fa-bell fa-2x"></span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="account.html">Mi cuenta</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownNotifications">
+                            <span>Notificación 1</span>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item logout" href="#">Cerrar Sesión</a>
+                            <span>Notificación 2</span>
                         </div>
                     </div>    
-                    <a class="nav-link" href="cart.html">
-                        Pedidos
-                        <span class="fas fa-shopping-cart"></span>
-                    </a>
-                    <a class="nav-link" href="faq.html">¿Dudas?</a>
-                </nav>
-                <aside class="notifications position-absolute">
-                    <span class="fas fa-bell fa-2x"></span>
                 </aside>
-            </div>    
-        </nav>
+
+            </div> 
+            <!-- /Main navbar container -->
+
+            <!-- Offcanvas menu -->
+            <nav class="nav menu-offcanvas collapse w-100 d-lg-none" id="collapsedMenu">
+                <div class="w-100 mb-2 d-flex flex-column justify-content-center align-items-center flex-sm-row">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="nav-link" href="services.html">Servicios</a>
+                        <a class="nav-link" href="forms/contact.html">Contacto</a>
+                        <a class="nav-link" href="forms/register.html">Creá tu cuenta</a>
+                    </div> 
+                    <div class="d-flex justify-content-center align-items-center"> 
+                        <a class="nav-link" href="forms/login.html">Ingresá</a>
+                        <a class="nav-link" href="cart.html">
+                            Pedidos
+                            <span class="fas fa-shopping-cart"></span>
+                        </a>
+                    </div>      
+                </div>
+            </nav>
+
+        </nav> 
+        <!-- /NAVBAR -->
+
         <!-- HERO -->
         <div class="container-full">
             <div class="row no-gutters">
                 <div class="col-12">
                     <div class="image w-100 d-flex justify-content-center align-items-center">
-                        <h2 class="heading text-center text-white">Te acompañamos donde vayas</h2>
-                        <!-- <p class="lead mb-5 text-center text-white">Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p> -->
+                        <h2 class="heading mr-1 d-flex flex-column align-items-center text-center text-white">
+                            <span>Unimos caminos</span> 
+                            <span>con historias</span>
+                        </h2>
                         <a class="main-cta d-flex justify-content-center align-items-center text-center" href="services.html">Cotizá online</a>
                         <div class="gradient"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+        <!-- /HERO --> 
+
+    </header> 
+    <!-- /HOME HEADER -->
+
+
 
     <!-- SERVICES -->
     <main class="services" id="services">
 
+        <!-- Main services container -->
+        <div class="container-full">
+            <div class="row no-gutters justify-content-center mt-5">
+                
+                <!-- Fletes card -->
+                <div class="col-10 mb-3 p-5 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                    <h4 class="service-name">Fletes</h4>
+                    <span class="service-icon fas fa-truck-pickup"></span>  
+                    <p class="service-text text-center">Traslados con cobertura dentro de todo el territorio nacional y países limítrofes..</p> 
+                </div>
 
-       <!--  <article class="products my-5 p-5 d-flex flex-column align-items-center">
-            <h3 class="sub-heading mb-4 text-center font-weight-bold">Nuestros Servicios</h3>
-            <p class="text text-center mb-5">Ponemos nuestra experiencia al alcance de nuestros clientes de un modo simple, eficaz y con el diferencial de una atención personalizada real.</p>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 mt-3 d-flex flex-column align-items-center mt-md-5 flex-md-row justify-content-md-center">
-                        <div class="card service-card w-100 mb-5 d-flex flex-row align-items-center flex-md-column justify-content-md-between bg-light">
-                            <div class="service-icon d-flex justify-content-center align-items-center text-white">
-                                <span class="fas fa-truck"></span>
-                            </div>
-                            <div class="service-info w-100 d-flex flex-column justify-content-between align-items-center flex-sm-row justify-content-sm-around flex-md-column py-md-3">
-                                <h4 class="service-name font-weight-bold">Mudanzas</h4>
-                                <a class="btn btn-lg btn-primary" href="service.html">Cotizar online</a>
-                            </div>
-                        </div>
-                        <div class="card service-card w-100 mb-5 d-flex flex-row align-items-center mx-md-4 flex-md-column justify-content-md-between bg-light">
-                            <div class="service-icon d-flex justify-content-center align-items-center text-white">
-                                <span class="fas fa-truck-pickup"></span>
-                            </div>
-                            <div class="service-info w-100 d-flex flex-column justify-content-between align-items-center flex-sm-row justify-content-sm-around flex-md-column py-md-3">
-                                <h4 class="service-name font-weight-bold">Fletes</h4>
-                                <a class="btn btn-lg btn-primary" href="service.html">Cotizar online</a>
-                            </div>
-                        </div>
-                        <div class="card service-card w-100 mb-5 d-flex flex-row align-items-center flex-md-column justify-content-md-between bg-light">
-                            <div class="service-icon d-flex justify-content-center align-items-center text-white">
-                                <span class="fas fa-people-carry"></span>
-                            </div>
-                            <div class="service-info w-100 d-flex flex-column justify-content-between align-items-center flex-sm-row justify-content-sm-around flex-md-column py-md-3">
-                                <h4 class="service-name font-weight-bold">Frágiles</h4>
-                                <a class="btn btn-lg btn-primary" href="service.html">Cotizar online</a>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Mudanzas card -->
+                <div class="col-10 mb-3 mx-2 p-5 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                    <h4 class="service-name">Mudanzas</h4>
+                    <span class="service-icon fas fa-truck"></span>
+                    <p class="service-text text-center">Traslados ágiles de todo tipo de objetos con la asistencia de personal especializado.</p>
+                </div>
+
+                <!-- Envíos card -->
+                <div class="col-10 mb-3 p-5 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                    <h4 class="service-name">Envíos</h4>
+                    <span class="service-icon fas fa-box"></span>
+                    <p class="service-text text-center">Despacho de encomiendas, documentación, artículos, mercadería, insumos, etc.</p>
                 </div>
             </div>
-        </article> -->
-    
-    </main>
+
+        </div>
+        <!-- /Main services container -->
+
+    </main> 
+    <!-- /SERVICES -->
+
+
 
     <!-- COMPANY -->
     <section class="company" id="company">
+
+        <!-- Main company container -->
         <div class="container">
             <div class="row">
-                <article class="col-12 mb-5 d-flex flex-column align-items-center">
-                    <h3 class="sub-heading mb-5 text-center font-weight-bold">Sobre Nosotros</h3>
+
+                 <!-- Image -->
+                <figure class="col-12 mb-5 col-sm-10 offset-sm-1 col-md-8 offset-md-0 col-lg-4 offset-lg-1">
                     <img class="img-fluid" src="img/about.jpg" alt="">
-                    <h4 class="title mt-5 text-center font-weight-bold">Vamos para adelante con vos</h4>
-                    <p class="text text-center m-3">Somos una pequeña empresa local que apuesta a la <strong> calidad del servicio como estrategia diferencial</strong> . Apuntamos a que la experiencia de los clientes que nos contratan sea altamente positiva. Por esta razón invertimos en vehículos, tecnología y capacitación de nuestros operarios. No nos limita tener una estructura de empresa mediana: <strong>¡Queremos ser excelentes y crecer!</strong> Buscamos expandirnos a nivel regional cada vez más, con más y mejores ofertas. <strong> ¿Nos acompañas en el viaje?</strong> </p>
-                </article>
+                </figure>  
+                
+                <!-- Text -->
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-3 col-lg-5 offset-lg-0">
+                    <p class="company-maintext mb-5">Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p>
+                    <p class="company-text my-5">Somos una empresa local que apuesta a la calidad del servicio como estrategia diferencial.</p>
+                    <p class="company-text my-5">Apuntamos a que la experiencia de los clientes que nos contratan sea altamente positiva. Por esta razón invertimos en vehículos, tecnología y capacitación de nuestros operarios.</p>
+                    <p class="company-text my-5">No nos limitamos: ¡Queremos ser excelentes y crecer! Buscamos expandirnos a nivel regional cada vez más, con más y mejores ofertas.</p>
+                    <h4 class="company-title font-weight-bold mt-5"> ¿Nos acompañas en el viaje?</h4>
+                </div>    
             </div>
+
         </div>
+        <!-- /Main company container -->
+
     </section>
+    <!-- /COMPANY -->
+
+
+
 
     <!-- FOOTER -->
-    <footer class="footer p-5" id="footer">
+    <footer class="footer" id="footer">
+
+        <!-- Main footer container -->
         <div class="container-full">
-            <div class="row">
-                <h2 class="logo col-12 mb-5 d-flex justify-content-center font-weight-bold col-sm-6 justify-content-sm-start">
-                    <a class="text-decoration-none text-light" href="index.html">Surlink</a>
-                </h2>
-                <div class="social col-12 mb-3 d-flex justify-content-center col-sm-6 mt-sm-3">
-                    <a class="facebook mr-4 font-weight-bold" href="#/">Facebook</a>
-                    <a class="instagram font-weight-bold" href="#/">Instagram</a>
+            <div class="row no-gutters">
+
+                <!-- Logo -->
+                <div class="logo col-12 col-md-4 col-lg-2 mt-lg-4">
+                    <div class="w-100 my-4 d-flex flex-column align-items center">
+                        <h3 class="specialty mb-0 text-center">Transportes</h3>
+                        <a class="font-weight-bold text-center" href="index.html">UNE</a>
+                    </div>    
                 </div>
-            </div>
-            <div class="row">
-                <nav class="nav menu col-12 mb-5 d-flex justify-content-center col-sm-6 justify-content-sm-start">
-                    <a class="nav-link" href="#services">Servicios</a>
-                    <a class="nav-link" href="#company">Nosotros</a>
-                    <a class="nav-link" href="forms/contact.html">Contacto</a>
+
+                <!-- Contact information -->
+                <div class="contact-info col-12 mb-5 col-md-7 offset-md-1 mb-md-0 col-lg-5 mt-lg-4 ml-lg-0 pl-lg-5">
+                    <div class="mt-md-5 d-md-flex flex-md-column align-items-md-center align-items-lg-start">
+                        <div class="dir text-center text-white">Hipólito Yrigoyen 760, Godoy Cruz, Mendoza</div>
+                        <div class="tel text-center text-white">4250981 - 2612407123</div>
+                    </div>    
+                </div> 
+                
+                <!-- Menu -->
+                <nav class="nav menu col-12 mb-5 col-md-11 offset-md-1 col-lg-5 mt-lg-4 ml-lg-0">
+                    <div class="w-100 d-flex flex-column flex-sm-row justify-content-sm-center justify-content-md-start ml-md-5 ml-lg-0 mt-lg-4">
+                        <div class="d-flex justify-content-center align-items-center justify-content-sm-end">
+                            <a class="nav-link" href="services.html">Servicios</a>
+                            <a class="nav-link" href="forms/contact.html">Contacto</a>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center justify-content-sm-start">
+                            <a class="nav-link" href="account.html">Mi cuenta</a>
+                            <a class="nav-link" href="cart.html">Pedidos</a>
+                            <a class="nav-link" href="faq.html">Ayuda</a>
+                        </div>   
+                    </div>     
                 </nav>
-                <div class="contact-info col-12 d-flex flex-column align-items-center col-sm-6">
-                    <span class="dir mb-2 text-center text-white">Laprida 551 | Dorrego - Gllén | Mendoza</span>
-                    <span class="tel mb-2 text-center text-white">4250981 - 2612407123</span>
-                </div>
-            </div>
+
+            </div> 
+
         </div>
+        <!-- /Main footer container -->
+
     </footer>
+    <!-- /FOOTER -->
 
 
 

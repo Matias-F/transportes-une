@@ -58,6 +58,9 @@ a {
 	z-index: 1030;
 	background-color: #3366ff;
 }
+#navbar {
+	transition: top 0.3s; /* Transition effect when sliding up and down */
+}
 
 
 /* Datetime */
@@ -83,7 +86,7 @@ a {
 }
 
 
-/* Hamburguer button and Offcanvas menu */
+/* Menu */
 
 .hamb-btn {
 	right: 60px;
@@ -94,30 +97,15 @@ a {
 .menu-offcanvas {
 	margin-top: 8px;
 	background-color: #3366ff;
-}
-
-.nav.menu-offcanvas .nav-link {
-	margin: .5rem 1rem;
-	padding: 0 !important;
-	font-size: 1.25rem;
-	font-weight: 600;
-	letter-spacing: .05rem;
-	background: none !important;
-	color: #f5f5f5;
-}
-
-.nav.menu-offcanvas .nav-link:hover {
-	color: #ffffff;
-}
-
-
-/* Menu displayed in desktop size */
+} /* displayed in mobile */
 
 .nav.menu {
 	width: 280px;
-}
+} /* displayed in desktop */
 
+.nav.menu-offcanvas .nav-link,
 .nav.menu .nav-link,
+.nav.menu-offcanvas .user,
 .nav.menu .user {
 	margin: .5rem 1rem;
 	padding: 0 !important;
@@ -128,20 +116,25 @@ a {
 	color: #f5f5f5;
 }
 
+.nav.menu-offcanvas .nav-link:hover,
 .nav.menu .nav-link:hover,
+.nav.menu-offcanvas .user:hover,
 .nav.menu .user:hover {
 	color: #ffffff;
 }
 
+.nav.menu-offcanvas .dropdown-toggle::after,
 .nav.menu .dropdown-toggle::after {
 	display: none !important;
 } /* hides the default bootstrap's dropdown arrow */
 
+.nav.menu-offcanvas .dropdown-menu a,
 .nav.menu .dropdown-menu a {
 	font-size: 1.125rem;
 	font-weight: 600;
 }
 
+.nav.menu-offcanvas .dropdown-menu a.logout,
 .nav.menu .dropdown-menu a.logout {
 	color: #3366ff;
 }
@@ -157,7 +150,6 @@ a {
 .notifications .bell {
 	margin: .5rem 1rem;
 	padding: 0 !important;
-	font-size: 1.25rem;
 	font-weight: 600;
 	letter-spacing: .05rem;
 	background: none !important;
@@ -178,6 +170,24 @@ a {
 	padding: 5px;
 	font-size: 1.25rem;
 }
+
+
+
+/* LABEL
+**********/
+
+.label {
+	height: 60px;
+	margin-top: 60px;
+    background-color: white;
+}
+
+.heading {
+	font-size: 2.7rem;
+	line-height: 2.7rem;
+	color: #3366ff;
+}
+
 
 
 /* HOME
@@ -209,7 +219,7 @@ a {
     );
 }
 
-.heading {
+.main-heading {
 	position: absolute;
 	top: 45px;
 	z-index: 1020;
@@ -293,19 +303,103 @@ a {
 }
 
 
-/* SERVICE
-************/
 
-/* Label */
+/* SERVICES
+*************/
 
-.service-label {
-    height: 300px;
-    background-color: #ff652d;
+/* Service selection */
+
+.selection .card {
+	height: 180px;
+	background-color: #3366ff !important;
 }
 
-.service-label span {
-    color: #ff935d;
-    font-size: 15rem;
+.selection .title {
+	margin-top: 30px;
+	font-weight: 700;
+	text-align: center;
+	color: #3366ff;
+}
+
+.selection .service-name {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: white;
+}
+
+.selection .service-icon {
+	font-size: 6rem;
+	color: white;
+}
+
+.check {
+	height: 24px;
+}
+
+.check input {
+	width: 24px;
+	height: 24px;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 99999999;
+}
+
+.check .custom-checkbox {
+	width: 24px;
+	height: 24px;
+	top: 0;
+	right: 0;
+	border-radius: 4px;
+	border: 2px solid white;
+	background-color: transparent;
+	transition: all 0.3s ease-out;
+}
+
+.check .custom-checkbox::after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	border-radius: 4px;
+	border: solid #fc522f;
+	border-width: 0 3px 3px 0;
+	transform: rotate(0deg) scale(0);
+	transition: all 0.3s ease-out;
+	opacity: 1;
+}
+
+.check input:checked ~ .custom-checkbox {
+	border-radius: 4px;
+	background-color: white;
+	transform: rotate(0deg) scale(1);
+	opacity: 1;
+	transform: rotate(0deg) scale(1);
+}
+
+.check input:checked ~ .custom-checkbox::after {
+	width: 6px;
+	height: 12px;
+	top: 3px;
+	right: 8px;
+	border-radius: 0;
+	border: solid #fc522f;
+	border-width: 0 3px 3px 0;
+	background-color: transparent;
+	transform: rotate(45deg) scale(1);
+	opacity: 1;
+}
+
+
+/* Stepper */
+
+.bs-stepper, 
+.bs-stepper span,
+.bs-stepper button {
+	font-size: 1.4rem;
 }
 
 /* Pricing */
@@ -329,7 +423,7 @@ a {
     font-size: 2rem;
 }
 
-.step .label {
+.step .title {
     color: #3366ff;
     font-size: 1.6rem;
 }
@@ -384,12 +478,9 @@ a {
 /* CART
 *********/
 
-.cart {
-	padding-top: 120px;
-}
-
 .cart-content {
-    height: 100vh;
+	margin-top: 60px;
+	margin-bottom: 100px;
 }
 
 .cart-frame {
@@ -418,10 +509,8 @@ a {
 /* ACCOUNT
 ************/
 
-.account-label {
-	height: 200px;
-	background-color: #f5f5f5;
-	color: #3366ff;
+.dashboard {
+	margin-bottom: 100px;
 }
 
 .user-avatar {
@@ -471,33 +560,12 @@ a {
 }
 
 
-/* FAQ BTN
-************/
-
-.faq-btn-shape {
-	width: 100px;
-	height: 60px;
-	right: 0;
-	bottom: 0;
-    z-index: 1020;
-	border-radius: 10px 0 0 0;
-	background-color: #ff3730;
-}
-
-.faq-btn-link {
-	color: #ffE5d5 !important;
-	font-size: 1.4rem;
-	letter-spacing: .05rem;
-}
-
-
 /* FAQ
 ********/
 
-.faq-label {
-	height: 200px;
-	background-color: #f5f5f5;
-	color: #3366ff;
+.faq-questions {
+	margin-top: 40px;
+	margin-bottom: 100px;
 }
 
 .accordion {

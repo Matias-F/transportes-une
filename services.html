@@ -5,85 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="E-Commerce para empresa de transporte">
-    <title>E-Commerce Transporte / Service</title>
+    <title>UNE | Servicios</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bs-stepper.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- SERVICE HEADER -->
-    <header class="service" id="service">
+
+    <!-- SERVICES HEADER -->
+    <header class="services" id="services">
+
         <!-- NAVBAR -->
-        <nav class="navbar w-100 position-fixed">
-            <div class="w-100 position-relative d-flex justify-content-center align-items-center">
-                <aside class="geo-localization position-absolute d-flex align-items-center">
+        <nav class="navbar w-100 p-0 position-fixed align-items-start" id="navbar">
+
+            <!-- Main navbar container -->
+            <div class="w-100 mt-2 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
+
+                <!-- Datetime -->
+                <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
                     <span class="fas fa-map-marker-alt fa-2x"></span>
-                    <div class="location d-flex flex-column mx-3">
-                        <span class="location-label">Ubicación actual</span>
-                        <span class="location-address">Zuloaga 781, Mendoza, Argentina</span>
+                    <div class="d-flex flex-column mx-3">
+                        <span class="place">Godoy Cruz, Mendoza, Argentina</span>
+                        <span class="timestamp">19/01/20 - 17:00 h</span>
                     </div>
                 </aside>
-                <nav class="nav menu d-flex justify-content-end">
+
+                <!-- Hamburguer btn - Offcanvas menu trigger -->
+                <button class="hamb-btn position-absolute d-lg-none" type="button" data-toggle="collapse" data-target="#collapsedMenu" aria-expanded="false" aria-controls="collapsedMenu"> 
+                    <span class="fas fa-bars fa-2x text-white"></span> 
+                </button>
+
+                <!-- Left-side menu displayed in desktop size -->
+                <nav class="nav menu d-none d-lg-flex justify-content-lg-end">
                     <a class="nav-link" href="services.html">Servicios</a>
-                    <a class="nav-link" href="index.html#company">Nosotros</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
-                <h1 class="logo mx-5">
+
+                <!-- Company logo -->
+                <h1 class="logo mx-3 mx-sm-5">
                     <a class="text-decoration-none" href="index.html">UNE</a>
                 </h1>
-               <!--  <nav class="nav menu d-flex justify-content-start">
-                    <a class="nav-link" href="forms/register.html">Creá tu cuenta</a>
-                    <a class="nav-link" href="forms/login.html">Ingresá</a>
-                    <a class="nav-link" href="cart.html">
-                        Pedidos
-                        <span class="fas fa-shopping-cart"></span>
-                    </a>
-                </nav> -->
-                <nav class="nav menu d-flex justify-content-start">
+
+                <!-- Rigth-side menu displayed in desktop size -->
+                <nav class="nav menu d-none d-lg-flex justify-content-lg-start">
                     <div class="dropdown">
-                        <button class="user dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="user dropdown-toggle" type="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Nacho
                             <span class="fas fa-chevron-down"></span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
                             <a class="dropdown-item" href="account.html">Mi cuenta</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item logout" href="#">Cerrar Sesión</a>
+                            <a class="dropdown-item logout" href="index.html">Cerrar Sesión</a>
                         </div>
                     </div>    
                     <a class="nav-link" href="cart.html">
                         Pedidos
                         <span class="fas fa-shopping-cart"></span>
                     </a>
-                    <a class="nav-link" href="faq.html">¿Dudas?</a>
                 </nav>
+
+                <!-- Notifications -->
                 <aside class="notifications position-absolute">
-                    <span class="fas fa-bell fa-2x"></span>
+                    <div class="dropdown d-flex justify-content-end">
+                        <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fas fa-bell fa-2x"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownNotifications">
+                            <span>Notificación 1</span>
+                            <div class="dropdown-divider"></div>
+                            <span>Notificación 2</span>
+                        </div>
+                    </div>    
                 </aside>
-            </div>    
-        </nav>
+
+            </div> 
+            <!-- /Main navbar container -->
+
+            <!-- Offcanvas menu -->
+            <nav class="nav menu-offcanvas collapse w-100 d-lg-none" id="collapsedMenu">
+                <div class="w-100 mb-2 d-flex flex-column justify-content-center align-items-center flex-sm-row">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="nav-link" href="services.html">Servicios</a>
+                        <a class="nav-link" href="forms/contact.html">Contacto</a>
+                    </div> 
+                    <div class="d-flex justify-content-center align-items-center"> 
+                        <div class="dropdown">
+                            <button class="user dropdown-toggle" type="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Nacho
+                                <span class="fas fa-chevron-down"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
+                                <a class="dropdown-item" href="account.html">Mi cuenta</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item logout" href="index.html">Cerrar Sesión</a>
+                            </div>
+                        </div> 
+                        <a class="nav-link" href="cart.html">
+                            Pedidos
+                            <span class="fas fa-shopping-cart"></span>
+                        </a>
+                    </div>      
+                </div>
+            </nav>
+
+        </nav> 
+        <!-- /NAVBAR -->
+
 
         <!-- LABEL -->
         <div class="container-full">
             <div class="row no-gutters">
-                <div class="service-label col-12 pb-5 d-flex justify-content-center align-items-end">
-                    <span class="fas fa-truck"></span>
+                <div class="label col-12 d-flex justify-content-center align-items-center shadow-sm">
+                    <h2 class="heading m-0">Contratá fácil y con flexibilidad de pago</h2>
                 </div>
             </div>
         </div>
+
     </header>
+    <!-- /SERVICES HEADER -->
 
 
-    <!-- SERVICE DETAILS -->
+    <!-- SERVICE CATEGORY SELECTION -->
+    <section class="selection" id="selection">
+
+        <h3 class="title">Seleccioná un servicio para comenzar tu cotización</h3>
+
+        <!-- Main services container -->
+        <div class="container">
+            <div class="row no-gutters justify-content-center mt-5">
+                
+                <!-- Fletes card -->
+                <div class="col-10 mb-3 p-4 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                    <h4 class="service-name">Fletes</h4>
+                    <span class="service-icon fas fa-truck-pickup"></span>  
+                    <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
+                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value1">
+                        <span class="custom-checkbox position-absolute"></span>
+                    </span>
+                </div>
+
+                <!-- Mudanzas card -->
+                <div class="col-10 mb-3 mx-2 p-4 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                    <h4 class="service-name">Mudanzas</h4>
+                    <span class="service-icon fas fa-truck"></span>
+                    <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
+                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value2" checked>
+                        <span class="custom-checkbox position-absolute"></span>
+                    </span>
+                </div>
+
+                <!-- Envíos card -->
+                <div class="col-10 mb-3 p-4 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                    <h4 class="service-name">Envíos</h4>
+                    <span class="service-icon fas fa-box"></span>
+                    <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
+                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value3">
+                        <span class="custom-checkbox position-absolute"></span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <!-- /Main services container -->
+
+    </section> 
+    <!-- /SERVICE CATEGORY SELECTION -->
+
+
+    <!-- STEPPER -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <!-- <h2>Linear stepper</h2> -->
+                <div id="stepper" class="bs-stepper">
+                    <div class="bs-stepper-header">
+                        <div class="step" data-target="#test-l-1">
+                            <button type="button" class="btn step-trigger">
+                                <span class="bs-stepper-circle">1</span>
+                                <span class="bs-stepper-label">First step</span>
+                            </button>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step" data-target="#test-l-2">
+                            <button type="button" class="btn step-trigger">
+                                <span class="bs-stepper-circle">2</span>
+                                <span class="bs-stepper-label">Second step</span>
+                            </button>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step" data-target="#test-l-3">
+                            <button type="button" class="btn step-trigger">
+                                <span class="bs-stepper-circle">3</span>
+                                <span class="bs-stepper-label">Third step</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bs-stepper-content">
+                        <div id="test-l-1" class="content">
+                            <p class="text-center">test 1</p>
+                            <button class="btn btn-primary" onclick="stepper.next()">Próximo paso</button>
+                        </div>
+                        <div id="test-l-2" class="content">
+                            <p class="text-center">test 2</p>
+                            <button class="btn btn-secondary" onclick="stepper.previous()">Volver</button>
+                            <button class="btn btn-primary" onclick="stepper.next()">Próximo paso</button>
+                        </div>
+                        <div id="test-l-3" class="content">
+                            <p class="text-center">test 3</p>
+                            <button class="btn btn-secondary" onclick="stepper.previous()">Volver</button>
+                            <button class="btn btn-success" type="submit" onclick="stepper.next()">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+
+
+    <!-- SERVICES DETAILS -->
     <section class="details" id="details">
-        <!-- Description -->
-        <article class="description mt-5 p-5 d-flex flex-column align-items-center">
-            <h3 class="sub-heading mb-4 text-center font-weight-bold">Mudanzas</h3>
-            <p class="text text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis cupiditate temporibus quis illum ipsa consectetur eveniet magni quia impedit.</p>
-        </article>
         <!-- Pricing -->
         <div class="container">
             <div class="row">
@@ -93,7 +238,7 @@
                     <!-- Area -->
                     <div class="step mt-5 mb-4 d-flex align-items-center">
                         <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">1</span>
-                        <span class="label font-weight-bold">Superficie cubierta</span>
+                        <span class="title font-weight-bold">Superficie cubierta</span>
                     </div>
                     <div class="area input-group mb-3">
                         <select class="area-options custom-select" id="inputGroupSelect">
@@ -111,7 +256,7 @@
                     <!-- Type -->
                     <div class="step mt-5 mb-4 d-flex align-items-center">
                         <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">2</span>
-                        <span class="label font-weight-bold">Tipo</span>
+                        <span class="title font-weight-bold">Tipo</span>
                     </div>
                     <div class="type mb-3">
                         <div class="form-check form-check-inline">
@@ -140,7 +285,7 @@
                     <!-- Distance -->
                     <div class="step mt-5 mb-4 d-flex align-items-center">
                         <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">3</span>
-                        <span class="label font-weight-bold">Distancia</span>
+                        <span class="title font-weight-bold">Distancia</span>
                     </div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13400.747169983657!2d-68.84665435000001!3d-32.893229250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1574022544385!5m2!1ses!2sar" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     <!-- Action -->
@@ -157,7 +302,7 @@
                     <!-- Book -->
                     <div class="step mt-5 mb-4 d-flex align-items-center">
                         <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">5</span>
-                        <span class="label font-weight-bold">Agregar al carrito</span>
+                        <span class="title font-weight-bold">Agregar al carrito</span>
                     </div>
                     <p class="bookin ml-4">
                         Al agregar tu cotización al carrito se guardarán en el sistema todos los detalles del servicio que estés interesado en contratar.
@@ -183,35 +328,59 @@
     </section>
 
 
-   <!-- FOOTER -->
-   <footer class="footer p-5" id="footer">
-    <div class="container-full">
-        <div class="row align-items-center">
-            <h2 class="footer-logo col-3">
-                <a class="text-decoration-none font-weight-bold text-light" href="index.html">UNE</a>
-            </h2>
-            <div class="footer-info col-5 d-flex flex-column">
-                <div class="dir text-white">Hipólito Yrigoyen 760 Godoy Cruz, Mendoza</div>
-                <div class="tel text-white">4250981 - 2612407123</div>
-            </div>    
-            <nav class="nav footer-menu col-4 d-flex">
-                <a class="nav-link" href="services.html">Servicios</a>
-                <a class="nav-link" href="#company">Nosotros</a>
-                <a class="nav-link" href="forms/contact.html">Contacto</a>
-                <a class="nav-link" href="account.html">Mi cuenta</a>
-                <a class="nav-link" href="cart.html">Pedidos</a>
-                <a class="nav-link" href="faq.html">Ayuda</a>
-            </nav>
-        </div>        
-    </div>
-</footer>
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+
+        <!-- Main footer container -->
+        <div class="container-full">
+            <div class="row no-gutters">
+
+                <!-- Logo -->
+                <div class="logo col-12 col-md-4 col-lg-2 mt-lg-4">
+                    <div class="w-100 my-4 d-flex flex-column align-items center">
+                        <h3 class="specialty mb-0 text-center">Transportes</h3>
+                        <a class="font-weight-bold text-center" href="index.html">UNE</a>
+                    </div>    
+                </div>
+
+                <!-- Contact information -->
+                <div class="contact-info col-12 mb-5 col-md-7 offset-md-1 mb-md-0 col-lg-5 mt-lg-4 ml-lg-0 pl-lg-5">
+                    <div class="mt-md-5 d-md-flex flex-md-column align-items-md-center align-items-lg-start">
+                        <div class="dir text-center text-white">Hipólito Yrigoyen 760, Godoy Cruz, Mendoza</div>
+                        <div class="tel text-center text-white">4250981 - 2612407123</div>
+                    </div>    
+                </div> 
+                
+                <!-- Menu -->
+                <nav class="nav menu col-12 mb-5 col-md-11 offset-md-1 col-lg-5 mt-lg-4 ml-lg-0">
+                    <div class="w-100 d-flex flex-column flex-sm-row justify-content-sm-center justify-content-md-start ml-md-5 ml-lg-0 mt-lg-4">
+                        <div class="d-flex justify-content-center align-items-center justify-content-sm-end">
+                            <a class="nav-link" href="services.html">Servicios</a>
+                            <a class="nav-link" href="forms/contact.html">Contacto</a>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center justify-content-sm-start">
+                            <a class="nav-link" href="account.html">Mi cuenta</a>
+                            <a class="nav-link" href="cart.html">Pedidos</a>
+                            <a class="nav-link" href="faq.html">Ayuda</a>
+                        </div>   
+                    </div>     
+                </nav>
+
+            </div> 
+
+        </div>
+        <!-- /Main footer container -->
+
+    </footer>
+    <!-- /FOOTER -->
 
 
 
-
+    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap/popper.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/bs-stepper.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

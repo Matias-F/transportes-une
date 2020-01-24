@@ -120,7 +120,7 @@
         <div class="container-full">
             <div class="row no-gutters">
                 <div class="label col-12 d-flex justify-content-center align-items-center shadow-sm">
-                    <h2 class="heading m-0">Contratá fácil y con flexibilidad de pago</h2>
+                    <h2 class="heading m-0 px-3 text-center">Contratá fácil y con flexibilidad de pago</h2>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
     <!-- SERVICE CATEGORY SELECTION -->
     <section class="selection" id="selection">
 
-        <h3 class="title">Seleccioná un servicio para comenzar tu cotización</h3>
+        <h3 class="title mx-5 mx-sm-3 mx-md-2">Seleccioná un servicio para comenzar tu cotización</h3>
 
         <!-- Main services container -->
         <div class="container">
@@ -176,156 +176,155 @@
     <!-- /SERVICE CATEGORY SELECTION -->
 
 
-    <!-- STEPPER -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 mt-5">
-                <!-- <h2>Linear stepper</h2> -->
-                <div id="stepper" class="bs-stepper">
-                    <div class="bs-stepper-header">
-                        <div class="step" data-target="#test-l-1">
-                            <button type="button" class="btn step-trigger">
-                                <span class="bs-stepper-circle">1</span>
-                                <span class="bs-stepper-label">First step</span>
-                            </button>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step" data-target="#test-l-2">
-                            <button type="button" class="btn step-trigger">
-                                <span class="bs-stepper-circle">2</span>
-                                <span class="bs-stepper-label">Second step</span>
-                            </button>
-                        </div>
-                        <div class="line"></div>
-                        <div class="step" data-target="#test-l-3">
-                            <button type="button" class="btn step-trigger">
-                                <span class="bs-stepper-circle">3</span>
-                                <span class="bs-stepper-label">Third step</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bs-stepper-content">
-                        <div id="test-l-1" class="content">
-                            <p class="text-center">test 1</p>
-                            <button class="btn btn-primary" onclick="stepper.next()">Próximo paso</button>
-                        </div>
-                        <div id="test-l-2" class="content">
-                            <p class="text-center">test 2</p>
-                            <button class="btn btn-secondary" onclick="stepper.previous()">Volver</button>
-                            <button class="btn btn-primary" onclick="stepper.next()">Próximo paso</button>
-                        </div>
-                        <div id="test-l-3" class="content">
-                            <p class="text-center">test 3</p>
-                            <button class="btn btn-secondary" onclick="stepper.previous()">Volver</button>
-                            <button class="btn btn-success" type="submit" onclick="stepper.next()">Agregar al Carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-        </div>
-    </div>
-
-
-
-    <!-- SERVICES DETAILS -->
-    <section class="details" id="details">
-        <!-- Pricing -->
+    <!-- QUOTATION -->
+    <section class="quotation" id="quotation">
+        <!-- Stepper -->
         <div class="container">
             <div class="row">
-                <div class="pricing col-12 p-5 d-flex flex-column">
-                    <span class="calculator fas fa-calculator mb-3 text-align-center align-self-center"></span>
-                    <h3 class="mb-2 text-center text-uppercase text-secondary font-weight-bold">Calculá tu tarifa</h3>
-                    <!-- Area -->
-                    <div class="step mt-5 mb-4 d-flex align-items-center">
-                        <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">1</span>
-                        <span class="title font-weight-bold">Superficie cubierta</span>
-                    </div>
-                    <div class="area input-group mb-3">
-                        <select class="area-options custom-select" id="inputGroupSelect">
-                            <option selected>Elige una opción...</option>
-                            <option value="1">Hasta 40</option>
-                            <option value="2">Entre 40 y 80</option>
-                            <option value="3">Entre 80 y 200</option>
-                            <option value="4">Entre 200 y 600</option>
-                            <option value="5">Más de 600</option>
-                        </select>
-                        <div class="area input-group-append">
-                            <label class="area-unit input-group-text font-weight-bold" for="inputGroupSelect">m2</label>
+                <div class="col-md-12 mt-5">
+                    <!-- <h2>Linear stepper</h2> -->
+                    <div id="stepper" class="bs-stepper">
+                        <!-- Steper header -->
+                        <div class="bs-stepper-header">
+                            <div class="step" data-target="#test-l-1">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle">1</span>
+                                    <span class="bs-stepper-label">Fecha</span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-2">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle">2</span>
+                                    <span class="bs-stepper-label">Distancia</span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-3">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle">3</span>
+                                    <span class="bs-stepper-label">Detalles</span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-4">
+                                <button type="button" class="btn step-trigger">
+                                    <span class="bs-stepper-circle">4</span>
+                                    <span class="bs-stepper-label">Precio</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Steper content -->
+                        <div class="bs-stepper-content">
+                            <!-- Step 1 -->
+                            <div id="test-l-1" class="content">
+                                <div class="wrapper d-flex flex-column text-center">
+                                TO DO ---> FECHA 
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-primary" onclick="stepper.next()">Próximo</button>
+                                </div>    
+                            </div>
+                            <!-- Step 2 -->
+                            <div id="test-l-2" class="content">
+                                <div class="wrapper d-flex justify-content-center">
+                                    <!-- Distance -->
+                                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13400.747169983657!2d-68.84665435000001!3d-32.893229250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1574022544385!5m2!1ses!2sar" width="auto" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-secondary mx-3" onclick="stepper.previous()">Anterior</button>
+                                    <button class="btn btn-primary mx-3" onclick="stepper.next()">Próximo</button>
+                                </div>
+                            </div>
+                            <!-- Step 3 -->
+                            <div id="test-l-3" class="content">
+                                <div class="wrapper d-flex flex-column align-items-center">
+                                    <!-- Service details -->
+                                    <div class="area-selection input-group my-5">
+                                        <select class="area-options custom-select" id="inputGroupSelect">
+                                            <option selected>Elige una opción...</option>
+                                            <option value="1">Hasta 40</option>
+                                            <option value="2">Entre 40 y 80</option>
+                                            <option value="3">Entre 80 y 200</option>
+                                            <option value="4">Entre 200 y 600</option>
+                                            <option value="5">Más de 600</option>
+                                        </select>
+                                        <div class="input-group-append align-self-start">
+                                            <label class="area-unit input-group-text font-weight-bold" for="inputGroupSelect">m2</label>
+                                        </div>
+                                    </div>
+                                    <div class="category-selection mb-5">
+                                        <div class="form-check form-check-inline">
+                                            <span class="fas fa-home mr-3"></span>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
+                                            <label class="form-check-label mr-4" for="inlineRadio1">Planta</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <span class="fas fa-building mr-3"></span>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
+                                            <label class="form-check-label mr-4" for="inlineRadio2">Edificio</label>
+                                        </div>
+                                    </div>
+                                    <div class="category-selection mb-5">
+                                        <div class="form-check form-check-inline">
+                                            <span class="fas fa-user mr-3"></span>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3">
+                                            <label class="form-check-label mr-4" for="inlineRadio1">Particular</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <span class="fas fa-user-tie mr-3"></span>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option4">
+                                            <label class="form-check-label mr-4" for="inlineRadio2">Empresa</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-secondary mx-3" onclick="stepper.previous()">Anterior</button>
+                                    <button class="btn btn-success mx-3" type="submit" onclick="stepper.next()">Calcular</button>
+                                </div>    
+                            </div>
+                            <!-- Step 4 -->
+                            <div id="test-l-4" class="content">
+                                <div class="wrapper d-flex flex-column align-items-center">
+                                    <!-- Price -->
+                                    <div class="price w-100 mt-5 mb-3 alert alert-success" role="alert">
+                                        <h4 class="alert-heading font-weight-bold">Valor estimado del servicio</h4>
+                                        <strong>$ 7365</strong>
+                                        <hr>
+                                        <p class="terms mb-0">Precio en pesos argentinos. Válido por 20 días.</p>
+                                        <hr>
+                                        <button class="download-btn btn btn-success btn-sm text-uppercase align-self-center" type="button">Descargar</button>
+                                    </div>
+                                    <div class="discount-alert w-100 my-3 alert alert-primary text-center" role="alert">
+                                        Reservando a través de la web obtenés un <strong>10%</strong> de descuento
+                                    </div>
+                                    <div class="conditions mb-2 d-flex flex-column">
+                                        <p>
+                                            Al agregar tu cotización al carrito se guardarán en el sistema todos los detalles de la misma.
+                                        </p>
+                                        <p>
+                                            A continuación, te enviaremos un mail para que nos indiques cuándo y cómo prefieres que nos contactemos contigo a fin de poder asesorarte y corroborar todos los detalles del servicio.
+                                        </p>
+                                        <p>
+                                            Si finalmente decides contratarnos actualizaremos en el carrito todos los detalles del servicio y habilitaremos el botón de pago para que puedas completar la operación.
+                                        </p>
+                                        <p>
+                                            Si lo prefieres puedes contactarnos directamente por teléfono.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-secondary mx-3" onclick="stepper.previous()">Anterior</button>
+                                    <button class="btn btn-success mx-3" onclick="stepper.next()">Agregar al Carrito</button>
+                                </div>    
+                            </div>
                         </div>
                     </div>
-                    <!-- Type -->
-                    <div class="step mt-5 mb-4 d-flex align-items-center">
-                        <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">2</span>
-                        <span class="title font-weight-bold">Tipo</span>
-                    </div>
-                    <div class="type mb-3">
-                        <div class="form-check form-check-inline">
-                            <span class="fas fa-home mr-3"></span>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
-                            <label class="form-check-label mr-4" for="inlineRadio1">En planta</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <span class="fas fa-building mr-3"></span>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
-                            <label class="form-check-label mr-4" for="inlineRadio2">En edificio</label>
-                        </div>
-                    </div>
-                    <div class="type mb-3">
-                        <div class="form-check form-check-inline">
-                            <span class="fas fa-user mr-3"></span>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3">
-                            <label class="form-check-label mr-4" for="inlineRadio1">Particular</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <span class="fas fa-user-tie mr-3"></span>
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option4">
-                            <label class="form-check-label mr-4" for="inlineRadio2">Empresa</label>
-                        </div>
-                    </div>
-                    <!-- Distance -->
-                    <div class="step mt-5 mb-4 d-flex align-items-center">
-                        <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">3</span>
-                        <span class="title font-weight-bold">Distancia</span>
-                    </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13400.747169983657!2d-68.84665435000001!3d-32.893229250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1574022544385!5m2!1ses!2sar" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                    <!-- Action -->
-                    <button class="calculate-btn btn btn-success btn-lg mt-5 align-self-center" type="submit">Calcular</button>
-                    <!-- Price -->
-                    <div class="price mt-4 alert alert-success" role="alert">
-                        <h4 class="alert-heading font-weight-bold">Valor estimado del servicio</h4>
-                        <strong>$ 7365</strong>
-                        <hr>
-                        <p class="terms mb-0">Precio en pesos argentinos. Válido por 20 días.</p>
-                        <hr>
-                        <button class="btn btn-success text-uppercase align-self-center" type="button">Descargar</button>
-                    </div>
-                    <!-- Book -->
-                    <div class="step mt-5 mb-4 d-flex align-items-center">
-                        <span class="number mr-3 d-flex justify-content-center align-items-center font-weight-bold">5</span>
-                        <span class="title font-weight-bold">Agregar al carrito</span>
-                    </div>
-                    <p class="bookin ml-4">
-                        Al agregar tu cotización al carrito se guardarán en el sistema todos los detalles del servicio que estés interesado en contratar.
-                    </p>
-                    <p class="bookin ml-4">
-                        A continuación, el sistema te enviará un correo electrónico para que nos indiques cuándo y cómo prefieres que nos contactemos contigo para poder brindarte toda la información que necesites y corroborar los detalles a fin de confirmar el precio.
-                    </p>
-                    <p class="bookin ml-4">
-                        Si finalmente decides contratarnos actualizaremos en el carrito todos los detalles del servicio y habilitaremos el botón de pago para que puedas completar la operación.
-                    </p>
-                    <p class="bookin ml-4">
-                        Si lo prefieres puedes contactarnos directamente por teléfono.
-                    </p>
-                    <div class="discount alert alert-primary text-center" role="alert">
-                        Reservando a través de la web obtenés un <strong>10%</strong> de descuento
-                    </div>
-                    <!-- Si al hacer click el usuario no se ha registrado, entonces llevar al formulario de registro -->
-                    <button class="bookin-btn mt-5 align-self-center btn btn-lg text-white" type="button">Agregar al carrito</button>
-                    <a class="legal text-center mt-3" href="#/">Términos y Condiciones</a>
-                </div>
+                </div>    
             </div>
         </div>
-    </section>
+    </section>    
+    <!-- /QUOTATION -->
 
 
     <!-- FOOTER -->

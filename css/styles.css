@@ -183,8 +183,8 @@ a {
 }
 
 .heading {
-	font-size: 2.7rem;
-	line-height: 2.7rem;
+	font-size: 1.8rem;
+	line-height: 2rem;
 	color: #3366ff;
 }
 
@@ -316,6 +316,7 @@ a {
 
 .selection .title {
 	margin-top: 30px;
+	font-size: 1.6rem;
 	font-weight: 700;
 	text-align: center;
 	color: #3366ff;
@@ -394,84 +395,55 @@ a {
 }
 
 
-/* Stepper */
+/* Service quotation */
 
-.bs-stepper, 
-.bs-stepper span,
-.bs-stepper button {
+.quotation {
+	margin-bottom: 100px;
+}
+
+.bs-stepper-content .content .wrapper {
+	min-height: 450px;
+}
+
+.bs-stepper .bs-stepper-content button {
 	font-size: 1.4rem;
 }
 
-/* Pricing */
-
-.pricing {
-    margin-bottom: 100px;
-}
-
-.calculator {
-    color: #6c757d;
-    font-size: 4rem;
-    transform: rotate(-15deg);
-}
-
-.step .number {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 3px solid #3366ff;
-    color: #3366ff;
-    font-size: 2rem;
-}
-
-.step .title {
-    color: #3366ff;
-    font-size: 1.6rem;
-}
-
-.area {
-    max-width: 550px;
+.area-selection {
+	max-width: 500px;
 }
 
 .area-options,
 .area-unit,
-.type, .date {
+.category-selection {
     font-size: 1.4rem;
 }
 
-.type .fas {
+.category-selection .fas {
     color: #3366ff;
     font-size: 1.8rem;
 }
 
-.calculate-btn, .bookin-btn {
-    min-width: 130px;
+.price, .conditions,
+.discount-alert {
+	max-width: 600px;
 }
 
 .price > strong {
     font-size: 2.4rem;
 }
 
-.terms {
-    color: #131313;
-    font-size: 1.25rem;
+.download-btn {
+	font-size: 1rem !important;
+    padding-top: .4rem;
 }
 
-.bookin {
-    max-width: 600px;
-    font-size: 1.35rem;
-}
-
-.discount {
+.discount-alert {
     font-size: 1.6rem;
 }
 
-.bookin-btn {
-    font-size: 1.6rem;
-    background-color: #3366ff;
-}
-
-.legal {
-    font-size: 1.25rem;
+.conditions p {
+	font-size: 1.3rem;
 }
 
 
@@ -584,7 +556,12 @@ a {
 .login,
 .password,
 .contact {
-    padding-top: 60px;
+	padding-top: 60px;
+	margin-bottom: 100px;
+}
+
+.password {
+	height: 100vh;
 }
 
 .user-image {
@@ -658,6 +635,7 @@ a {
     font-size: 1.25rem;
 }
 
+
 /* FOOTER
 ***********/
 
@@ -716,6 +694,19 @@ a {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
 	
+	/* Label */
+	.heading {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+		color: #3366ff;
+	}
+
+	/* Services */
+
+	.map {
+		width: 80%;
+	}
+
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -724,6 +715,28 @@ a {
 	/* Menu offcanvas */
 	.hamb-btn {
 		right: 90px;
+	}
+
+	/* Label */
+	.heading {
+		font-size: 2.7rem;
+		line-height: 3rem;
+		color: #3366ff;
+	}
+
+	/* Services */
+	.selection .title {
+		font-size: 1.8rem;
+	}
+
+	.bs-stepper, 
+	.bs-stepper span,
+	.bs-stepper button {
+		font-size: 1.4rem;
+	}
+
+	.map {
+		width: 80%;
 	}
 	
 	/* Cart */
@@ -742,6 +755,28 @@ a {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
+	/* Label */
+	.heading {
+		font-size: 2.7rem;
+		line-height: 3rem;
+		color: #3366ff;
+	}
+
+	/* Services */
+	.selection .title {
+		font-size: 1.8rem;
+	}
+
+	.bs-stepper, 
+	.bs-stepper span,
+	.bs-stepper button {
+		font-size: 1.4rem;
+	}
+
+	.map {
+		width: 80%;
+	}
+
     /* Cart */
     .item-icon {
         width: 120px;
@@ -758,6 +793,27 @@ a {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+	/* Label */
+	.heading {
+		font-size: 2.7rem;
+		line-height: 3rem;
+		color: #3366ff;
+	}
+
+	/* Services */
+	.selection .title {
+		font-size: 1.8rem;
+	}
+
+	.bs-stepper, 
+	.bs-stepper span,
+	.bs-stepper button {
+		font-size: 1.4rem;
+	}
+
+	.map {
+		width: 80%;
+	}
 
     /* Cart */
     .item-icon {

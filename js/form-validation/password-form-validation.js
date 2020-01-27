@@ -30,6 +30,7 @@ form.onsubmit = function(event) {
     else {
         errorEmailEmpty.style.display = 'none';
         messageSent.style.display = 'block';
+        formButton.classList.add('disabled', 'btn-secondary');
         event.preventDefault();
     }
 };

@@ -38,6 +38,7 @@ form.onsubmit = function(event) {
         errorNameEmpty.style.display = 'none';
         errorEmailEmpty.style.display = 'none';
         messageSent.style.display = 'block';
+        formButton.classList.add('disabled', 'btn-secondary');
         event.preventDefault();
     }
 };

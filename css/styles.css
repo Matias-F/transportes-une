@@ -560,10 +560,6 @@ a {
 	margin-bottom: 100px;
 }
 
-.password {
-	height: 100vh;
-}
-
 .user-image {
     width: 8rem;
     height: 8rem
@@ -610,8 +606,12 @@ a {
 	background-color: #3366ff;
 }
 
-.contact .contact-info {
-    color: #3366ff;
+.disabled {
+	pointer-events: none;
+}
+
+.form-link {
+	font-size: 1.2rem;
 }
 
 .form-group .helper,
@@ -641,6 +641,7 @@ a {
 
 .footer {
 	min-height: 150px;
+	margin-top: auto;
 	background-color: #3366ff;
 }
 

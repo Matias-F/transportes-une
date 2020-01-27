@@ -72,6 +72,7 @@ form.onsubmit = function(event) {
         errorConfirmPassEmpty.style.display = 'none';
         errorConfirmPassMatching.style.display = 'none';
         registerFormSent.style.display = 'block';
+        formButton.classList.add('disabled', 'btn-secondary');
         event.preventDefault();
     }
 };

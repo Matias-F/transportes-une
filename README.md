@@ -1,2 +1,2 @@
-# Proyecto Transporte
-E-Commerce para el curso de desarrollo fullstack de Digital House.
+# Transportes UNE
+Proyecto del curso de desarrollo fullstack con Java de Digital House.

@@ -17,6 +17,12 @@ body {
 /* HEADER
 ***********/
 
+.header {
+	width: 100%;
+	position: fixed;
+	z-index: 1030;
+}
+
 .branding {
 	height: 6rem;
 	background-color: #3366ff;
@@ -42,19 +48,17 @@ body {
 
 
 
-/* SIDENAV
+.dashboard {
+	padding-top: 150px;
+}
+
+
+
+/* MENU
 ************/
 
-.sidenav {
-	background-color: white;
-}
-
-.user-img img {
-	width: 7.5rem;
-}
-
-.btn {
-	width: 75%;
+.menu {
+	height: 100%;
 }
 
 
@@ -112,10 +116,6 @@ body {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
 	
-	/* Sidenav */
-	.btn {
-		width: 50%;
-	}
 
 
 }
@@ -154,9 +154,6 @@ body {
 	.user-img img {
 		width: 15rem;
 	}
-	.btn {
-		width: 100%;
-	}
 
 	/* Panel */
 	.form {
@@ -179,9 +176,7 @@ body {
 	.user-img img {
 		width: 15rem;
 	}
-	.btn {
-		width: 100%;
-	}
+
 
 	/* Panel */
 	.form {

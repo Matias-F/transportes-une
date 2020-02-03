@@ -22,7 +22,7 @@
         <nav class="navbar w-100 p-0 position-fixed align-items-start" id="navbar">
 
             <!-- Main navbar container -->
-            <div class="w-100 mt-2 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
+            <div class="navbar-content w-100 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
 
                 <!-- Datetime -->
                 <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
@@ -46,7 +46,9 @@
 
                 <!-- Company logo -->
                 <h1 class="logo mx-3 mx-sm-5">
-                    <a class="text-decoration-none" href="index.html">UNE</a>
+                    <a  href="index.html">
+                        <img src="img/logo-fullcolor.svg" alt="company logo">
+                    </a>
                 </h1>
 
                 <!-- Rigth-side menu displayed in desktop size -->
@@ -129,19 +131,65 @@
     <!-- /SERVICES HEADER -->
 
 
+    <!-- INFORMATION -->
+    <section class="information">
+        <div class="d-flex flex-column align-items-center">
+            <!-- Heading -->
+            <header class="col-12 d-flex justify-content-center">
+                <h2 class="heading text-center">Ponemos a tu disposición un proceso de <span>contratación online</span> simple y directo, con flexibilidad de pago y más control para vos.</h2>
+            </header>
+            <!-- Button trigger modal -->
+            <a class="dialog-trigger" role="button" data-toggle="modal" data-target="#infoModal">
+                Más información
+            </a>
+        </div>
+         <!-- Modal -->
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModal">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <article class="box">
+                            <h3 class="d-flex justify-content-center align-items-center">1</h3>
+                            <p class="text-center px-5">Cotizás online y agregás el presupuesto generado al carrito.</p>
+                        </article>
+                        <article class="box">
+                            <h3 class="d-flex justify-content-center align-items-center">2</h3>
+                            <p class="text-center px-5">Te llamamos para revisar y confirmar detalles del servicio.</p>
+                        </article>
+                        <article class="box">
+                            <h3 class="d-flex justify-content-center align-items-center">3</h3>
+                            <p class="text-center px-5">Confirmamos el monto del servicio y habilitamos el pago online.</p>
+                        </article>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- SERVICE CATEGORY SELECTION -->
     <section class="selection" id="selection">
-
-        <h3 class="title mx-5 mx-sm-3 mx-md-2">Seleccioná un servicio para comenzar tu cotización</h3>
 
         <!-- Main services container -->
         <div class="container">
             <div class="row no-gutters justify-content-center mt-5">
                 
                 <!-- Fletes card -->
-                <div class="col-10 mb-3 p-4 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                <div class="card bg-light col-10 mb-3 p-4 d-flex flex-column justify-content-between align-items-center col-sm-8 col-md-6 col-lg-3">
                     <h4 class="service-name">Fletes</h4>
-                    <span class="service-icon fas fa-truck-pickup"></span>  
+                    <img class="freight" src="img/freight-white.svg" alt="freight service">
+                    <!-- <span class="service-icon fas fa-truck-pickup"></span>   -->
                     <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
                         <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value1">
                         <span class="custom-checkbox position-absolute"></span>
@@ -149,25 +197,29 @@
                 </div>
 
                 <!-- Mudanzas card -->
-                <div class="col-10 mb-3 mx-2 p-4 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                <div class="card bg-light col-10 mb-3 mx-2 p-4 d-flex flex-column justify-content-between align-items-center col-sm-8 col-md-6 col-lg-3">
                     <h4 class="service-name">Mudanzas</h4>
-                    <span class="service-icon fas fa-truck"></span>
+                    <img class="move" src="img/move-white.svg" alt="move service">
+                    <!-- <span class="service-icon fas fa-truck"></span> -->
                     <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
-                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value2" checked>
+                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value2">
                         <span class="custom-checkbox position-absolute"></span>
                     </span>
                 </div>
 
                 <!-- Envíos card -->
-                <div class="col-10 mb-3 p-4 d-flex flex-column justify-content-between align-items-center card bg-light col-sm-8 col-md-6 col-lg-3">
+                <div class="card bg-light col-10 mb-3 p-4 d-flex flex-column justify-content-between align-items-center col-sm-8 col-md-6 col-lg-3">
                     <h4 class="service-name">Envíos</h4>
-                    <span class="service-icon fas fa-box"></span>
+                    <img class="parcel" src="img/parcel-white.svg" alt="parcel service">
+                    <!-- <span class="service-icon fas fa-box"></span> -->
                     <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
                         <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value3">
                         <span class="custom-checkbox position-absolute"></span>
                     </span>
                 </div>
             </div>
+
+            <h4 class="hint text-center mt-3">Seleccioná un servicio para comenzar tu cotización</h4>
 
         </div>
         <!-- /Main services container -->
@@ -283,8 +335,10 @@
                 <!-- Logo -->
                 <div class="logo col-12 col-md-4 col-lg-2 mt-lg-4">
                     <div class="w-100 my-4 d-flex flex-column align-items center">
-                        <h3 class="specialty mb-0 text-center">Transportes</h3>
-                        <a class="font-weight-bold text-center" href="index.html">UNE</a>
+                        <h3 class="specialty mb-2 text-center">Transportes</h3>
+                        <a class="text-center" href="index.html">
+                            <img src="img/logo-monocolor.svg" alt="company logo">
+                        </a>
                     </div>    
                 </div>
 

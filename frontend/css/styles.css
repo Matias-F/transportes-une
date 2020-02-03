@@ -62,6 +62,10 @@ a {
 	transition: top 0.3s; /* Transition effect when sliding up and down */
 }
 
+.navbar-content {
+	height: 100%;
+}
+
 
 /* Datetime */
 
@@ -79,10 +83,8 @@ a {
 
 /* Logo */
 
-.navbar .logo a {
-	font-size: 3.5rem;
-	font-weight: 800;
-	color: #ffffff;
+.navbar .logo img {
+	width: 100px;
 }
 
 
@@ -261,6 +263,18 @@ a {
 	color: #3366ff;
 }
 
+.services .freight {
+	width: 150px;
+}
+
+.services .move {
+	width: 140px;
+}
+
+.services .parcel {
+	width: 100px;
+}
+
 .service-icon {
 	font-size: 6rem;
 	color: #3366ff;
@@ -286,19 +300,19 @@ a {
 
 .company-title {
 	color: #3366ff;
-	font-size: 1.8rem;
+	font-size: 2rem;
 }
 
 .company-maintext {
-	font-size: 1.6rem;
-	line-height: 2rem;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
 	font-weight: 600;
 	color: #3366ff;
 }
 
 .company-text {
-	font-size: 1.3rem;
-	line-height: 1.6rem;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
 	color: #3366ff;
 }
 
@@ -306,6 +320,44 @@ a {
 
 /* SERVICES
 *************/
+
+/* Service information */
+
+.information {
+	margin-top: 30px;
+}
+
+.information .heading {
+	max-width: 600px;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: #3366ff;
+}
+
+.information .dialog-trigger {
+	font-size: 1.6rem;
+	font-weight: 600;
+	border-bottom: 1px solid #3366ff;
+	color: #3366ff !important;
+	cursor: pointer;
+}
+
+.information .box h3 {
+	height: 50px;
+	font-size: 3rem;
+	background-image: url("../img/graphic-arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	color: white;
+}
+
+.information .box p {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	color: #ef6244;
+}	
+
 
 /* Service selection */
 
@@ -326,6 +378,15 @@ a {
 	font-size: 1.8rem;
 	font-weight: 600;
 	color: white;
+}
+
+.selection .freight,
+.selection .move {
+	width: 100px;
+}
+
+.selection .parcel {
+	width: 70px;
 }
 
 .selection .service-icon {
@@ -394,6 +455,10 @@ a {
 	opacity: 1;
 }
 
+.selection .hint {
+	font-size: 1.4rem;
+	color: #fc522f;
+}
 
 /* Service quotation */
 
@@ -402,7 +467,11 @@ a {
 }
 
 .bs-stepper-content .content .wrapper {
-	min-height: 450px;
+	min-height: 300px;
+}
+
+.bs-stepper-circle, .bs-stepper-label {
+	font-size: 1.4rem;
 }
 
 .bs-stepper .bs-stepper-content button {
@@ -658,8 +727,8 @@ a {
 	font-size: 1.4rem;
 }
 
-.footer .logo a {
-	font-size: 3rem;
+.footer .logo img {
+	width: 100px;
 }
 
 .contact-info {
@@ -799,6 +868,11 @@ a {
 		font-size: 2.7rem;
 		line-height: 3rem;
 		color: #3366ff;
+	}
+
+	/* Home */
+	.services .card {
+		padding: 25px !important;	
 	}
 
 	/* Services */

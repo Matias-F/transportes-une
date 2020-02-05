@@ -17,7 +17,7 @@ public class TransportServiceEntity {
 	private String name;
 	
 	@Column(name="image")
-	private String icon;
+	private String image;
 	
 	@Column(name="description")
 	private String desc;
@@ -26,10 +26,10 @@ public class TransportServiceEntity {
 	private Integer value;
 	
 	
-	public TransportServiceEntity(String name, String icon, String desc, Integer value) {
+	public TransportServiceEntity(String name, String image, String desc, Integer value) {
 		super();
 		this.name  = name;
-		this.icon  = icon;
+		this.image = image;
 		this.desc  = desc;
 		this.value = value;
 	}

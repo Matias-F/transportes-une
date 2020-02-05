@@ -12,7 +12,5 @@ import java.util.List;
 
 @Repository
 public interface TransportServiceRepository extends JpaRepository<TransportServiceEntity, Long> {
-	
-	
-	
+		
 }

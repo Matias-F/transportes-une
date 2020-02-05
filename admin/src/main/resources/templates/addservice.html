@@ -1,0 +1,21 @@
+
+<!-- Add service -->
+<form th:action="@{/}" th:object="${service}">
+	<div class="form-group">
+		<label for="name">Nombre</label>
+		<input class="form-control" id="name" type="text" placeholder="Nombre del servicio" th:field="*{name}">
+	</div>
+	<div class="form-group">
+		<label for="file">Example file input</label>
+		<input class="form-control-file" id="file" type="file" th:field="*{image}">
+	</div>
+	<div class="form-group">
+		<label for="desc">Descripción</label>
+		<input class="form-control" id="desc" type="text" placeholder="Descripción del servicio" th:field="*{desc}">
+	</div>
+	<div class="form-group">
+		<label for="value">Descripción</label>
+		<input class="form-control" id="value" type="number" placeholder="Valor del servicio" th:field="*{value}">
+	</div>
+	<button type="submit" class="btn btn-primary">Agregar</button>
+</form>

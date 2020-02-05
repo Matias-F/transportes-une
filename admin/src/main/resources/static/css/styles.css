@@ -1,0 +1,311 @@
+/*********************
+ GENERAL SETTINGS
+*********************/
+
+html {
+    box-sizing: border-box;
+	font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	background-color: #ebebeb;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none !important;
+}
+
+figure, figcaption {
+	margin: 0;
+	padding: 0;
+}
+
+input, select, textarea, button {
+	outline: 0 !important;
+	border: none;
+}
+
+img,
+video {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+
+
+/********************
+ COMPONENTS
+********************/
+
+/* NAVBAR
+***********/
+
+.navbar {
+	height: 60px;
+	top: 0;
+	z-index: 1030;
+	background-color: #3366ff;
+}
+#navbar {
+	transition: top 0.3s; /* Transition effect when sliding up and down */
+}
+
+.navbar-content {
+	height: 100%;
+}
+
+
+/* Datetime */
+
+.datetime {
+	left: 15px;
+	color: #adc8ff;
+}
+
+.place, 
+.timestamp {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+
+/* Logo */
+
+.navbar .logo img {
+	width: 100px;
+}
+
+
+/* Notifications */
+
+.notifications {
+	width: 200px;
+	right: 6px;
+}
+
+.notifications .bell {
+	margin: .5rem 1rem;
+	padding: 0 !important;
+	font-weight: 600;
+	letter-spacing: .05rem;
+	background: none !important;
+}
+
+.notifications .dropdown-toggle::after {
+	display: none !important;
+} /* hides the default bootstrap's dropdown arrow */
+
+.notifications .bell span {
+	cursor: pointer;
+	color: #adc8ff;
+}
+
+.notifications .dropdown-menu {
+	min-width: 200px;
+	left: auto !important;
+	padding: 5px;
+	font-size: 1.25rem;
+}
+
+
+
+/* LABEL
+**********/
+
+.label {
+	height: 60px;
+	margin-top: 60px;
+    background-color: white;
+}
+
+.heading {
+	font-size: 1.8rem;
+	line-height: 2rem;
+	color: #3366ff;
+}
+
+
+
+/* DASHBOARD
+***************/
+
+.dashboard {
+	margin-top: 45px;
+	margin-bottom: 25px;
+	padding: 0 15px;
+}
+
+.admin-panel {
+	flex: 1;
+	background-color: white;
+}
+
+.tabs {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.tabs .nav-link {
+	color: #525252;
+}
+
+.tabs .nav-link.active {
+	color: #3366ff;
+}
+
+.tab-content {
+	min-height: 30rem;
+	flex: 1;
+}
+
+.form-control, .btn {
+	font-size: 1.2rem;
+}
+
+.form input {
+	min-width: 200px;
+}
+
+.btn {
+	text-transform: uppercase;
+	letter-spacing: .7px;
+	border-color: #3366ff; 
+	background-color: #3366ff;
+	color: white !important;
+}
+
+.table {
+  margin: 0 0 3em 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table-cell {
+  width: 100%;  
+  padding: 0.8em 1.2em;
+  box-sizing: border-box;
+  flex-grow: 1;
+  overflow: hidden; 
+  list-style: none;
+  border: solid 2px white;
+  background: #d6e4ff;
+}
+
+.table-cell {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+.table-cell h3 {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+/* Table column sizing */
+.users > .table-cell.id       { width: 10%; }
+.users > .table-cell.username { width: 12%; }
+.users > .table-cell.fullname { width: 12%; }
+.users > .table-cell.email    { width: 10%; }
+.users > .table-cell.dir      { width: 20%; }
+.users > .table-cell.tel      { width: 12%; }
+.users > .table-cell.pass     { width: 15%; }
+.users > .table-cell.delete   { width: 5%;  }
+
+.services > .table-cell.id     { width: 10%; }
+.services > .table-cell.name   { width: 15%; }
+.services > .table-cell.img    { width: 17%; }
+.services > .table-cell.desc   { width: 35%; }
+.services > .table-cell.value  { width: 10%; }
+.services > .table-cell.delete { width: 5%;  }
+
+
+.img img {
+	max-height: 40px;
+}
+
+.delete span {
+	cursor: pointer;
+}
+
+.delete span:hover {
+   color: red;
+   transition: all 300ms ease;
+}
+.delete span:active {
+	transform: scale(1.1);
+}
+
+
+
+
+
+/* RWD MEDIA QUERIES
+===================== */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	
+	/* Label */
+	.heading {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+		color: #3366ff;
+	}
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+	/* Label */
+	.heading {
+		font-size: 2.7rem;
+		line-height: 3rem;
+		color: #3366ff;
+	}
+	
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+	/* Label */
+	.heading {
+		font-size: 2.7rem;
+		line-height: 3rem;
+		color: #3366ff;
+	}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	/* Label */
+	.heading {
+		font-size: 2.7rem;
+		line-height: 3rem;
+		color: #3366ff;
+	}
+	
+}

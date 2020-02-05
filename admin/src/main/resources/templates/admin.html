@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="E-Commerce para empresa de transporte">
+    <title>UNE | Administración</title>
+    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+
+	<!-- ADMIN HEADER -->
+	<header class="admin" id="admin">
+
+		<!-- NAVBAR -->
+        <nav class="navbar w-100 p-0 position-fixed align-items-start" id="navbar">
+
+            <!-- Main navbar container -->
+            <div class="navbar-content w-100 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
+
+                <!-- Datetime -->
+                <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
+                    <span class="fas fa-map-marker-alt fa-2x"></span>
+                    <div class="d-flex flex-column mx-3">
+                        <span class="place">Godoy Cruz, Mendoza, Argentina</span>
+                        <span class="timestamp">19/01/20 - 17:00 h</span>
+                    </div>
+                </aside>
+
+                <!-- Company logo -->
+                <h1 class="logo mx-3 mx-sm-5">
+                    <a  href="index.html">
+                        <img src="/img/logo-fullcolor.svg" alt="company logo">
+                    </a>
+                </h1>
+
+                <!-- Notifications -->
+                <aside class="notifications position-absolute">
+                    <div class="dropdown d-flex justify-content-end">
+                        <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fas fa-bell fa-2x"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownNotifications">
+                            <span>Notificación 1</span>
+                            <div class="dropdown-divider"></div>
+                            <span>Notificación 2</span>
+                        </div>
+                    </div>    
+                </aside>
+
+            </div> 
+            <!-- /Main navbar container -->
+
+        </nav> 
+        <!-- /NAVBAR -->
+
+        <!-- LABEL -->
+        <div class="container-full">
+            <div class="row no-gutters">
+                <div class="label col-12 d-flex justify-content-center align-items-center shadow-sm">
+                    <h2 class="heading m-0 px-3 text-center">Panel de Administración</h2>
+                </div>
+            </div>
+        </div>
+
+	</header>
+	<!-- /ADMIN HEADER -->
+
+
+	<!-- ADMIN DASHBOARD -->
+	<section class="dashboard" id="dashboard">
+		<div class="container-full">
+			<div class="row no-gutters">
+
+				<!-- Admin Panel -->
+				<main class="admin-panel col-12 p-3">
+						
+					<!-- Tabs -->
+					<nav class="tabs">
+						<div class="nav nav-tabs" id="nav-tab-admin" role="tablist">
+							<!-- Services tab -->
+							<a class="nav-item nav-link active" id="nav-services-tab" data-toggle="tab" href="#nav-services" role="tab" aria-controls="nav-services" aria-selected="true">
+								Servicios
+							</a>
+							<!-- Users tab -->
+							<a class="nav-item nav-link" id="nav-users-tab" data-toggle="tab" href="#nav-users" role="tab" aria-controls="nav-users" aria-selected="false">
+								Usuarios
+							</a>
+						</div>
+					</nav>
+					
+					<!-- Tabs content -->
+					<div class="tab-content p-3" id="nav-tabContent">
+						<!-- Services content -->
+						<div class="tab-pane fade show active" id="nav-services" role="tabpanel" aria-labelledby="nav-services-tab">
+							<aside class="utilities px-1 d-flex justify-content-between align-items-center">
+								<form class="form d-flex align-items-center">
+									<input class="form-control mr-3" id="search-services" type="search" placeholder="Buscar servicio">
+									<button class="btn btn-dark btn-large" type="button">Buscar</button>
+								</form>
+								<button class="btn btn-dark btn-large ml-5" type="button">
+									<span class="fas fa-plus"></span>
+								</button>
+							</aside>
+							<div class="table services mt-4">
+
+								<div style="order:1;" class="table-cell id"><h3 class="m-0 text-truncate">ID</h3></div>
+								<div style="order:2;" class="table-cell id text-truncate">01</div>
+
+								<div style="order:1;" class="table-cell name"><h3 class="m-0 text-truncate">Nombre</h3></div>
+								<div style="order:2;" class="table-cell name text-truncate">Mudanzas</div>
+					
+								<div style="order:1;" class="table-cell img"><h3 class="m-0 text-truncate">Imagen</h3></div>
+								<div style="order:2;" class="table-cell img text-truncate">
+									<img class="img-fluid" src="/img/move-fullcolor.svg">
+								</div>
+
+								<div style="order:1;" class="table-cell desc"><h3 class="m-0 text-truncate">Descripción</h3></div>
+								<div style="order:2;" class="table-cell desc text-truncate">Traslados con cobertura dentro de todo el territorio nacional y países limítrofes.</div>
+
+								<div style="order:1;" class="table-cell value"><h3 class="m-0 text-truncate">Valor</h3></div>
+								<div style="order:2;" class="table-cell value text-truncate">230</div>
+
+								<div style="order:1;" class="table-cell delete bg-white"></div>
+								<div style="order:2;" class="table-cell delete bg-white">
+									<span class="fas fa-trash fa-lg"></span>
+								</div>
+
+							</div>
+						</div>
+						
+						<!-- Users content -->
+						<div class="tab-pane fade" id="nav-users" role="tabpanel" aria-labelledby="nav-users-tab">
+							<aside class="utilities px-1 d-flex justify-content-between align-items-center">
+								<form class="form d-flex align-items-center">
+									<input class="form-control mr-3" id="search-users" type="search" placeholder="Buscar usuarios">
+									<button class="btn btn-dark btn-large" type="button">Buscar</button>
+								</form>
+								<button class="btn btn-dark btn-large ml-5" type="button">
+									<span class="fas fa-plus"></span>
+								</button>
+							</aside>
+							<div class="table users mt-4">
+
+								<div style="order:1;" class="table-cell id"><h3 class="m-0 text-truncate">ID</h3></div>
+								<div style="order:2;" class="table-cell id text-truncate">01</div>
+
+								<div style="order:1;" class="table-cell username"><h3 class="m-0 text-truncate">Usuario</h3></div>
+								<div style="order:2;" class="table-cell username text-truncate">Nacho</div>
+					
+								<div style="order:1;" class="table-cell fullname"><h3 class="m-0 text-truncate">Nombre</h3></div>
+								<div style="order:2;" class="table-cell fullname text-truncate">Ignacio Alcantara</div>
+
+								<div style="order:1;" class="table-cell email"><h3 class="m-0 text-truncate">Email</h3></div>
+								<div style="order:2;" class="table-cell email text-truncate">nachoal@gmail.com</div>
+
+								<div style="order:1;" class="table-cell dir"><h3 class="m-0 text-truncate">Dirección</h3></div>
+								<div style="order:2;" class="table-cell dir text-truncate">Pedro Vargas 1481 de Godoy Cruz, Mendoza</div>
+
+								<div style="order:1;" class="table-cell tel"><h3 class="m-0 text-truncate">Teléfono</h3></div>
+								<div style="order:2;" class="table-cell tel text-truncate">sin datos</div>
+
+								<div style="order:1;" class="table-cell pass"><h3 class="m-0 text-truncate">Contraseña</h3></div>
+								<div style="order:2;" class="table-cell pass text-truncate">Nachito_10</div>
+
+								<div style="order:1;" class="table-cell delete bg-white"></div>
+								<div style="order:2;" class="table-cell delete bg-white">
+									<span class="fas fa-trash fa-lg"></span>
+								</div>
+
+							</div>
+						</div>
+					</div>	
+
+				</main>
+				
+			</div> <!-- /row -->
+		</div> <!-- /container -->
+	</section>	
+
+
+	
+	<script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>

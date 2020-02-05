@@ -12,25 +12,26 @@ import com.transportesune.admin.entities.TransportServiceEntity;
 public class AdminController {
 	
 	@Autowired
-	private TransportServiceInterface serviceMudanza; 
+	private TransportServiceInterface serviceMudanza;
 	
 	
 	@GetMapping("/")
-	public String loadPanel() {		
-		
-		return "panel";
+	public String loadAdmin(Model model) {		
+		model.addAttribute("service", new TransportServiceEntity("campo1","campo2","campo3",001));
+		return "admin";
 		
 	}
+	
 	
 	@GetMapping("/services")
 	public String loadServices(Model model) {		
 		model.addAttribute("service", serviceMudanza.listServices());
-		return "services";
+		return "admin";
 	}
 	
 	@GetMapping("/addservice")
 	public String addServices(Model model) {		
-		model.addAttribute("service", new TransportServiceEntity());
+		model.addAttribute("service", new TransportServiceEntity("campo1","campo2","campo3",001));
 		return "addservice";
 	}
 	

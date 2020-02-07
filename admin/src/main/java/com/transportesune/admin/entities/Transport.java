@@ -1,6 +1,7 @@
 package com.transportesune.admin.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.Column;
@@ -8,10 +9,12 @@ import javax.persistence.Column;
 
 @Entity
 @Table(name="services")
-public class TransportServiceEntity {
+public class Transport {
 
 	@Id
-	private Double id;
+	@Column(name="id")
+	@GeneratedValue
+	private Long id;
 	
 	@Column(name="name")
 	private String name;
@@ -22,24 +25,20 @@ public class TransportServiceEntity {
 	@Column(name="description")
 	private String desc;
 	
-	@Column(name="value")
-	private Integer value;
+	@Column(name="price")
+	private Double price;
 	
 	
-	public TransportServiceEntity(String name, String image, String desc, Integer value) {
-		super();
-		this.name  = name;
-		this.image = image;
-		this.desc  = desc;
-		this.value = value;
+	public Transport() {
+		
 	}
 
 	
-	public Double getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Double id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -50,6 +49,14 @@ public class TransportServiceEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
 
 	public String getDesc() {
 		return desc;
@@ -59,12 +66,12 @@ public class TransportServiceEntity {
 		this.desc = desc;
 	}
 
-	public Integer getValue() {
-		return value;
+	public Double getPrice() {
+		return price;
 	}
 
-	public void setValue(Integer value) {
-		this.value = value;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 		
 }

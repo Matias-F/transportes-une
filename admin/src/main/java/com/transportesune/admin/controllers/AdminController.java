@@ -2,38 +2,33 @@ package com.transportesune.admin.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import com.transportesune.admin.entities.Transport;
 import com.transportesune.admin.services.TransportServiceInterface;
-import com.transportesune.admin.entities.TransportServiceEntity;
+
 
 
 @Controller
 public class AdminController {
 	
 	@Autowired
-	private TransportServiceInterface serviceMudanza;
-	
+	private TransportServiceInterface transportService;
 	
 	@GetMapping("/")
-	public String loadAdmin(Model model) {		
-		model.addAttribute("service", new TransportServiceEntity("campo1","campo2","campo3",001));
+	public String admin() {		
+		
 		return "admin";
 		
 	}
 	
-	
-	@GetMapping("/services")
-	public String loadServices(Model model) {		
-		model.addAttribute("service", serviceMudanza.listServices());
-		return "admin";
-	}
-	
 	@GetMapping("/addservice")
-	public String addServices(Model model) {		
-		model.addAttribute("service", new TransportServiceEntity("campo1","campo2","campo3",001));
+	public String addservice(Model model) {		
+		model.addAttribute("service", new Transport());
 		return "addservice";
+		
 	}
+	
 	
 
 }

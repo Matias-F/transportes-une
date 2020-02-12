@@ -72,7 +72,8 @@
 
                 <!-- Notifications -->
                 <aside class="notifications position-absolute">
-                    <div class="dropdown d-flex justify-content-end">
+                    <div class="dropdown position-relative d-flex justify-content-end">
+                        <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div>
                         <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fas fa-bell fa-2x"></span>
                         </button>
@@ -90,28 +91,15 @@
             <!-- Offcanvas menu -->
             <nav class="nav menu-offcanvas collapse w-100 d-lg-none" id="collapsedMenu">
                 <div class="w-100 mb-2 d-flex flex-column justify-content-center align-items-center flex-sm-row">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <a class="nav-link" href="services.html">Servicios</a>
-                        <a class="nav-link" href="forms/contact.html">Contacto</a>
-                    </div> 
-                    <div class="d-flex justify-content-center align-items-center"> 
-                        <div class="dropdown">
-                            <button class="user dropdown-toggle" type="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Nacho
-                                <span class="fas fa-chevron-down"></span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
-                                <a class="dropdown-item" href="account.html">Mi cuenta</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item logout" href="index.html">Cerrar Sesión</a>
-                            </div>
-                        </div> 
-                        <a class="nav-link" href="cart.html">
-                            Pedidos
-                            <span class="fas fa-shopping-cart"></span>
-                        </a>
-                    </div>      
-                </div>
+                    <a class="nav-link m-3" href="services.html">Servicios</a>
+                    <a class="nav-link m-3" href="forms/contact.html">Contacto</a>
+                    <a class="nav-link m-3" href="cart.html">
+                        Pedidos
+                        <span class="fas fa-shopping-cart"></span>
+                    </a>
+                    <a class="nav-link m-3" href="account.html">Mi cuenta</a>
+                    <a class="logout nav-link m-3" href="index.html">Cerrar Sesión</a>
+                </div>      
             </nav>
 
         </nav> 
@@ -147,29 +135,29 @@
         <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="infoModal">Modal title</h5>
+                    <div class="modal-header align-items-center">
+                        <h5 class="modal-title" id="infoModal">¿Cómo funciona?</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body px-5">
                         <article class="box">
-                            <h3 class="d-flex justify-content-center align-items-center">1</h3>
-                            <p class="text-center px-5">Cotizás online y agregás el presupuesto generado al carrito.</p>
+                            <h3 class="text-center">PASO 1</h3>
+                            <p class="text-center mx-auto px-5">Cotizás online y agregás el presupuesto generado al carrito.</p>
                         </article>
                         <article class="box">
-                            <h3 class="d-flex justify-content-center align-items-center">2</h3>
-                            <p class="text-center px-5">Te llamamos para revisar y confirmar detalles del servicio.</p>
+                            <h3 class="text-center border-top pt-3">PASO 2</h3>
+                            <p class="text-center mx-auto px-5">Te llamamos para revisar y confirmar detalles del servicio.</p>
                         </article>
                         <article class="box">
-                            <h3 class="d-flex justify-content-center align-items-center">3</h3>
-                            <p class="text-center px-5">Confirmamos el monto del servicio y habilitamos el pago online.</p>
+                            <h3 class="text-center border-top pt-3">PASO 3</h3>
+                            <p class="text-center mx-auto px-5">Confirmamos el monto del servicio y habilitamos el pago online.</p>
                         </article>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="modal-footer py-4">
+                        <a href="faq.html">Preguntas Frecuentes</a>
+                        <button class="btn btn-lg ml-5" type="button" data-dismiss="modal">¡Entendido!</button>
                     </div>
                 </div>
             </div>
@@ -276,7 +264,7 @@
                                     <!-- Distance -->
                                     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13400.747169983657!2d-68.84665435000001!3d-32.893229250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1574022544385!5m2!1ses!2sar" width="auto" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                 </div>
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center mt-3">
                                     <button class="btn btn-secondary mx-3" onclick="stepper.previous()">Anterior</button>
                                     <button class="btn btn-primary mx-3" onclick="stepper.next()">Próximo</button>
                                 </div>
@@ -293,21 +281,18 @@
                                         <hr>
                                         <button class="download-btn btn btn-success btn-sm text-uppercase align-self-center" type="button">Descargar</button>
                                     </div>
-                                    <div class="discount-alert w-100 my-3 alert alert-primary text-center" role="alert">
-                                        Reservando a través de la web obtenés un <strong>10%</strong> de descuento
-                                    </div>
                                     <div class="conditions mb-2 d-flex flex-column">
                                         <p>
                                             Al agregar tu cotización al carrito se guardarán en el sistema todos los detalles de la misma.
                                         </p>
                                         <p>
-                                            A continuación, te enviaremos un mail para que nos indiques cuándo y cómo prefieres que nos contactemos contigo a fin de poder asesorarte y corroborar todos los detalles del servicio.
+                                            A continuación, nos contactaremos contigo a fin de poder asesorarte y corroborar todos los detalles del servicio.
                                         </p>
                                         <p>
                                             Si finalmente decides contratarnos actualizaremos en el carrito todos los detalles del servicio y habilitaremos el botón de pago para que puedas completar la operación.
                                         </p>
                                         <p>
-                                            Si lo prefieres puedes contactarnos directamente por teléfono.
+                                            Si lo prefieres puedes contactarnos directamente por teléfono al 4250981 o 261 2407123.
                                         </p>
                                     </div>
                                 </div>
@@ -334,7 +319,7 @@
 
                 <!-- Logo -->
                 <div class="logo col-12 col-md-4 col-lg-2 mt-lg-4">
-                    <div class="w-100 my-4 d-flex flex-column align-items center">
+                    <div class="w-100 my-4 d-flex flex-column align-items-center">
                         <h3 class="specialty mb-2 text-center">Transportes</h3>
                         <a class="text-center" href="index.html">
                             <img src="img/logo-monocolor.svg" alt="company logo">
@@ -343,25 +328,21 @@
                 </div>
 
                 <!-- Contact information -->
-                <div class="contact-info col-12 mb-5 col-md-7 offset-md-1 mb-md-0 col-lg-5 mt-lg-4 ml-lg-0 pl-lg-5">
-                    <div class="mt-md-5 d-md-flex flex-md-column align-items-md-center align-items-lg-start">
+                <div class="contact-info col-12 mb-4 pr-md-3 col-md-4 offset-md-2 d-md-flex justify-content-md-end col-lg-4 offset-lg-0">
+                    <div class="d-md-flex flex-md-column justify-content-md-end align-items-md-center align-items-lg-start">
                         <div class="dir text-center text-white">Hipólito Yrigoyen 760, Godoy Cruz, Mendoza</div>
                         <div class="tel text-center text-white">4250981 - 2612407123</div>
                     </div>    
                 </div> 
                 
                 <!-- Menu -->
-                <nav class="nav menu col-12 mb-5 col-md-11 offset-md-1 col-lg-5 mt-lg-4 ml-lg-0">
-                    <div class="w-100 d-flex flex-column flex-sm-row justify-content-sm-center justify-content-md-start ml-md-5 ml-lg-0 mt-lg-4">
-                        <div class="d-flex justify-content-center align-items-center justify-content-sm-end">
-                            <a class="nav-link" href="services.html">Servicios</a>
-                            <a class="nav-link" href="forms/contact.html">Contacto</a>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center justify-content-sm-start">
-                            <a class="nav-link" href="account.html">Mi cuenta</a>
-                            <a class="nav-link" href="cart.html">Pedidos</a>
-                            <a class="nav-link" href="faq.html">Ayuda</a>
-                        </div>   
+                <nav class="nav menu col-12 mb-4 mb-md-0 col-md-10 col-lg-5 offset-lg-1 d-lg-flex mt-lg-4">
+                    <div class="w-100 d-flex flex-column align-items-center flex-sm-row justify-content-sm-center justify-content-md-end justify-content-lg-center">
+                        <a class="nav-link m-3" href="services.html">Servicios</a>
+                        <a class="nav-link m-3" href="forms/contact.html">Contacto</a>
+                        <a class="nav-link m-3" href="account.html">Mi cuenta</a>
+                        <a class="nav-link m-3" href="cart.html">Pedidos</a>
+                        <a class="nav-link m-3" href="faq.html">Ayuda</a>  
                     </div>     
                 </nav>
 

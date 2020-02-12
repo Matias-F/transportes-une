@@ -26,7 +26,7 @@ public class TransportServiceImpl implements TransportServiceInterface {
 	
 	@Override
 	public Transport findServiceById(Long id) throws Exception {
-		return transportRepository.findById(id).orElseThrow(() -> new Exception("Usuario inexistentet"));
+		return transportRepository.findById(id).orElseThrow(() -> new Exception("Usuario inexistente"));
 	}
 
 	@Override

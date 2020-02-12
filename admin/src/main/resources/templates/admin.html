@@ -7,9 +7,9 @@
     <meta name="description" content="E-Commerce para empresa de transporte">
     <title>UNE | Administración</title>
     <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap}" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.min.css" th:href="@{/css/bootstrap/bootstrap.min.css}" rel="stylesheet">
+    <link href="/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
 <body>
 
@@ -113,7 +113,7 @@
 								<div style="order:2;" class="table-cell id text-truncate">01</div>
 
 								<div style="order:1;" class="table-cell name"><h3 class="m-0 text-truncate">Nombre</h3></div>
-								<div style="order:2;" class="table-cell name text-truncate">Mudanzas</div>
+								<div style="order:2;" class="table-cell name text-truncate" th:text="${serviceName}"></div>
 					
 								<div style="order:1;" class="table-cell img"><h3 class="m-0 text-truncate">Imagen</h3></div>
 								<div style="order:2;" class="table-cell img text-truncate">

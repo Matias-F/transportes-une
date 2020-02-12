@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="E-Commerce para empresa de transporte">
-    <title>UNE | Transportes</title>
+    <title>UNE | Home</title>
     <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,8 @@
 
                 <!-- Notifications -->
                 <aside class="notifications position-absolute">
-                    <div class="dropdown d-flex justify-content-end">
+                    <div class="dropdown position-relative d-flex justify-content-end">
+                        <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div>
                         <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fas fa-bell fa-2x"></span>
                         </button>
@@ -80,19 +81,15 @@
             <!-- Offcanvas menu -->
             <nav class="nav menu-offcanvas collapse w-100 d-lg-none" id="collapsedMenu">
                 <div class="w-100 mb-2 d-flex flex-column justify-content-center align-items-center flex-sm-row">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <a class="nav-link" href="services.html">Servicios</a>
-                        <a class="nav-link" href="forms/contact.html">Contacto</a>
-                        <a class="nav-link" href="forms/register.html">Creá tu cuenta</a>
-                    </div> 
-                    <div class="d-flex justify-content-center align-items-center"> 
-                        <a class="nav-link" href="forms/login.html">Ingresá</a>
-                        <a class="nav-link" href="cart.html">
-                            Pedidos
-                            <span class="fas fa-shopping-cart"></span>
-                        </a>
-                    </div>      
-                </div>
+                    <a class="nav-link m-3" href="services.html">Servicios</a>
+                    <a class="nav-link m-3" href="forms/contact.html">Contacto</a>
+                    <a class="nav-link m-3" href="cart.html">
+                        Pedidos
+                        <span class="fas fa-shopping-cart"></span>
+                    </a>
+                    <a class="nav-link m-3" href="forms/register.html">Creá tu cuenta</a>
+                    <a class="nav-link m-3" href="forms/login.html">Ingresá</a>
+                </div>      
             </nav>
 
         </nav> 
@@ -159,6 +156,22 @@
     <!-- /SERVICES CATEGORIES -->
 
 
+    <!-- PROMO -->
+    <section class="promo" id="promo">
+        <div class="container">
+            <div class="row">
+                <article class="mx-auto px-4 px-md-0">
+                    <div class="icons mb-3 d-flex justify-content-center align-items-center">
+                        <img class="mx-3" src="img/paiment-cash.svg" alt="cash icon">
+                        <img class="mx-3" src="img/paiment-card.svg" alt="credit card icon">
+                    </div>
+                    <h3 class="text text-center">Pagá en efectivo, débito o en cuotas con tarjeta de crédito.</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- /PROMO -->
+
 
     <!-- COMPANY -->
     <section class="company" id="company">
@@ -167,21 +180,14 @@
         <div class="container">
             <div class="row">
 
-                 <!-- Image -->
-                <figure class="col-12 mb-5 col-sm-10 offset-sm-1 col-md-8 offset-md-0 col-lg-4 offset-lg-1">
-                    <img class="img-fluid" src="img/about.jpg" alt="">
-                </figure>  
-                
                 <!-- Text -->
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-3 col-lg-5 offset-lg-0">
-                    <p class="company-maintext mb-5">Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p>
-                    <p class="company-text my-5">Somos una empresa local que apuesta a la calidad del servicio como estrategia diferencial.</p>
-                    <p class="company-text my-5">Apuntamos a que la experiencia de los clientes que nos contratan sea altamente positiva. Por esta razón invertimos en vehículos, tecnología y capacitación de nuestros operarios.</p>
-                    <p class="company-text my-5">No nos limitamos: ¡Queremos ser excelentes y crecer! Buscamos expandirnos a nivel regional cada vez más, con más y mejores ofertas.</p>
-                    <h4 class="company-title font-weight-bold mt-5"> ¿Nos acompañas en el viaje?</h4>
-                </div>    
+                <!-- Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p>
+                Somos una empresa local que apuesta a la calidad del servicio como estrategia diferencial.
+                Apuntamos a que la experiencia de los clientes que nos contratan sea altamente positiva. Por esta razón invertimos en vehículos, tecnología y capacitación de nuestros operarios.</p>
+                No nos limitamos: ¡Queremos ser excelentes y crecer! Buscamos expandirnos a nivel regional cada vez más, con más y mejores ofertas.</p>
+                ¿Nos acompañas en el viaje? -->
+                
             </div>
-
         </div>
         <!-- /Main company container -->
 
@@ -200,7 +206,7 @@
 
                 <!-- Logo -->
                 <div class="logo col-12 col-md-4 col-lg-2 mt-lg-4">
-                    <div class="w-100 my-4 d-flex flex-column align-items center">
+                    <div class="w-100 my-4 d-flex flex-column align-items-center">
                         <h3 class="specialty mb-2 text-center">Transportes</h3>
                         <a class="text-center" href="index.html">
                             <img src="img/logo-monocolor.svg" alt="company logo">
@@ -209,25 +215,21 @@
                 </div>
 
                 <!-- Contact information -->
-                <div class="contact-info col-12 mb-5 col-md-7 offset-md-1 mb-md-0 col-lg-5 mt-lg-4 ml-lg-0 pl-lg-5">
-                    <div class="mt-md-5 d-md-flex flex-md-column align-items-md-center align-items-lg-start">
+                <div class="contact-info col-12 mb-4 pr-md-3 col-md-4 offset-md-2 d-md-flex justify-content-md-end col-lg-4 offset-lg-0">
+                    <div class="d-md-flex flex-md-column justify-content-md-end align-items-md-center align-items-lg-start">
                         <div class="dir text-center text-white">Hipólito Yrigoyen 760, Godoy Cruz, Mendoza</div>
                         <div class="tel text-center text-white">4250981 - 2612407123</div>
                     </div>    
                 </div> 
                 
                 <!-- Menu -->
-                <nav class="nav menu col-12 mb-5 col-md-11 offset-md-1 col-lg-5 mt-lg-4 ml-lg-0">
-                    <div class="w-100 d-flex flex-column flex-sm-row justify-content-sm-center justify-content-md-start ml-md-5 ml-lg-0 mt-lg-4">
-                        <div class="d-flex justify-content-center align-items-center justify-content-sm-end">
-                            <a class="nav-link" href="services.html">Servicios</a>
-                            <a class="nav-link" href="forms/contact.html">Contacto</a>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center justify-content-sm-start">
-                            <a class="nav-link" href="account.html">Mi cuenta</a>
-                            <a class="nav-link" href="cart.html">Pedidos</a>
-                            <a class="nav-link" href="faq.html">Ayuda</a>
-                        </div>   
+                <nav class="nav menu col-12 mb-4 mb-md-0 col-md-10 col-lg-5 offset-lg-1 d-lg-flex mt-lg-4">
+                    <div class="w-100 d-flex flex-column align-items-center flex-sm-row justify-content-sm-center justify-content-md-end justify-content-lg-center">
+                        <a class="nav-link m-3" href="services.html">Servicios</a>
+                        <a class="nav-link m-3" href="forms/contact.html">Contacto</a>
+                        <a class="nav-link m-3" href="account.html">Mi cuenta</a>
+                        <a class="nav-link m-3" href="cart.html">Pedidos</a>
+                        <a class="nav-link m-3" href="faq.html">Ayuda</a>  
                     </div>     
                 </nav>
 

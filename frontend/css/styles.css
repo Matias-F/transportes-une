@@ -97,7 +97,6 @@ a {
 }
 
 .menu-offcanvas {
-	margin-top: 8px;
 	background-color: #3366ff;
 } /* displayed in mobile */
 
@@ -130,15 +129,17 @@ a {
 	display: none !important;
 } /* hides the default bootstrap's dropdown arrow */
 
-.nav.menu-offcanvas .dropdown-menu a,
 .nav.menu .dropdown-menu a {
 	font-size: 1.125rem;
 	font-weight: 600;
 }
 
-.nav.menu-offcanvas .dropdown-menu a.logout,
 .nav.menu .dropdown-menu a.logout {
 	color: #3366ff;
+}
+
+.nav.menu-offcanvas a.logout {
+	color: #adc8ff;
 }
 
 
@@ -155,6 +156,17 @@ a {
 	font-weight: 600;
 	letter-spacing: .05rem;
 	background: none !important;
+}
+
+.notifications .amount {
+	width: 15px;
+	height: 15px;
+	top: 0;
+	right: 30px;
+	font-weight: 700;
+	border-radius: 50%;
+	background-color: white;
+	color: #3366ff;
 }
 
 .notifications .dropdown-toggle::after {
@@ -235,7 +247,7 @@ a {
 	width: 150px;
 	height: 40px;
 	position: absolute;
-	bottom: 50px;
+	bottom: 100px;
 	z-index: 1020;
 	font-size: 1.6rem;
 	font-weight: 800;
@@ -288,33 +300,25 @@ a {
 }
 
 
-/* Company */
-
-.company {
-	margin: 200px 0;
+/* Promo */
+.promo {
+	margin: 100px 0;
 }
 
-.company img {
+.promo .icons img {
+	width: 80px;
 	height: auto;
 }
 
-.company-title {
-	color: #3366ff;
+.promo .text {
+	max-width: 400px;
 	font-size: 2rem;
-}
-
-.company-maintext {
-	font-size: 1.8rem;
 	line-height: 2.2rem;
-	font-weight: 600;
 	color: #3366ff;
 }
 
-.company-text {
-	font-size: 1.4rem;
-	line-height: 1.8rem;
-	color: #3366ff;
-}
+
+/* Company */
 
 
 
@@ -342,21 +346,42 @@ a {
 	cursor: pointer;
 }
 
-.information .box h3 {
-	height: 50px;
-	font-size: 3rem;
-	background-image: url("../img/graphic-arrow.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+.information .modal-title {
+	font-size: 1.35rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.information .close {
+	font-size: 2.5rem;
+}
+
+.information .modal h3 {
+	font-size: 1.4rem;
+	font-weight: 600;
+	border-top-color: #ebebeb;
+	color: #212529;
+}
+
+.information .modal p {
+	max-width: 300px;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	color: #212529;
+}
+
+.information .modal-footer button {
+	font-size: 1.3rem;
+	background-color: #3366ff;
 	color: white;
 }
 
-.information .box p {
-	font-size: 1.4rem;
-	line-height: 1.8rem;
-	color: #ef6244;
-}	
+.information .modal-footer a {
+	font-size: 1.2rem;
+	border-bottom: 1px solid #3366ff;
+	color: #3366ff;
+}
+
 
 
 /* Service selection */
@@ -545,6 +570,54 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
 }
+
+
+/* CHECKOUT
+*************/
+.checkout-form {
+	margin: 50px 0 100px 0;
+}
+
+.checkout-form h4 {
+	font-size: 1.6rem;
+}
+
+.checkout-form label {
+	font-size: 1.125rem;
+}
+
+.checkout-form .helper-text {
+	color: #6c757d;
+}
+
+.checkout-form .payment-btn {
+	background-color: #3366ff;
+	color: white;
+}
+
+.selected-item .move {
+	width: 80px;
+	height: auto;
+} 
+
+.selected-item .name {
+	font-size: 1.6rem;
+	color: #3366ff;
+}
+
+.selected-item .desc {
+	font-size: 1.125rem;
+	line-height: 1.25rem;
+}
+
+.selected-item .amount {
+	font-size: 1.4rem;
+}
+
+.selected-item .price {
+	font-size: 1.8rem;
+}
+
 
 
 /* ACCOUNT
@@ -752,14 +825,6 @@ a {
 @media (max-width: 575.98px) {
 
 }
-
-			/* Speciall mediaquery correction */
-			@media (min-width: 425px) and (max-width: 575.98px) {
-				.company {
-					max-width: 350px;
-					margin: 200px auto;
-				}
-			} 
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.transportesune.admin.entities.Transport;
-import com.transportesune.admin.services.TransportServiceInterface;
+import com.transportesune.admin.services.TransportService;
 
 
 
@@ -14,11 +14,11 @@ import com.transportesune.admin.services.TransportServiceInterface;
 public class AdminController {
 	
 	@Autowired
-	private TransportServiceInterface transportService;
+	private TransportService transportService;
 	
 	@GetMapping("/")
-	public String admin() {	
-		
+	public String admin(Model model) {	
+		model.addAttribute("services", transportService.listServices());
 		return "admin";
 	}
 	

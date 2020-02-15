@@ -3,7 +3,7 @@ package com.transportesune.admin.services;
 import com.transportesune.admin.entities.Transport;
 import java.util.List;
 
-public interface TransportServiceInterface {
+public interface TransportService {
 
 	public List<Transport> listServices();
 	public Transport saveService(Transport service);

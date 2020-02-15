@@ -3,12 +3,12 @@ package com.transportesune.admin.services.impl;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.transportesune.admin.entities.Transport;
-import com.transportesune.admin.services.TransportServiceInterface;
+import com.transportesune.admin.services.TransportService;
 import com.transportesune.admin.repository.TransportRepository;
 import java.util.List;
 
 @Service
-public class TransportServiceImpl implements TransportServiceInterface {
+public class TransportServiceImpl implements TransportService {
 	
 	@Autowired
 	private TransportRepository transportRepository;

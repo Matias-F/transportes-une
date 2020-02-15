@@ -148,8 +148,14 @@ a {
 }
 
 .admin-panel {
+ 	min-width: 550px;
 	flex: 1;
 	background-color: white;
+}
+
+.tab-content {
+	min-width: 550px;
+	overflow-x: auto;
 }
 
 .tabs {
@@ -187,7 +193,7 @@ a {
 }
 
 .table {
-  margin: 0 0 3em 0;
+  /*margin: 0 0 3em 0;*/
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -205,16 +211,25 @@ a {
 }
 
 .table-cell {
-	font-size: 1.2rem;
-	line-height: 1.4rem;
+	font-size: 1rem;
+	line-height: 1.2rem;
 }
 
 .table-cell h3 {
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: 600;
 }
 
 /* Table column sizing */
+.table-services > .table-cell.id     { width: 5%; min-width: 30px; max-width: 50px; }
+.table-services > .table-cell.name   { width: 10%; }
+.table-services > .table-cell.img    { width: 20%; }
+.table-services > .table-cell.desc   { width: 28%; }
+.table-services > .table-cell.price  { width: 7%; min-width: 55px; max-width: 50px; }
+.table-services > .table-cell.edit   { width: 5%; min-width: 30px; max-width: 50px; }
+.table-services > .table-cell.delete { width: 5%; min-width: 30px; max-width: 50px; }
+
+
 .users > .table-cell.id       { width: 10%; }
 .users > .table-cell.username { width: 12%; }
 .users > .table-cell.fullname { width: 12%; }
@@ -224,27 +239,16 @@ a {
 .users > .table-cell.pass     { width: 15%; }
 .users > .table-cell.delete   { width: 5%;  }
 
-.services > .table-cell.id     { width: 10%; }
-.services > .table-cell.name   { width: 15%; }
-.services > .table-cell.img    { width: 17%; }
-.services > .table-cell.desc   { width: 35%; }
-.services > .table-cell.value  { width: 10%; }
-.services > .table-cell.delete { width: 5%;  }
 
-
-.img img {
-	max-height: 40px;
+.edit, .delete {
+	border-radius: 4.5px;
 }
 
-.delete span {
+.edit span, .delete span {
 	cursor: pointer;
 }
 
-.delete span:hover {
-   color: red;
-   transition: all 300ms ease;
-}
-.delete span:active {
+.edit span:active, .delete span:active {
 	transform: scale(1.1);
 }
 
@@ -258,6 +262,7 @@ a {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
+	
 }
 
 
@@ -270,7 +275,6 @@ a {
 		line-height: 2.6rem;
 		color: #3366ff;
 	}
-
 
 }
 

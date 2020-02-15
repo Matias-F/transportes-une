@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="E-Commerce para empresa de transporte">
+    <title>UNE | Administración</title>
+    <script src="https://kit.fontawesome.com/fcd2f49556.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap}" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.min.css" th:href="@{/css/bootstrap/bootstrap.min.css}" rel="stylesheet">
+    <link href="/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- ADD SERVICE HEADER -->
+	<header class="add-service" id="add-service">
+
+		<!-- NAVBAR -->
+        <nav class="navbar w-100 p-0 position-fixed align-items-start" id="navbar">
+
+            <!-- Main navbar container -->
+            <div class="navbar-content w-100 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
+
+                <!-- Datetime -->
+                <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
+                    <span class="fas fa-map-marker-alt fa-2x"></span>
+                    <div class="d-flex flex-column mx-3">
+                        <span class="place">Godoy Cruz, Mendoza, Argentina</span>
+                        <span class="timestamp">19/01/20 - 17:00 h</span>
+                    </div>
+                </aside>
+
+                <!-- Company logo -->
+                <h1 class="logo mx-3 mx-sm-5">
+                    <a  href="/">
+                        <img src="/img/logo-fullcolor.svg" alt="company logo">
+                    </a>
+                </h1>
+
+                <!-- Notifications -->
+                <aside class="notifications position-absolute">
+                    <div class="dropdown d-flex justify-content-end">
+                        <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fas fa-bell fa-2x"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownNotifications">
+                            <span>Notificación 1</span>
+                            <div class="dropdown-divider"></div>
+                            <span>Notificación 2</span>
+                        </div>
+                    </div>    
+                </aside>
+
+            </div> 
+            <!-- /Main navbar container -->
+
+        </nav> 
+        <!-- /NAVBAR -->
+
+        <!-- LABEL -->
+        <div class="container-full">
+            <div class="row no-gutters">
+                <div class="label col-12 d-flex justify-content-center align-items-center shadow-sm">
+                    <h2 class="heading m-0 px-3 text-center">Agregar un Servicio</h2>
+                </div>
+            </div>
+        </div>
+
+	</header>
+	<!-- /ADD SERVICE HEADER -->
+
+
+	<!-- ADD SERVICE FORM -->
+	<section class="add-service-form" id="add-service-form">
+		<div class="container">
+			<div class="row no-gutters">
+				<!-- Add service -->
+				<form class="mx-auto mt-5" th:object="${service}" th:action="@{save}" method="post">
+					<input class="form-control" type="hidden" th:field="*{id}">
+					<div class="form-group">
+						<label for="name">Nombre</label>
+						<input class="form-control" id="name" type="text" placeholder="Nombre del servicio" th:field="*{name}">
+					</div>
+					<div class="form-group">
+						<label for="file">Subir imagen</label>
+						<input class="form-control-file" id="file" type="file" th:field="*{image}">
+					</div>
+					<div class="form-group">
+						<label for="desc">Descripción</label>
+						<textarea class="form-control" id="desc" rows="3" th:field="*{desc}"></textarea>
+					</div>
+					<div class="form-group">
+						<label for="price">Precio</label>
+						<input class="form-control" id="price" type="number" placeholder="Precio del servicio" th:field="*{price}">
+					</div>
+					<button class="mt-4 btn btn-primary" type="submit">Agregar</button>
+				</form>
+			</div> <!-- /row -->
+		</div> <!-- /container -->
+	</section>	
+
+
+	<script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>   
+    
+    

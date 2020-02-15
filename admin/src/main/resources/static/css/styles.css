@@ -176,7 +176,7 @@ a {
 	flex: 1;
 }
 
-.form-control, .btn {
+.form-control {
 	font-size: 1.2rem;
 }
 
@@ -190,6 +190,17 @@ a {
 	border-color: #3366ff; 
 	background-color: #3366ff;
 	color: white !important;
+}
+.btn:hover {
+	background-color: #254edb;
+}
+.btn:active {
+	background-color: #3366ff;
+}
+.btn-add {
+	width: 48px;
+	height: 30px;
+	font-size: 1.3rem;
 }
 
 .table {
@@ -218,6 +229,12 @@ a {
 .table-cell h3 {
 	font-size: 1rem;
 	font-weight: 600;
+}
+
+.table-cell.edit,
+.label-cell {
+	background-color: #3366ff;
+	color: white;
 }
 
 /* Table column sizing */

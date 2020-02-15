@@ -25,13 +25,13 @@ public class TransportServiceImpl implements TransportService {
 	}
 	
 	@Override
-	public Transport findServiceById(Long id) throws Exception {
-		return transportRepository.findById(id).orElseThrow(() -> new Exception("Usuario inexistente"));
+	public Transport findService(Long id) throws Exception {
+		return transportRepository.findById(id).orElseThrow(() -> new Exception("El servicio referido no existe"));
 	}
 
 	@Override
 	public Transport updateService(Transport service) throws Exception {
-		Transport serv = findServiceById(service.getId());
+		Transport serv = findService(service.getId());
 		serv.setName(service.getName());
 		serv.setImage(service.getImage());
 		serv.setDesc(service.getDesc());

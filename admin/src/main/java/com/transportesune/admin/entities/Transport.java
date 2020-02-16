@@ -2,9 +2,13 @@ package com.transportesune.admin.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.Column;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 
 
 @Entity
@@ -13,16 +17,20 @@ public class Transport {
 
 	@Id
 	@Column(name="id")
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@Column(name="name")
+	@NotBlank(message="El nombre debe tener entre 2 y 50 caracteres")
+	@Size(min=2, max=50)
 	private String name;
 	
 	@Column(name="image")
 	private String image;
 	
 	@Column(name="description")
+	@NotBlank(message="Debes agregar una descripción de entre 10 y 128 caracteres")
+	@Size(min=10, max=128)
 	private String desc;
 	
 	@Column(name="price")

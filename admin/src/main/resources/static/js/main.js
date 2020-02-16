@@ -20,3 +20,20 @@ window.onscroll = () => {
   prevScrollpos = currentScrollPos;
   
 }
+
+
+/* Delete
+************/
+
+function confirmDelete(id) {
+	$("#deleteModal").modal('show');
+	$("#entityIdHiddenInput").val(id);
+}
+
+function deleteEntity() {
+	var id = $("#entityIdHiddenInput").val();
+    window.location = "delete/"+id;
+}
+
+
+

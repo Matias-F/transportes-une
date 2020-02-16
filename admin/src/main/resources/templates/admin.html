@@ -16,48 +16,9 @@
 
 	<!-- ADMIN HEADER -->
 	<header class="admin" id="admin">
-
+		
 		<!-- NAVBAR -->
-        <nav class="navbar w-100 p-0 position-fixed align-items-start" id="navbar">
-
-            <!-- Main navbar container -->
-            <div class="navbar-content w-100 position-relative d-flex justify-content-between align-items-center justify-content-sm-center">
-
-                <!-- Datetime -->
-                <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
-                    <span class="fas fa-map-marker-alt fa-2x"></span>
-                    <div class="d-flex flex-column mx-3">
-                        <span class="place">Godoy Cruz, Mendoza, Argentina</span>
-                        <span class="timestamp">19/01/20 - 17:00 h</span>
-                    </div>
-                </aside>
-
-                <!-- Company logo -->
-                <h1 class="logo mx-3 mx-sm-5">
-                    <a  href="/">
-                        <img src="/img/logo-fullcolor.svg" alt="company logo">
-                    </a>
-                </h1>
-
-                <!-- Notifications -->
-                <aside class="notifications position-absolute">
-                    <div class="dropdown d-flex justify-content-end">
-                        <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="fas fa-bell fa-2x"></span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownNotifications">
-                            <span>Notificación 1</span>
-                            <div class="dropdown-divider"></div>
-                            <span>Notificación 2</span>
-                        </div>
-                    </div>    
-                </aside>
-
-            </div> 
-            <!-- /Main navbar container -->
-
-        </nav> 
-        <!-- /NAVBAR -->
+		<nav th:replace="common/navbar :: navbar"></nav>
 
         <!-- LABEL -->
         <div class="container-full">
@@ -101,9 +62,9 @@
 							<aside class="utilities px-1 d-flex justify-content-between align-items-center">
 								<form class="form d-flex align-items-center">
 									<input class="form-control mr-3" id="search-services" type="search" placeholder="Buscar servicio">
-									<button class="btn btn-large btn-search" type="button">Buscar</button>
+									<button class="btn btn-accent" type="button">Buscar</button>
 								</form>
-								<a class="btn btn-large btn-add d-flex justify-content-center align-items-center" th:href="@{/add-service}">
+								<a class="btn btn-accent btn-add d-flex justify-content-center align-items-center" th:href="@{/add-service}">
 									<span class="fas fa-plus"></span>
 								</a>
 							</aside>
@@ -133,7 +94,7 @@
 									</a>
 								</div>
 								<div style="order:2;" class="table-cell delete bg-danger d-flex justify-content-center">
-									<a th:href="@{'/delete/' + ${service.id}}" data-toggle="modal" data-target="#removeDialog">
+									<a th:onclick="'javascript:confirmDelete(\''+ ${service.id} +'\');'">
 										<span class="fas fa-trash fa-lg text-white"></span>
 									</a>	
 								</div>
@@ -192,10 +153,10 @@
 		</div> <!-- /container -->
 	</section>	
 
-
+	<div th:include="delete-dialog.html"></div>
 	
 	<script src="/js/jquery-3.4.1.min.js"></script>
-    <script src="/js/bootstrap/bootstrap.bundle.min"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 </body>

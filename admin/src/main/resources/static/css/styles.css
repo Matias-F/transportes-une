@@ -184,19 +184,19 @@ a {
 	min-width: 200px;
 }
 
-.btn {
-	text-transform: uppercase;
-	letter-spacing: .7px;
-	border-color: #3366ff; 
+.btn-accent {
 	background-color: #3366ff;
-	color: white !important;
+	color: white;
 }
-.btn:hover {
+.btn-accent:hover {
 	background-color: #254edb;
+	color: white;
 }
-.btn:active {
+.btn-accent:active {
 	background-color: #3366ff;
+	color: white;
 }
+
 .btn-add {
 	width: 48px;
 	height: 30px;

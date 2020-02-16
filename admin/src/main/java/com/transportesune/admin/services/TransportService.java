@@ -8,7 +8,8 @@ public interface TransportService {
 	public List<Transport> listServices();
 	public Transport saveService(Transport service);
 	public Transport updateService(Transport service) throws Exception;
-	public Transport findService(Long id) throws Exception;
+	public Transport findServiceByName(String name);
+	public Transport findServiceById(Long id) throws Exception;
 	public Transport deleteService(Long id);
 	
 }

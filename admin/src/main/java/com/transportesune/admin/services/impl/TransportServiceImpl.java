@@ -25,13 +25,19 @@ public class TransportServiceImpl implements TransportService {
 	}
 	
 	@Override
-	public Transport findService(Long id) throws Exception {
+	public Transport findServiceByName(String name) {
+		Transport serviceFound = transportRepository.findName(name);
+		return serviceFound;
+	}
+	
+	@Override
+	public Transport findServiceById(Long id) throws Exception {
 		return transportRepository.findById(id).orElseThrow(() -> new Exception("El servicio referido no existe"));
 	}
 
 	@Override
 	public Transport updateService(Transport service) throws Exception {
-		Transport serv = findService(service.getId());
+		Transport serv = findServiceById(service.getId());
 		serv.setName(service.getName());
 		serv.setImage(service.getImage());
 		serv.setDesc(service.getDesc());

@@ -247,14 +247,16 @@ a {
 .table-services > .table-cell.delete { width: 5%; min-width: 30px; max-width: 50px; }
 
 
-.users > .table-cell.id       { width: 10%; }
-.users > .table-cell.username { width: 12%; }
-.users > .table-cell.fullname { width: 12%; }
-.users > .table-cell.email    { width: 10%; }
-.users > .table-cell.dir      { width: 20%; }
-.users > .table-cell.tel      { width: 12%; }
-.users > .table-cell.pass     { width: 15%; }
-.users > .table-cell.delete   { width: 5%;  }
+.table-users > .table-cell.id       { width: 10%; }
+.table-users > .table-cell.username { width: 10%; }
+.table-users > .table-cell.fullname { width: 10%; }
+.table-users > .table-cell.img		{ width: 10%; }
+.table-users > .table-cell.email    { width: 10%; }
+.table-users > .table-cell.dir      { width: 10%; }
+.table-users > .table-cell.tel      { width: 10%; }
+.table-users > .table-cell.pass     { width: 10%; }
+.table-users > .table-cell.edit     { width: 10%; }
+.table-users > .table-cell.delete   { width: 10%; }
 
 
 .edit, .delete {

@@ -38,7 +38,7 @@
 		<div class="container">
 			<div class="row no-gutters">
 				<!-- Add service -->
-				<form class="mx-auto mt-5" th:object="${service}" th:action="@{save}" method="post">
+				<form class="mx-auto mt-5" th:object="${service}" th:action="@{save}" method="post" autocomplete="off">
 					<input class="form-control" type="hidden" th:field="*{id}">
 					<div class="form-group">
 						<label for="name">Nombre</label>

@@ -38,7 +38,7 @@
 		<div class="container">
 			<div class="row no-gutters">
 				<!-- Add service -->
-				<form class="mx-auto mt-5" th:object="${service}" th:action="@{update}" method="post">
+				<form class="mx-auto mt-5" th:object="${service}" th:action="@{update}" method="post" autocomplete="off">
 					<input class="form-control" type="hidden" th:field="${service.id}">
 					<div class="form-group">
 						<label for="name">Nombre</label>
@@ -57,7 +57,7 @@
 						<input class="form-control" id="price" type="number" placeholder="Precio del servicio" th:field="${service.price}">
 					</div>
 					<div class="actions mt-4 d-flex justify-content-end">
-						<a class="btn btn-secondary mr-4" th:href="@{/}">Cancelar</a>
+						<a class="btn btn-secondary mr-4" th:href="@{/dashboard}">Cancelar</a>
 						<button class="btn btn-accent" type="submit">Modificar</button>
 					</div>	
 				</form>

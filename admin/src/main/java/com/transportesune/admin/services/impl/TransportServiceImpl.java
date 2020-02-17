@@ -2,6 +2,8 @@ package com.transportesune.admin.services.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+
 import com.transportesune.admin.entities.Transport;
 import com.transportesune.admin.services.TransportService;
 import com.transportesune.admin.repository.TransportRepository;
@@ -17,17 +19,16 @@ public class TransportServiceImpl implements TransportService {
 	public List<Transport> listServices() {
 		return (List<Transport>) transportRepository.findAll();
 	}
+	
+	@Override
+	public List<Transport> filterServicesByName(Sort name) {
+		return (List<Transport>) transportRepository.findAll(name);
+	}
 
 	@Override
 	public Transport saveService(Transport service) {
 		transportRepository.save(service);
 		return null;
-	}
-	
-	@Override
-	public Transport findServiceByName(String name) {
-		Transport serviceFound = transportRepository.findName(name);
-		return serviceFound;
 	}
 	
 	@Override

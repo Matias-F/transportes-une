@@ -2,15 +2,17 @@
 /* JSON dynamic information consumption
 ******************************************/
 
-fetch("http://my-json-server.typicode.com/Matias-F/proyecto-transporte/servicios")    
-.then (function(respuesta){
-    return respuesta.json();
-  })
+fetch("http://localhost:8090/services/all")    
+.then (function(response){
+    return response.json();
+})
 .then (function (data){
-     console.log(data);
-   })
+  // data.forEach(service => {
+  //   //do something
+  // });
+})
 .catch(function(error){
-  console.log(error);
+  console.log("El error fue: " + error);
 })
 
 

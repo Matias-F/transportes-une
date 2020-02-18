@@ -21,8 +21,8 @@ public class TransportServiceImpl implements TransportService {
 	}
 	
 	@Override
-	public List<Transport> filterServicesByName(Sort name) {
-		return (List<Transport>) transportRepository.findAll(name);
+	public List<Transport> filterServicesListByName(String name) {
+		return (List<Transport>) transportRepository.findNameIs(name);
 	}
 
 	@Override

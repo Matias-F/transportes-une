@@ -28,6 +28,13 @@ public class TransportController {
 		
 		return "redirect:" + "/dashboard";
 	}
+	
+	//FILTER SERVICES
+	@PostMapping("/filter")
+	public String filterServices() {
+		
+		return "";
+	}
 
 	// ADD SERVICE
 	@GetMapping("/add-service")
@@ -38,12 +45,7 @@ public class TransportController {
 	}
 	
 	@PostMapping("/save")
-	public String save(@Valid Transport service, Errors errors) {
-		
-		if(errors.hasErrors()) {
-			System.out.println("Error");	
-			return "redirect:" + "/dashboard";
-		}
+	public String save(@Valid Transport service, Errors errors, Model model) {
 		
 		transportService.saveService(service);
 		return "redirect:" + "/dashboard";

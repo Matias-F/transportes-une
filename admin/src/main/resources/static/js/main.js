@@ -36,4 +36,12 @@ function deleteEntity() {
 }
 
 
+/* Send Name
+***************/
+
+function sendName() {
+	var name = document.getElementById("search-services").value;
+    console.log(name);
+    window.location = "/filterby/"+name;
+}
 

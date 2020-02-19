@@ -43,8 +43,7 @@
 					<div class="form-group">
 						<label for="name">Nombre</label>
 						<input class="form-control" id="name" type="text" th:field="*{name}">
-						<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">El nombre debe tener entre 2 y 50 caracteres</p>
-					</div>
+						<p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
 					<div class="form-group">
 						<label for="file">Subir imagen</label>
 						<input class="form-control-file" id="file" type="file" th:field="*{image}">
@@ -52,6 +51,7 @@
 					<div class="form-group">
 						<label for="desc">Descripción</label>
 						<textarea class="form-control" id="desc" rows="3" th:field="*{desc}"></textarea>
+						<p class="error" th:if="${#fields.hasErrors('desc')}" th:errors="*{desc}"></p>
 					</div>
 					<div class="form-group">
 						<label for="price">Precio</label>

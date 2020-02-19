@@ -30,19 +30,20 @@
         </div>
 
 	</header>
-	<!-- /ADD SERVICE HEADER -->
+	<!-- /UPDATE SERVICE HEADER -->
 
 
 	<!-- UPDATE SERVICE FORM -->
 	<section class="update-service-form" id="update-service-form">
 		<div class="container">
 			<div class="row no-gutters">
-				<!-- Add service -->
+				<!-- Update service -->
 				<form class="mx-auto mt-5" th:object="${service}" th:action="@{update}" method="post" autocomplete="off">
 					<input class="form-control" type="hidden" th:field="${service.id}">
 					<div class="form-group">
 						<label for="name">Nombre</label>
 						<input class="form-control" id="name" type="text" placeholder="Nombre del servicio" th:field="${service.name}">
+						<p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
 					</div>
 					<div class="form-group">
 						<label for="file">Subir imagen</label>
@@ -51,6 +52,7 @@
 					<div class="form-group">
 						<label for="desc">Descripción</label>
 						<textarea class="form-control" id="desc" rows="3" th:field="${service.desc}"></textarea>
+						<p class="error" th:if="${#fields.hasErrors('desc')}" th:errors="*{desc}">
 					</div>
 					<div class="form-group">
 						<label for="price">Precio</label>

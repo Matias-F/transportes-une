@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import com.transportesune.admin.entities.Transport;
 import com.transportesune.admin.services.TransportService;
 import javax.validation.Valid;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 
 
@@ -45,10 +47,16 @@ public class TransportController {
 	}
 	
 	@PostMapping("/save")
-	public String save(@Valid Transport service, Errors errors, Model model) {
+	public String save(@ModelAttribute("service") @Valid Transport service, BindingResult bindingResult, Model model) {
 		
-		transportService.saveService(service);
-		return "redirect:" + "/dashboard";
+		if (bindingResult.hasErrors()) {
+            System.out.println("BINDING RESULT ERROR");
+            return "add-service";
+        } else {
+        	model.addAttribute("service", new Transport());
+        	transportService.saveService(service);
+        	return "redirect:" + "/dashboard";
+        }	
 		
 	}
 	
@@ -62,15 +70,16 @@ public class TransportController {
 	}
 	
 	@PostMapping("/service/update")
-	public String updateService(@Valid Transport service, Errors errors) throws Exception {
+	public String updateService(@ModelAttribute("service") @Valid Transport service, BindingResult bindingResult, Model model) throws Exception {
 		
-		if(errors.hasErrors()) {
-			System.out.println("Error");	
-			return "redirect:" + "/dashboard";
-		}
-		
-		transportService.updateService(service);
-		return "redirect:" + "/dashboard";
+		if (bindingResult.hasErrors()) {
+            System.out.println("BINDING RESULT ERROR");
+            return "update-service";
+        } else {
+        	model.addAttribute("service", new Transport());
+        	transportService.updateService(service);
+        	return "redirect:" + "/dashboard";
+        }	
 	}
 	
 	@GetMapping("/cancel")

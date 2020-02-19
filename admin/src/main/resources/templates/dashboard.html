@@ -107,11 +107,11 @@
 						<!-- Users content -->
 						<div class="tab-pane fade" id="nav-users" role="tabpanel" aria-labelledby="nav-users-tab">
 							<aside class="utilities px-1 d-flex justify-content-between align-items-center">
-								<form class="form d-flex align-items-center" autocomplete="off" >
+								<div class="form d-flex align-items-center" autocomplete="off" >
 									<input class="form-control mr-3" id="search-users" type="search" placeholder="Buscar usuarios">
 									<button class="btn btn-accent" type="submit">Buscar</button>
-								</form>
-								<a class="btn btn-accent btn-add d-flex justify-content-center align-items-center" th:href="@{/users/add-user}">
+								</div>
+								<a class="btn btn-accent btn-add d-flex justify-content-center align-items-center">
 									<span class="fas fa-plus"></span>
 								</a>
 							</aside>
@@ -119,11 +119,11 @@
 							<div class="table table-users mt-4 mb-0 p-0">
 
 								<div style="order:1;" class="table-cell label-cell id"><h3 class="m-0">ID</h3></div>
-								<div style="order:1;" class="table-cell label-cell username"><h3 class="m-0 text-truncate">Nombre de usuario</h3></div>
-								<div style="order:1;" class="table-cell label-cell username"><h3 class="m-0 text-truncate">Nombre completo</h3></div>
-								<div style="order:1;" class="table-cell label-cell img"><h3 class="m-0 text-truncate">Foto de perfil</h3></div>
+								<div style="order:1;" class="table-cell label-cell username"><h3 class="m-0">Usuario</h3></div>
+								<div style="order:1;" class="table-cell label-cell fullname"><h3 class="m-0">Nombre</h3></div>
+								<div style="order:1;" class="table-cell label-cell profileimg"><h3 class="m-0 text-truncate">Foto de perfil</h3></div>
 								<div style="order:1;" class="table-cell label-cell email"><h3 class="m-0 text-truncate">Email</h3></div>
-								<div style="order:1;" class="table-cell label-cell dir"><h3 class="m-0 text-truncate">Dirección</h3></div>
+								<div style="order:1;" class="table-cell label-cell address"><h3 class="m-0 text-truncate">Dirección</h3></div>
 								<div style="order:1;" class="table-cell label-cell tel"><h3 class="m-0 text-truncate">Teléfono</h3></div>
 								<div style="order:1;" class="table-cell label-cell pass"><h3 class="m-0 text-truncate">Contraseña</h3></div>
 								<div style="order:1;" class="table-cell label-cell edit bg-white"></div>
@@ -131,23 +131,23 @@
 					
 							</div>	
 							
-							<div class="table table-services m-0 p-0" th:each="user, index:${users}">	
+							<div class="table table-users m-0 p-0">	
 							
-								<div style="order:2;" class="table-cell id" th:text="${user.id}"></div>
-								<div style="order:2;" class="table-cell username text-truncate" th:text="${user.username}"></div>
-								<div style="order:2;" class="table-cell fullname text-truncate" th:text="${user.fullname}"></div>
-								<div style="order:2;" class="table-cell img" th:text="${user.image}"></div>
-								<div style="order:2;" class="table-cell email text-truncate" th:text="${user.email}"></div>
-								<div style="order:2;" class="table-cell dir text-truncate" th:text="${user.dir}"></div>
-								<div style="order:2;" class="table-cell tel text-truncate" th:text="${user.tel}"></div>
-								<div style="order:2;" class="table-cell pass text-truncate" th:text="${user.pass}"></div>
+								<div style="order:2;" class="table-cell id"></div>
+								<div style="order:2;" class="table-cell username text-truncate"></div>
+								<div style="order:2;" class="table-cell fullname text-truncate"></div>
+								<div style="order:2;" class="table-cell profileimg"></div>
+								<div style="order:2;" class="table-cell email text-truncate"></div>
+								<div style="order:2;" class="table-cell address text-truncate"></div>
+								<div style="order:2;" class="table-cell tel text-truncate"></div>
+								<div style="order:2;" class="table-cell pass text-truncate"></div>
 								<div style="order:2;" class="table-cell edit d-flex justify-content-center">
-									<a th:href="@{'services/service/' + ${service.id}}">
-										<span class="fas fa-edit fa-lg text-white" ></span>
+									<a>
+										<span class="fas fa-edit fa-lg text-white"></span>
 									</a>
 								</div>
 								<div style="order:2;" class="table-cell delete bg-danger d-flex justify-content-center">
-									<a th:onclick="'javascript:confirmDelete(\''+ ${service.id} +'\');'">
+									<a>
 										<span class="fas fa-trash fa-lg text-white"></span>
 									</a>	
 								</div>

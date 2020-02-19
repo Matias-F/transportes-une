@@ -32,7 +32,8 @@ function confirmDelete(id) {
 
 function deleteEntity() {
 	var id = $("#entityIdHiddenInput").val();
-    window.location = "delete/"+id;
+	console.log(id);
+    window.location = "services/delete/"+id;
 }
 
 
@@ -42,6 +43,6 @@ function deleteEntity() {
 function sendName() {
 	var name = document.getElementById("search-services").value;
     console.log(name);
-    window.location = "/filterby/"+name;
+    window.location = "filterby/"+name;
 }
 

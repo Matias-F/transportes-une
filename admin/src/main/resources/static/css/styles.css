@@ -186,21 +186,22 @@ a {
 
 .btn-accent {
 	background-color: #3366ff;
-	color: white;
+	color: white !important;
 }
 .btn-accent:hover {
 	background-color: #254edb;
-	color: white;
+	color: white !important;
 }
 .btn-accent:active {
 	background-color: #3366ff;
-	color: white;
+	color: white !important;
 }
 
 .btn-add {
 	width: 48px;
 	height: 30px;
 	font-size: 1.3rem;
+	cursor:pointer;
 }
 
 .table {
@@ -247,16 +248,16 @@ a {
 .table-services > .table-cell.delete { width: 5%; min-width: 30px; max-width: 50px; }
 
 
-.table-users > .table-cell.id       { width: 10%; }
-.table-users > .table-cell.username { width: 10%; }
-.table-users > .table-cell.fullname { width: 10%; }
-.table-users > .table-cell.img		{ width: 10%; }
-.table-users > .table-cell.email    { width: 10%; }
-.table-users > .table-cell.dir      { width: 10%; }
-.table-users > .table-cell.tel      { width: 10%; }
-.table-users > .table-cell.pass     { width: 10%; }
-.table-users > .table-cell.edit     { width: 10%; }
-.table-users > .table-cell.delete   { width: 10%; }
+.table-users > .table-cell.id         { width: 5%; min-width: 30px; max-width: 50px; }
+.table-users > .table-cell.username   { width: 10%; }
+.table-users > .table-cell.fullname   { width: 15%; }
+.table-users > .table-cell.profileimg { width: 10%; }
+.table-users > .table-cell.email      { width: 10%; }
+.table-users > .table-cell.address    { width: 20%; }
+.table-users > .table-cell.tel        { width: 10%; }
+.table-users > .table-cell.pass       { width: 10%; }
+.table-users > .table-cell.edit       { width: 5%; min-width: 30px; max-width: 50px; }
+.table-users > .table-cell.delete     { width: 5%; min-width: 30px; max-width: 50px; }
 
 
 .edit, .delete {
@@ -271,7 +272,9 @@ a {
 	transform: scale(1.1);
 }
 
-
+.error {
+ color: #dc3545;
+}
 
 
 

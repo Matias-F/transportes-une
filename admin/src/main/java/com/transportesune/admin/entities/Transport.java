@@ -21,16 +21,16 @@ public class Transport {
 	private Long id;
 	
 	@Column(name="name")
-	@NotBlank(message="El nombre debe tener entre 2 y 50 caracteres")
-	@Size(min=2, max=50)
+	@NotBlank(message="Campo obligatorio")
+	@Size(min=2, max=50, message="El nombre debe tener entre 2 y 50 caracteres")
 	private String name;
 	
 	@Column(name="image")
 	private String image;
 	
 	@Column(name="description")
-	@NotBlank(message="Debes agregar una descripción de entre 10 y 128 caracteres")
-	@Size(min=10, max=128)
+	@NotBlank(message="Campo obligatorio")
+	@Size(min=10, max=128, message="Debes agregar una descripción de entre 10 y 128 caracteres")
 	private String desc;
 	
 	@Column(name="price")

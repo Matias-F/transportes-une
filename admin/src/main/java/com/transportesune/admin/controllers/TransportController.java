@@ -13,7 +13,6 @@ import com.transportesune.admin.entities.Transport;
 import com.transportesune.admin.services.TransportService;
 import javax.validation.Valid;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 
 
 @Controller
@@ -31,12 +30,6 @@ public class TransportController {
 		return "redirect:" + "/dashboard";
 	}
 	
-	//FILTER SERVICES
-	@PostMapping("/filter")
-	public String filterServices() {
-		
-		return "";
-	}
 
 	// ADD SERVICE
 	@GetMapping("/add-service")

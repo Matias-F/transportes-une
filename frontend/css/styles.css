@@ -275,6 +275,10 @@ a {
 	color: #3366ff;
 }
 
+.service-img {
+	max-width: 140px;
+}
+
 .services .freight {
 	width: 150px;
 }

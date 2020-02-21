@@ -1,6 +1,6 @@
 
-/* JSON dynamic information consumption
-******************************************/
+/* FETCH
+***********/
 
 fetch("http:/localhost:8090/services/all")    
 .then (function(response){
@@ -13,7 +13,7 @@ fetch("http:/localhost:8090/services/all")
   data.forEach(service => {
 
     const card = document.createElement('div');
-    card.classList.add('card', 'bg-light', 'col-10', 'mb-3', 'mx-2', 'p-4', 'd-flex', 'flex-column', 'justify-content-between', 'align-items-center', 'col-sm-8', 'p-sm-5', 'col-md-6', 'p-md-4', 'col-lg-3');
+    card.classList.add('card', 'bg-light', 'col-10', 'mb-3', 'mx-2', 'd-flex', 'flex-column', 'justify-content-between', 'align-items-center', 'col-sm-8', 'col-md-6', 'col-lg-3');
     const title = document.createElement('h4');
     title.classList.add('service-name');
     title.textContent = service.name;
@@ -37,7 +37,7 @@ fetch("http:/localhost:8090/services/all")
 
 })
 .catch(function(error){
-  console.log("El error fue: " + error);
+  console.log('El error fue: ' + error);
 })
 
 
@@ -54,15 +54,36 @@ window.onscroll = () => {
 
   if(currentScrollPos > 60) {
     if (prevScrollpos > currentScrollPos ) {
-      document.getElementById("navbar").style.top = "0";
+      document.getElementById('navbar').style.top = '0';
     } else {
-      document.getElementById("navbar").style.top = "-60px";
+      document.getElementById('navbar').style.top = '-60px';
     }
   }
 
   prevScrollpos = currentScrollPos;
   
 }
+
+
+/* Toggle Stepper Visibility
+*******************************/
+
+const checkbox1 = document.getElementById('check1');
+const checkbox2 = document.getElementById('check2');
+const checkbox3 = document.getElementById('check3');
+const quotation = document.getElementById('quotation');
+
+checkbox1.addEventListener('click', function() {
+  quotation.classList.toggle('visible');
+})  
+
+checkbox2.addEventListener('click', function() {
+  quotation.classList.toggle('visible');
+})  
+
+checkbox3.addEventListener('click', function() {
+  quotation.classList.toggle('visible');
+})  
 
 
 
@@ -74,3 +95,4 @@ document.addEventListener('DOMContentLoaded', function () {
   window.stepper = new Stepper(document.querySelector('#stepper'))
   
 })
+

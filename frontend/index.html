@@ -27,8 +27,8 @@
                 <aside class="datetime position-absolute d-none d-sm-flex align-items-sm-center">
                     <span class="fas fa-map-marker-alt fa-2x"></span>
                     <div class="d-flex flex-column mx-3">
-                        <span class="place">Godoy Cruz, Mendoza, Argentina</span>
-                        <span class="timestamp">19/01/20 - 17:00 h</span>
+                        <span class="place">Ciudad de Mendoza, Argentina</span>
+                        <span class="timestamp">21/02/20 - 19:00 h</span>
                     </div>
                 </aside>
 
@@ -63,7 +63,7 @@
                 <!-- Notifications -->
                 <aside class="notifications position-absolute">
                     <div class="dropdown position-relative d-flex justify-content-end">
-                        <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div>
+                        <!-- <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div> -->
                         <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fas fa-bell fa-2x"></span>
                         </button>
@@ -100,9 +100,8 @@
             <div class="row no-gutters">
                 <div class="col-12">
                     <div class="image w-100 d-flex justify-content-center align-items-center">
-                        <h2 class="main-heading mr-1 d-flex flex-column align-items-center text-center text-white">
-                            <span>Unimos caminos</span> 
-                            <span>con historias</span>
+                        <h2 class="main-heading px-2 d-flex flex-column align-items-center text-center text-white">
+                            Somos tu empresa de Transportes
                         </h2>
                         <a class="main-cta d-flex justify-content-center align-items-center text-center" href="services.html">Cotizá online</a>
                         <div class="gradient"></div>
@@ -115,36 +114,33 @@
     </header> 
     <!-- /HOME HEADER -->
 
-
-
     <!-- SERVICES CATEGORIES -->
     <main class="services" id="services">
 
         <!-- Main services container -->
         <div class="container-full">
             <div class="row no-gutters justify-content-center mt-5" id="service-container"></div>
+            <!-- Content printed dinamically using data served from an API Rest that we build in the backend -->
         </div>
 
     </main> 
     <!-- /SERVICES CATEGORIES -->
 
-
-    <!-- PROMO -->
-    <section class="promo" id="promo">
+     <!-- PROMO -->
+     <section class="promo" id="promo">
         <div class="container">
             <div class="row">
-                <article class="mx-auto px-4 px-md-0">
-                    <div class="icons mb-3 d-flex justify-content-center align-items-center">
+                <article class="mx-auto pt-3 pb-4 px-3 d-flex flex-column align-items-center pb-sm-3 flex-sm-row d-md-flex justify-content-md-center col-10 col-sm-10 col-md-8">
+                    <h3 class="text text-center mb-3 mb-md-0">Pagá en efectivo, débito o en cuotas con tarjeta de crédito.</h3>
+                    <div class="icons">
                         <img class="mx-3" src="img/paiment-cash.svg" alt="cash icon">
                         <img class="mx-3" src="img/paiment-card.svg" alt="credit card icon">
                     </div>
-                    <h3 class="text text-center">Pagá en efectivo, débito o en cuotas con tarjeta de crédito.</h3>
                 </article>
             </div>
         </div>
     </section>
     <!-- /PROMO -->
-
 
     <!-- COMPANY -->
     <section class="company" id="company">
@@ -152,14 +148,20 @@
         <!-- Main company container -->
         <div class="container">
             <div class="row">
-
-                <!-- Text -->
-                <!-- Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p>
-                Somos una empresa local que apuesta a la calidad del servicio como estrategia diferencial.
-                Apuntamos a que la experiencia de los clientes que nos contratan sea altamente positiva. Por esta razón invertimos en vehículos, tecnología y capacitación de nuestros operarios.</p>
-                No nos limitamos: ¡Queremos ser excelentes y crecer! Buscamos expandirnos a nivel regional cada vez más, con más y mejores ofertas.</p>
-                ¿Nos acompañas en el viaje? -->
-                
+                <article class="col-12 d-flex flex-column align-items-center">
+                    <h3 class="title">¿Nos acompañas en el viaje?</h3>
+                    <figure class="imgs">
+                        <img class="d-none d-md-block" src="img/arrow.jpg" alt="arrow image">
+                        <img src="img/team.jpg" alt="company team image">
+                        <img class="d-none d-md-block" src="img/journey.jpg" alt="truck image">
+                    </figure>   
+                    <div class="speech">     
+                        <p> Somos simples y eficaces. Contamos con un gran equipamiento y personal calificado. Cuidamos tus cosas para que puedas ocuparte de lo que más importa.</p>
+                        <p>Somos una empresa local que apuesta a la calidad del servicio como estrategia diferencial.</p> 
+                        <blockquote> No nos limitamos: ¡Queremos ser excelentes y crecer! Buscamos expandirnos a nivel regional cada vez más, con más y mejores ofertas.</blockquote>
+                        <p> Apuntamos a que la experiencia de los clientes que nos contratan sea altamente positiva. Por esta razón invertimos en vehículos, tecnología y capacitación de nuestros operarios.</p>
+                    </div>    
+                </article>    
             </div>
         </div>
         <!-- /Main company container -->

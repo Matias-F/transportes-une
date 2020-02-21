@@ -53,7 +53,7 @@
                 <!-- Rigth-side menu displayed in desktop size -->
                 <nav class="nav menu d-none d-lg-flex justify-content-lg-start">
                     <div class="dropdown">
-                        <button class="user dropdown-toggle" type="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="user dropdown-toggle active" type="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Nacho
                             <span class="fas fa-chevron-down"></span>
                         </button>
@@ -64,15 +64,18 @@
                         </div>
                     </div>    
                     <a class="nav-link" href="cart.html">
-                        Pedidos
-                        <span class="fas fa-shopping-cart"></span>
+                        <div class="d-flex align-items-center">
+                            Pedidos
+                            <span class="fas fa-shopping-cart"></span>
+                            <div class="amount ml-1 d-flex justify-content-center align-items-center">1</div>
+                        </div>   
                     </a>
                 </nav>
 
                 <!-- Notifications -->
                 <aside class="notifications position-absolute">
                     <div class="dropdown position-relative d-flex justify-content-end">
-                        <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div>
+                        <!-- <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div> -->
                         <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fas fa-bell fa-2x"></span>
                         </button>

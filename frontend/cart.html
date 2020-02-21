@@ -63,16 +63,19 @@
                             <a class="dropdown-item logout" href="index.html">Cerrar Sesión</a>
                         </div>
                     </div>    
-                    <a class="nav-link" href="cart.html">
-                        Pedidos
-                        <span class="fas fa-shopping-cart"></span>
+                    <a class="nav-link active" href="cart.html">
+                        <div class="d-flex align-items-center">
+                            Pedidos
+                            <span class="fas fa-shopping-cart"></span>
+                            <div class="amount ml-1 d-flex justify-content-center align-items-center">1</div>
+                        </div>    
                     </a>
                 </nav>
 
                 <!-- Notifications -->
                 <aside class="notifications position-absolute">
                     <div class="dropdown position-relative d-flex justify-content-end">
-                        <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div>
+                        <!-- <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div> -->
                         <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fas fa-bell fa-2x"></span>
                         </button>
@@ -92,9 +95,12 @@
                 <div class="w-100 mb-2 d-flex flex-column justify-content-center align-items-center flex-sm-row">
                     <a class="nav-link m-3" href="services.html">Servicios</a>
                     <a class="nav-link m-3" href="forms/contact.html">Contacto</a>
-                    <a class="nav-link m-3" href="cart.html">
-                        Pedidos
-                        <span class="fas fa-shopping-cart"></span>
+                    <a class="nav-link m-3 active" href="cart.html">
+                        <div class="d-flex align-items-center">
+                            Pedidos
+                            <span class="fas fa-shopping-cart"></span>
+                            <div class="amount ml-1 d-flex justify-content-center align-items-center">1</div>
+                        </div>   
                     </a>
                     <a class="nav-link m-3" href="account.html">Mi cuenta</a>
                     <a class="logout nav-link m-3" href="index.html">Cerrar Sesión</a>
@@ -125,7 +131,7 @@
                     <h3 class="cart-title mb-3">Pedidos</h3>
                     <div class="card">
                         <div class="card-img-top d-flex justify-content-center align-items-center pt-4">
-                            <span class="cart-icon fas fa-truck fa-3x"></span>
+                            <img class="cart-img" src="img/move-fullcolor.svg" alt="">
                         </div>
                         <div class="card-body">
                             <h5 class="service-name card-title text-center">Mudanza</h5>
@@ -140,7 +146,7 @@
                                 <li class="list-group-item text-center text-truncate"> Fecha probable 2/11/2019 a las 11 am</li>
                             </ul>
                             <div class="service-price d-flex justify-content-center mt-3">
-                                <span class="text-success text-center px-4">$ 7365</span>
+                                <span class="text-center px-4">$ 11690.56</span>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-2 mb-4">
@@ -202,7 +208,7 @@
     
 
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap/bootstrap.bundle.min"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -43,6 +43,10 @@ a {
 	text-decoration: none !important;
 }
 
+a.active,
+button.active {
+	color: #ffa47c !important;
+}
 
 
 /********************
@@ -142,6 +146,17 @@ a {
 	color: #adc8ff;
 }
 
+.nav.menu .nav-link .amount,
+.nav.menu-offcanvas .amount {
+	width: 15px;
+	height: 15px;
+	padding-right: 1.5px;
+	font-weight: 700;
+	border-radius: 50%;
+	background-color: white;
+	color: #3366ff;
+}
+
 
 /* Notifications */
 
@@ -234,6 +249,7 @@ a {
 }
 
 .main-heading {
+	max-width: 450px;
 	position: absolute;
 	top: 45px;
 	z-index: 1020;
@@ -266,64 +282,102 @@ a {
 /* Services */
 
 .services .card {
-	height: 250px;
+	height: 240px;
+	padding: 15px 25px 20px 25px;
 }
 
 .service-name {
-	font-size: 1.8rem;
+	font-size: 2rem;
 	font-weight: 600;
 	color: #3366ff;
 }
 
 .service-img {
-	max-width: 140px;
-}
-
-.services .freight {
-	width: 150px;
-}
-
-.services .move {
-	width: 140px;
-}
-
-.services .parcel {
-	width: 100px;
-}
-
-.service-icon {
+	max-width: 130px;
 	font-size: 6rem;
 	color: #3366ff;
 }
 
 .service-text {
-	max-width: 85%;
-	font-size: 1.2rem;
-	line-height: 1.4rem;
+	margin: 0;
+	font-size: 1.3rem;
+	line-height: 1.5rem;
 	color: #3366ff;
 }
 
 
 /* Promo */
+
 .promo {
-	margin: 100px 0;
+	margin: 100px 0 200px 0;
+}
+
+.promo article {
+	border-radius: 3px;
+	border: 1px solid #dadada;
 }
 
 .promo .icons img {
-	width: 80px;
+	width: 60px;
 	height: auto;
 }
 
 .promo .text {
-	max-width: 400px;
-	font-size: 2rem;
-	line-height: 2.2rem;
+	max-width: 250px;
+	font-size: 1.75rem;
+	line-height: 2rem;
 	color: #3366ff;
 }
 
 
 /* Company */
+.company {
+	margin-bottom: 200px;
+}
 
+.company .title {
+	max-width: 400px;
+	font-size: 2.5rem;
+	font-weight: 600;
+	line-height: 3rem;
+	color: #3366ff;
+}
+
+.company .imgs {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-column-gap: 10px;
+	max-width: 1200px;
+	counter-reset: item;
+	margin: 40px auto;
+}
+
+.company .imgs img {
+	height: 300px;
+	object-fit: cover;
+	justify-self: center;
+}
+
+.company .speech {
+	max-width: 500px;
+}
+
+.company .speech p, 
+.company .speech blockquote {
+	color: #3366ff;
+}
+
+.company .speech p {
+	font-size: 1.4rem;
+	line-height: 1.85rem;
+}
+
+.company .speech blockquote {
+	font-size: 1.8rem;
+	line-height: 2.3rem;
+	background-color: #dadada;
+}
 
 
 /* SERVICES
@@ -493,10 +547,16 @@ a {
 
 .quotation {
 	margin-bottom: 100px;
+	opacity: 0;
+	transition: opacity 300ms ease;
+}
+
+.visible {
+	opacity: 1;
 }
 
 .bs-stepper-content .content .wrapper {
-	min-height: 300px;
+	min-height: 400px;
 }
 
 .bs-stepper-circle, .bs-stepper-label {
@@ -522,26 +582,68 @@ a {
     font-size: 1.8rem;
 }
 
-.price, .conditions,
-.discount-alert {
-	max-width: 600px;
+.price {
+	width: 100%;
+	height: 150px;
+	background-color: transparent;
 }
 
-.price > strong {
-    font-size: 2.4rem;
+.price .title {
+	font-size: 1.1rem;
 }
 
-.download-btn {
-	font-size: 1rem !important;
-    padding-top: .4rem;
+.price .money {
+	font-size: 5rem;
 }
 
-.discount-alert {
-    font-size: 1.6rem;
+.price .download {
+	margin: auto 0 8px 0;
+	font-size: 1.1rem !important;
 }
 
-.conditions p {
-	font-size: 1.3rem;
+.btn-add {
+	background-color: #eb6448;
+}
+
+.btn-add a {
+	color: white !important;
+}
+
+.price .title,
+.price .money,
+.price-terms {
+	font-weight: 600;
+}
+
+.price-terms {
+	max-width: 500px;
+	font-size: 1.25rem;
+	color: #525252;
+}
+
+.datetime-form label {
+	font-size: 1.6rem;
+}
+
+.datetime-form .datetime {
+	max-width: 400px;
+	font-size: 1.4rem;
+	color: #212529;
+}
+
+.print-datetime div {
+	width: 100%;
+	max-width: 400px;
+	height: 150px;
+	font-size: 5rem;
+	background-color: transparent;
+	color: #6c757d;
+}
+
+.print-datetime div span {
+	font-size: 5rem;
+	font-weight: bold;
+	color: #212529;
 }
 
 
@@ -561,8 +663,8 @@ a {
     color: #6c757d;
 }
 
-.cart-icon {
-    color: #ff652d;
+.cart-img {
+	max-width: 50px;
 }
 
 .service-status,
@@ -706,6 +808,14 @@ a {
 	margin-bottom: 100px;
 }
 
+.login {
+	margin-bottom: 200px;
+}
+
+.password {
+	margin-bottom: 300px;
+}
+
 .user-image {
     width: 8rem;
     height: 8rem
@@ -840,8 +950,12 @@ a {
 		color: #3366ff;
 	}
 
-	/* Services */
+	/* Home */
+	.service-text { 
+		max-width: 80%;
+	}
 
+	/* Services */
 	.map {
 		width: 80%;
 	}
@@ -862,6 +976,14 @@ a {
 		line-height: 3rem;
 		color: #3366ff;
 	}
+
+	/* Home */
+	.service-text { 
+		max-width: 80%;
+	}
+	.company .imgs {
+		grid-template-columns: 1fr 50% 1fr;
+	}	
 
 	/* Services */
 	.selection .title {
@@ -894,12 +1016,28 @@ a {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
+	/* Promo */
+	.promo article {
+		max-width: 500px;
+	} 
+
 	/* Label */
 	.heading {
 		font-size: 2.7rem;
 		line-height: 3rem;
 		color: #3366ff;
 	}
+
+	/* Home */
+	.services .card {
+		padding: 15px 15px 20px 15px !important;	
+	}
+	.promo {
+		margin: 100px 0 250px 0;
+	}
+	.company .imgs {
+		grid-template-columns: 1fr 60% 1fr;
+	}	
 
 	/* Services */
 	.selection .title {
@@ -911,6 +1049,10 @@ a {
 	.bs-stepper button {
 		font-size: 1.4rem;
 	}
+
+	.print-datetime div {
+		height: 200px;
+	}	
 
 	.map {
 		width: 80%;
@@ -932,6 +1074,11 @@ a {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+	/* Promo */
+	.promo article {
+		max-width: 500px;
+	} 
+	
 	/* Label */
 	.heading {
 		font-size: 2.7rem;
@@ -940,9 +1087,12 @@ a {
 	}
 
 	/* Home */
-	.services .card {
-		padding: 25px !important;	
+	.promo {
+		margin: 100px 0 250px 0;
 	}
+	.company .imgs {
+		grid-template-columns: 1fr 60% 1fr;
+	}	
 
 	/* Services */
 	.selection .title {
@@ -954,6 +1104,10 @@ a {
 	.bs-stepper button {
 		font-size: 1.4rem;
 	}
+
+	.print-datetime div {
+		height: 200px;
+	}	
 
 	.map {
 		width: 80%;

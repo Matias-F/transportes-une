@@ -40,7 +40,7 @@
 
                 <!-- Left-side menu displayed in desktop size -->
                 <nav class="nav menu d-none d-lg-flex justify-content-lg-end">
-                    <a class="nav-link" href="services.html">Servicios</a>
+                    <a class="nav-link active" href="services.html">Servicios</a>
                     <a class="nav-link" href="forms/contact.html">Contacto</a>
                 </nav>
 
@@ -73,7 +73,7 @@
                 <!-- Notifications -->
                 <aside class="notifications position-absolute">
                     <div class="dropdown position-relative d-flex justify-content-end">
-                        <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div>
+                        <!-- <div class="amount position-absolute d-flex justify-content-center align-items-center">3</div> -->
                         <button class="bell dropdown-toggle alig-self-end" type="button" id="dropdownNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fas fa-bell fa-2x"></span>
                         </button>
@@ -91,7 +91,7 @@
             <!-- Offcanvas menu -->
             <nav class="nav menu-offcanvas collapse w-100 d-lg-none" id="collapsedMenu">
                 <div class="w-100 mb-2 d-flex flex-column justify-content-center align-items-center flex-sm-row">
-                    <a class="nav-link m-3" href="services.html">Servicios</a>
+                    <a class="nav-link active m-3" href="services.html">Servicios</a>
                     <a class="nav-link m-3" href="forms/contact.html">Contacto</a>
                     <a class="nav-link m-3" href="cart.html">
                         Pedidos
@@ -179,7 +179,7 @@
                     <img class="freight" src="img/freight-white.svg" alt="freight service">
                     <!-- <span class="service-icon fas fa-truck-pickup"></span>   -->
                     <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
-                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value1">
+                        <input class="checkbox position-absolute" id="check1" type="checkbox" name="checkbox" value="value1">
                         <span class="custom-checkbox position-absolute"></span>
                     </span>
                 </div>
@@ -190,7 +190,7 @@
                     <img class="move" src="img/move-white.svg" alt="move service">
                     <!-- <span class="service-icon fas fa-truck"></span> -->
                     <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
-                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value2">
+                        <input class="checkbox position-absolute" id="check2" type="checkbox" name="checkbox" value="value2">
                         <span class="custom-checkbox position-absolute"></span>
                     </span>
                 </div>
@@ -201,7 +201,7 @@
                     <img class="parcel" src="img/parcel-white.svg" alt="parcel service">
                     <!-- <span class="service-icon fas fa-box"></span> -->
                     <span class="check w-100 position-relative d-flex justify-content-end align-items-center">
-                        <input class="checkbox position-absolute" type="checkbox" name="checkbox" id="checkbox" value="value3">
+                        <input class="checkbox position-absolute" id="check3" type="checkbox" name="checkbox" value="value3">
                         <span class="custom-checkbox position-absolute"></span>
                     </span>
                 </div>
@@ -252,7 +252,19 @@
                             <!-- Step 1 -->
                             <div id="test-l-1" class="content">
                                 <div class="wrapper d-flex flex-column text-center">
-                                TO DO ---> FECHA 
+                                   <!-- Datepicker -->
+                                    <form class="datetime-form form-group mb-4 d-flex flex-column">
+                                        <label for="datetime">Seleccioná una Fecha y Hora:</label>
+                                        <input class="datetime form-control align-self-center" id="datetime" name="datetime" type="datetime-local">
+                                    </form>
+                                    <div class="print-datetime d-flex flex-column flex-grow-1 align-items-center flex-lg-row justify-content-lg-center">
+                                        <div class="card mb-3 flex-row justify-content-center align-items-center mb-lg-0 mx-lg-3"> 
+                                            <span>00</span> / <span>00</span> / <span>00</span>
+                                        </div>
+                                        <div class="card flex-row justify-content-center align-items-center"> 
+                                            <span>00</span> : <span>00</span> h
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button class="btn btn-primary" onclick="stepper.next()">Próximo</button>
@@ -262,7 +274,7 @@
                             <div id="test-l-2" class="content">
                                 <div class="wrapper d-flex justify-content-center">
                                     <!-- Distance -->
-                                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13400.747169983657!2d-68.84665435000001!3d-32.893229250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1574022544385!5m2!1ses!2sar" width="auto" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13400.747169983657!2d-68.84665435000001!3d-32.893229250000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1574022544385!5m2!1ses!2sar" width="auto" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                                 </div>
                                 <div class="d-flex justify-content-center mt-3">
                                     <button class="btn btn-secondary mx-3" onclick="stepper.previous()">Anterior</button>
@@ -273,32 +285,19 @@
                             <div id="test-l-3" class="content">
                                 <div class="wrapper d-flex flex-column align-items-center">
                                     <!-- Price -->
-                                    <div class="price w-100 mt-5 mb-3 alert alert-success" role="alert">
-                                        <h4 class="alert-heading font-weight-bold">Valor estimado del servicio</h4>
-                                        <strong>$ 7365</strong>
-                                        <hr>
-                                        <p class="terms mb-0">Precio en pesos argentinos. Válido por 20 días.</p>
-                                        <hr>
-                                        <button class="download-btn btn btn-success btn-sm text-uppercase align-self-center" type="button">Descargar</button>
-                                    </div>
-                                    <div class="conditions mb-2 d-flex flex-column">
-                                        <p>
-                                            Al agregar tu cotización al carrito se guardarán en el sistema todos los detalles de la misma.
-                                        </p>
-                                        <p>
-                                            A continuación, nos contactaremos contigo a fin de poder asesorarte y corroborar todos los detalles del servicio.
-                                        </p>
-                                        <p>
-                                            Si finalmente decides contratarnos actualizaremos en el carrito todos los detalles del servicio y habilitaremos el botón de pago para que puedas completar la operación.
-                                        </p>
-                                        <p>
-                                            Si lo prefieres puedes contactarnos directamente por teléfono al 4250981 o 261 2407123.
-                                        </p>
+                                    <article class="price card d-flex flex-column">
+                                        <h4 class="title p-3">PRECIO ESTIMADO DEL SERVICIO</h4>
+                                        <h2 class="money d-flex justify-content-center align-items-center">$ 11690.56</h2>
+                                        <button class="download btn btn-secondary align-self-end mr-3" type=button>DESCARGAR PDF</button>
+                                    </article>
+                                    <div class="price-terms mt-5">
+                                        <p class="text-center text-danger"> Agregar la cotización al carrito <strong>NO</strong> implica obligación de compra</p>
+                                        <p class="text-center">Ante cualquier duda puedes contactarnos directamente por teléfono al <strong>4250981</strong> o <strong>261 2407123</strong>, de lunes a viernes de 9 a 18 h, y sábados hasta las 13 h.</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button class="btn btn-secondary mx-3" onclick="stepper.previous()">Anterior</button>
-                                    <button class="btn btn-success mx-3" onclick="stepper.next()">Agregar al Carrito</button>
+                                    <button class="btn btn-add mx-3" onclick="stepper.next()"><a href="cart.html">Agregar al carrito</a></button>
                                 </div>    
                             </div>
                         </div>
@@ -355,9 +354,8 @@
     <!-- /FOOTER -->
 
 
-
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap/bootstrap.bundle.min"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/bs-stepper.min.js"></script>
     <script src="js/main.js"></script>

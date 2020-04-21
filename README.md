@@ -1,2 +1,3 @@
 # Transportes UNE
-Proyecto del curso de desarrollo fullstack con Java de Digital House.
+Concepto de app web para empresa de transportes.
+Diseño de Identidad Visual, Diseño Web, Desarrollo FrontEnd (HTML, CSS, JS), Desarrollo de Backend (JAVA / Spring / API Rest).
